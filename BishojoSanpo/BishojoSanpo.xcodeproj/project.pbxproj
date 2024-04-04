@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		22969ABC2BBE7B0400D8FC26 /* BishojoSanpoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22969ABB2BBE7B0400D8FC26 /* BishojoSanpoApp.swift */; };
-		22969ABE2BBE7B0400D8FC26 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22969ABD2BBE7B0400D8FC26 /* ContentView.swift */; };
+		22969ABE2BBE7B0400D8FC26 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22969ABD2BBE7B0400D8FC26 /* HomeView.swift */; };
 		22969AC02BBE7B0500D8FC26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22969ABF2BBE7B0500D8FC26 /* Assets.xcassets */; };
 		22969AC32BBE7B0500D8FC26 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22969AC22BBE7B0500D8FC26 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -16,7 +16,7 @@
 /* Begin PBXFileReference section */
 		22969AB82BBE7B0400D8FC26 /* BishojoSanpo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BishojoSanpo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22969ABB2BBE7B0400D8FC26 /* BishojoSanpoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BishojoSanpoApp.swift; sourceTree = "<group>"; };
-		22969ABD2BBE7B0400D8FC26 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		22969ABD2BBE7B0400D8FC26 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		22969ABF2BBE7B0500D8FC26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22969AC22BBE7B0500D8FC26 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -32,6 +32,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2214DE562BBEB065000E883F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2214DE582BBEB0CA000E883F /* Sounds */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2214DE582BBEB0CA000E883F /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		2214DE592BBEB0DA000E883F /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				2214DE5C2BBEB0EC000E883F /* SelectGoal */,
+				2214DE5B2BBEB0E5000E883F /* Map */,
+				2214DE5A2BBEB0E0000E883F /* Home */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		2214DE5A2BBEB0E0000E883F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				22969ABD2BBE7B0400D8FC26 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		2214DE5B2BBEB0E5000E883F /* Map */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		2214DE5C2BBEB0EC000E883F /* SelectGoal */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SelectGoal;
+			sourceTree = "<group>";
+		};
 		22969AAF2BBE7B0400D8FC26 = {
 			isa = PBXGroup;
 			children = (
@@ -51,8 +98,9 @@
 		22969ABA2BBE7B0400D8FC26 /* BishojoSanpo */ = {
 			isa = PBXGroup;
 			children = (
+				2214DE592BBEB0DA000E883F /* Features */,
+				2214DE562BBEB065000E883F /* Resources */,
 				22969ABB2BBE7B0400D8FC26 /* BishojoSanpoApp.swift */,
-				22969ABD2BBE7B0400D8FC26 /* ContentView.swift */,
 				22969ABF2BBE7B0500D8FC26 /* Assets.xcassets */,
 				22969AC12BBE7B0500D8FC26 /* Preview Content */,
 			);
@@ -137,7 +185,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22969ABE2BBE7B0400D8FC26 /* ContentView.swift in Sources */,
+				22969ABE2BBE7B0400D8FC26 /* HomeView.swift in Sources */,
 				22969ABC2BBE7B0400D8FC26 /* BishojoSanpoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
