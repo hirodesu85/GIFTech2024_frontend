@@ -1,5 +1,4 @@
 //
-//  ContentView.swift
 //  BishojoSanpo
 //
 //  Created by 伊藤まどか on 2024/04/04.
