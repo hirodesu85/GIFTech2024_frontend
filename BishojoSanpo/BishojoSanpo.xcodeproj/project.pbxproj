@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		2285D13B2BC76A9000F0D8A6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2285D13A2BC76A9000F0D8A6 /* Constants.swift */; };
+		2285D13F2BCA022C00F0D8A6 /* ItemDropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2285D13E2BCA022C00F0D8A6 /* ItemDropView.swift */; };
+		2285D1412BCA024600F0D8A6 /* ItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2285D1402BCA024600F0D8A6 /* ItemListView.swift */; };
+		2285D1432BCA0ACF00F0D8A6 /* NavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2285D1422BCA0ACF00F0D8A6 /* NavigationRouter.swift */; };
+		2285D1452BCAB76E00F0D8A6 /* SelectGoalViewSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2285D1442BCAB76E00F0D8A6 /* SelectGoalViewSample.swift */; };
 		22969ABC2BBE7B0400D8FC26 /* BishojoSanpoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22969ABB2BBE7B0400D8FC26 /* BishojoSanpoApp.swift */; };
 		22969ABE2BBE7B0400D8FC26 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22969ABD2BBE7B0400D8FC26 /* HomeView.swift */; };
 		22969AC02BBE7B0500D8FC26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22969ABF2BBE7B0500D8FC26 /* Assets.xcassets */; };
@@ -24,6 +28,10 @@
 
 /* Begin PBXFileReference section */
 		2285D13A2BC76A9000F0D8A6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		2285D13E2BCA022C00F0D8A6 /* ItemDropView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDropView.swift; sourceTree = "<group>"; };
+		2285D1402BCA024600F0D8A6 /* ItemListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListView.swift; sourceTree = "<group>"; };
+		2285D1422BCA0ACF00F0D8A6 /* NavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRouter.swift; sourceTree = "<group>"; };
+		2285D1442BCAB76E00F0D8A6 /* SelectGoalViewSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SelectGoalViewSample.swift; path = BishojoSanpo/SelectGoalViewSample.swift; sourceTree = SOURCE_ROOT; };
 		22969AB82BBE7B0400D8FC26 /* BishojoSanpo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BishojoSanpo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22969ABB2BBE7B0400D8FC26 /* BishojoSanpoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BishojoSanpoApp.swift; sourceTree = "<group>"; };
 		22969ABD2BBE7B0400D8FC26 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -68,6 +76,8 @@
 		2214DE592BBEB0DA000E883F /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				2285D13D2BCA018400F0D8A6 /* ItemDrop */,
+				2285D13C2BCA015500F0D8A6 /* ItemList */,
 				2214DE5C2BBEB0EC000E883F /* SelectGoal */,
 				2214DE5B2BBEB0E5000E883F /* Map */,
 				2214DE5A2BBEB0E0000E883F /* Home */,
@@ -96,8 +106,25 @@
 		2214DE5C2BBEB0EC000E883F /* SelectGoal */ = {
 			isa = PBXGroup;
 			children = (
+				2285D1442BCAB76E00F0D8A6 /* SelectGoalViewSample.swift */,
 			);
 			path = SelectGoal;
+			sourceTree = "<group>";
+		};
+		2285D13C2BCA015500F0D8A6 /* ItemList */ = {
+			isa = PBXGroup;
+			children = (
+				2285D1402BCA024600F0D8A6 /* ItemListView.swift */,
+			);
+			path = ItemList;
+			sourceTree = "<group>";
+		};
+		2285D13D2BCA018400F0D8A6 /* ItemDrop */ = {
+			isa = PBXGroup;
+			children = (
+				2285D13E2BCA022C00F0D8A6 /* ItemDropView.swift */,
+			);
+			path = ItemDrop;
 			sourceTree = "<group>";
 		};
 		22969AAF2BBE7B0400D8FC26 = {
@@ -142,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				22986D3A2BC4FF930018DCFC /* City.swift */,
+				2285D1422BCA0ACF00F0D8A6 /* NavigationRouter.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -229,9 +257,13 @@
 				22986D432BC5016B0018DCFC /* MapViewControllerBridge.swift in Sources */,
 				22969ABE2BBE7B0400D8FC26 /* HomeView.swift in Sources */,
 				22986D3B2BC4FF930018DCFC /* City.swift in Sources */,
+				2285D1412BCA024600F0D8A6 /* ItemListView.swift in Sources */,
+				2285D13F2BCA022C00F0D8A6 /* ItemDropView.swift in Sources */,
+				2285D1452BCAB76E00F0D8A6 /* SelectGoalViewSample.swift in Sources */,
 				2285D13B2BC76A9000F0D8A6 /* Constants.swift in Sources */,
 				22986D3D2BC500A50018DCFC /* MapViewController.swift in Sources */,
 				22969ABC2BBE7B0400D8FC26 /* BishojoSanpoApp.swift in Sources */,
+				2285D1432BCA0ACF00F0D8A6 /* NavigationRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
