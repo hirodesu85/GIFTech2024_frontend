@@ -11,6 +11,7 @@ import SwiftUI
 
 
 struct MapView: View {
+    @EnvironmentObject var router: NavigationRouter
     let destination = City(name: "Tokyo", coordinate: CLLocationCoordinate2D(latitude: 35.6684411, longitude: 139.6004407))
     
     /// State for markers displayed on the map for each city in `cities`
@@ -36,11 +37,17 @@ struct MapView: View {
                             .frame(width: geometry.size.width * 0.9, height: geometry.size.height * 0.9, alignment: .center)
                         Spacer()
                     }
+                    Button(action: {
+                        router.items.append(.itemDrop)
+                    }, label: {
+                        Text("到着")
+                    })
                     Spacer()
                 }
                 
             }
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
 
@@ -61,8 +68,6 @@ struct MapContainerView: View {
     }
 }
 
-struct MapView_Previews: PreviewProvider {
-    static var previews: some View {
-        MapView()
-    }
+#Preview{
+    return MapView()
 }

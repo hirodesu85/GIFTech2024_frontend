@@ -7,14 +7,41 @@
 import SwiftUI
 
 struct HomeView: View {
+    @StateObject private var router = NavigationRouter()
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack(path: $router.items){
+            VStack {
+                
+                Button(action: {
+                    router.items.append(.selectGoal)
+                    print(router)
+                }, label: {
+                    Text("お散歩")
+                })
+                
+                Button(action: {
+                    router.items.append(.itemList)
+                    
+                }, label: {
+                    Text("着替える")
+                })
+            }
+            // 画面遷移定義
+            .navigationDestination(for: NavigationRouter.Item.self) { item in
+                switch item{
+                case .selectGoal:
+                    SelectGoalViewSample()
+                case .map:
+                    MapView()
+                case .itemDrop:
+                    ItemDropView()
+                case .itemList:
+                    ItemListView()
+                }
+            }
         }
-        .padding()
+        .environmentObject(router)
+        
     }
 }
 
