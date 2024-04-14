@@ -34,8 +34,13 @@ struct SelectGoalViewSample: View {
     func getDestinationAndNavigate(){
         goalViewModel.selectedCategory = "サウナ"// 選択されたカテゴリをこの変数に入れる
         goalViewModel.selectedDistance = "far" // カテゴリと同様
-        // ここにAPIを叩く関数を置く
-        goalViewModel.api()
+        Task {
+            await goalViewModel.fetchSuggestedPlace()
+            print("errorMessage: \(String(describing: goalViewModel.errorMessage))")
+            print("placeId: \(goalViewModel.placeId)")
+            print("latitude: \(goalViewModel.latitude)")
+            print("longitude: \(goalViewModel.longitude)")
+        }
         router.items.append(.map) //Map画面へ遷移
     }
     
