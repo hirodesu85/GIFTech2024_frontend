@@ -149,8 +149,7 @@
 		2285D1532BCBFD5F00F0D8A6 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				2285D1542BCBFD8900F0D8A6 /* ImageLoader.swift */,
-				2285D1562BCBFE2000F0D8A6 /* WebPImageView.swift */,
+				2285D15E2BCC04B600F0D8A6 /* WebP */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -185,6 +184,15 @@
 			children = (
 			);
 			path = Map;
+			sourceTree = "<group>";
+		};
+		2285D15E2BCC04B600F0D8A6 /* WebP */ = {
+			isa = PBXGroup;
+			children = (
+				2285D1542BCBFD8900F0D8A6 /* ImageLoader.swift */,
+				2285D1562BCBFE2000F0D8A6 /* WebPImageView.swift */,
+			);
+			path = WebP;
 			sourceTree = "<group>";
 		};
 		22969AAF2BBE7B0400D8FC26 = {
