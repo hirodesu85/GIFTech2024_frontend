@@ -35,7 +35,7 @@ struct SelectGoalViewSample: View {
         goalViewModel.selectedCategory = "サウナ"// 選択されたカテゴリをこの変数に入れる
         goalViewModel.selectedDistance = "far" // カテゴリと同様
         // ここにAPIを叩く関数を置く
-        goalViewModel.aa()
+        goalViewModel.api()
         router.items.append(.map) //Map画面へ遷移
     }
     
