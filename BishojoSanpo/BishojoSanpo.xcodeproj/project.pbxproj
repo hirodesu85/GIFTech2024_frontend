@@ -13,6 +13,10 @@
 		2285D1432BCA0ACF00F0D8A6 /* NavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2285D1422BCA0ACF00F0D8A6 /* NavigationRouter.swift */; };
 		2285D1452BCAB76E00F0D8A6 /* SelectGoalViewSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2285D1442BCAB76E00F0D8A6 /* SelectGoalViewSample.swift */; };
 		2285D14B2BCACD0E00F0D8A6 /* GoalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2285D14A2BCACD0E00F0D8A6 /* GoalViewModel.swift */; };
+		2285D1502BCBFB6A00F0D8A6 /* SDWebImageWebPCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 2285D14F2BCBFB6A00F0D8A6 /* SDWebImageWebPCoder */; };
+		2285D1552BCBFD8900F0D8A6 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2285D1542BCBFD8900F0D8A6 /* ImageLoader.swift */; };
+		2285D1572BCBFE2000F0D8A6 /* WebPImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2285D1562BCBFE2000F0D8A6 /* WebPImageView.swift */; };
+		2285D15C2BCBFFC300F0D8A6 /* SampleWebP.webp in Resources */ = {isa = PBXBuildFile; fileRef = 2285D15B2BCBFFC300F0D8A6 /* SampleWebP.webp */; };
 		22969ABC2BBE7B0400D8FC26 /* BishojoSanpoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22969ABB2BBE7B0400D8FC26 /* BishojoSanpoApp.swift */; };
 		22969ABE2BBE7B0400D8FC26 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22969ABD2BBE7B0400D8FC26 /* HomeView.swift */; };
 		22969AC02BBE7B0500D8FC26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22969ABF2BBE7B0500D8FC26 /* Assets.xcassets */; };
@@ -34,6 +38,9 @@
 		2285D1422BCA0ACF00F0D8A6 /* NavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRouter.swift; sourceTree = "<group>"; };
 		2285D1442BCAB76E00F0D8A6 /* SelectGoalViewSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SelectGoalViewSample.swift; path = BishojoSanpo/SelectGoalViewSample.swift; sourceTree = SOURCE_ROOT; };
 		2285D14A2BCACD0E00F0D8A6 /* GoalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalViewModel.swift; sourceTree = "<group>"; };
+		2285D1542BCBFD8900F0D8A6 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		2285D1562BCBFE2000F0D8A6 /* WebPImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPImageView.swift; sourceTree = "<group>"; };
+		2285D15B2BCBFFC300F0D8A6 /* SampleWebP.webp */ = {isa = PBXFileReference; lastKnownFileType = file; name = SampleWebP.webp; path = ../../../../../../../../../Downloads/SampleWebP.webp; sourceTree = "<group>"; };
 		22969AB82BBE7B0400D8FC26 /* BishojoSanpo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BishojoSanpo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22969ABB2BBE7B0400D8FC26 /* BishojoSanpoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BishojoSanpoApp.swift; sourceTree = "<group>"; };
 		22969ABD2BBE7B0400D8FC26 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -53,6 +60,7 @@
 				22986D2E2BC4FCD70018DCFC /* GoogleMaps in Frameworks */,
 				22986D322BC4FCD70018DCFC /* GoogleMapsCore in Frameworks */,
 				22986D342BC4FCD70018DCFC /* GoogleMapsM4B in Frameworks */,
+				2285D1502BCBFB6A00F0D8A6 /* SDWebImageWebPCoder in Frameworks */,
 				22986D302BC4FCD70018DCFC /* GoogleMapsBase in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -63,6 +71,7 @@
 		2214DE562BBEB065000E883F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2285D1592BCBFF3000F0D8A6 /* WebPImage */,
 				2214DE582BBEB0CA000E883F /* Sounds */,
 			);
 			path = Resources;
@@ -137,6 +146,47 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		2285D1532BCBFD5F00F0D8A6 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				2285D1542BCBFD8900F0D8A6 /* ImageLoader.swift */,
+				2285D1562BCBFE2000F0D8A6 /* WebPImageView.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		2285D1582BCBFF0300F0D8A6 /* SelectGoal */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SelectGoal;
+			sourceTree = "<group>";
+		};
+		2285D1592BCBFF3000F0D8A6 /* WebPImage */ = {
+			isa = PBXGroup;
+			children = (
+				2285D15D2BCC001500F0D8A6 /* Map */,
+				2285D15B2BCBFFC300F0D8A6 /* SampleWebP.webp */,
+				2285D15A2BCBFF9A00F0D8A6 /* Common */,
+				2285D1582BCBFF0300F0D8A6 /* SelectGoal */,
+			);
+			path = WebPImage;
+			sourceTree = "<group>";
+		};
+		2285D15A2BCBFF9A00F0D8A6 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		2285D15D2BCC001500F0D8A6 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
 		22969AAF2BBE7B0400D8FC26 = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +206,7 @@
 		22969ABA2BBE7B0400D8FC26 /* BishojoSanpo */ = {
 			isa = PBXGroup;
 			children = (
+				2285D1532BCBFD5F00F0D8A6 /* Utility */,
 				2285D1492BCACCFC00F0D8A6 /* ViewModels */,
 				22986D382BC4FF610018DCFC /* Models */,
 				2214DE592BBEB0DA000E883F /* Features */,
@@ -206,6 +257,7 @@
 				22986D2F2BC4FCD70018DCFC /* GoogleMapsBase */,
 				22986D312BC4FCD70018DCFC /* GoogleMapsCore */,
 				22986D332BC4FCD70018DCFC /* GoogleMapsM4B */,
+				2285D14F2BCBFB6A00F0D8A6 /* SDWebImageWebPCoder */,
 			);
 			productName = BishojoSanpo;
 			productReference = 22969AB82BBE7B0400D8FC26 /* BishojoSanpo.app */;
@@ -237,6 +289,7 @@
 			mainGroup = 22969AAF2BBE7B0400D8FC26;
 			packageReferences = (
 				22986D2C2BC4FCD70018DCFC /* XCRemoteSwiftPackageReference "ios-maps-sdk" */,
+				2285D14E2BCBFB6A00F0D8A6 /* XCRemoteSwiftPackageReference "SDWebImageWebPCoder" */,
 			);
 			productRefGroup = 22969AB92BBE7B0400D8FC26 /* Products */;
 			projectDirPath = "";
@@ -254,6 +307,7 @@
 			files = (
 				22969AC32BBE7B0500D8FC26 /* Preview Assets.xcassets in Resources */,
 				22969AC02BBE7B0500D8FC26 /* Assets.xcassets in Resources */,
+				2285D15C2BCBFFC300F0D8A6 /* SampleWebP.webp in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,8 +328,10 @@
 				2285D1452BCAB76E00F0D8A6 /* SelectGoalViewSample.swift in Sources */,
 				2285D13B2BC76A9000F0D8A6 /* Constants.swift in Sources */,
 				22986D3D2BC500A50018DCFC /* MapViewController.swift in Sources */,
+				2285D1572BCBFE2000F0D8A6 /* WebPImageView.swift in Sources */,
 				22969ABC2BBE7B0400D8FC26 /* BishojoSanpoApp.swift in Sources */,
 				2285D1432BCA0ACF00F0D8A6 /* NavigationRouter.swift in Sources */,
+				2285D1552BCBFD8900F0D8A6 /* ImageLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,6 +539,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		2285D14E2BCBFB6A00F0D8A6 /* XCRemoteSwiftPackageReference "SDWebImageWebPCoder" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageWebPCoder?tab=readme-ov-file";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.14.5;
+			};
+		};
 		22986D2C2BC4FCD70018DCFC /* XCRemoteSwiftPackageReference "ios-maps-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/googlemaps/ios-maps-sdk";
@@ -494,6 +558,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		2285D14F2BCBFB6A00F0D8A6 /* SDWebImageWebPCoder */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2285D14E2BCBFB6A00F0D8A6 /* XCRemoteSwiftPackageReference "SDWebImageWebPCoder" */;
+			productName = SDWebImageWebPCoder;
+		};
 		22986D2D2BC4FCD70018DCFC /* GoogleMaps */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 22986D2C2BC4FCD70018DCFC /* XCRemoteSwiftPackageReference "ios-maps-sdk" */;
