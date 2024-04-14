@@ -8,6 +8,7 @@ import SwiftUI
 
 struct HomeView: View {
     @StateObject private var router = NavigationRouter()
+    @StateObject var goalViewModel = GoalViewModel()
     var body: some View {
         NavigationStack(path: $router.items){
             VStack {
@@ -41,6 +42,7 @@ struct HomeView: View {
             }
         }
         .environmentObject(router)
+        .environmentObject(goalViewModel)
         
     }
 }
