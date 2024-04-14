@@ -5,25 +5,24 @@
 //  Created by 伊藤まどか on 2024/04/13.
 //
 
-// 遷移周りを定義するためにSelectGoalView.swift
 
 import SwiftUI
 
 struct SelectGoalViewSample: View {
     // --- 以下の一行を追加 ---
     @EnvironmentObject var router: NavigationRouter
+    @EnvironmentObject var goalViewModel: GoalViewModel
     // ----------------------
     var body: some View {
         VStack{
             // デバッグ用ボタン
             Button(action: {
-                router.items.append(.map) // ページ遷移
-                
+                getDestinationAndNavigate()
             }, label: {
                 Text("APIを叩いてMapViewへ")
             })
             Button(action: {
-                router.items.removeLast(router.items.count) // ページ遷移
+                router.items.removeLast(router.items.count) // Homeへ
                 
             }, label: {
                 Text("Home")
@@ -31,6 +30,13 @@ struct SelectGoalViewSample: View {
             
         }
         .navigationBarBackButtonHidden(true)
+    }
+    func getDestinationAndNavigate(){
+        goalViewModel.selectedCategory = "サウナ"// 選択されたカテゴリをこの変数に入れる
+        goalViewModel.selectedDistance = "far" // カテゴリと同様
+        // ここにAPIを叩く関数を置く
+        goalViewModel.aa()
+        router.items.append(.map) //Map画面へ遷移
     }
     
 }

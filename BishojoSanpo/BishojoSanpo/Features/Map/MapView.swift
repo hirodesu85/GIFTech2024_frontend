@@ -12,6 +12,7 @@ import SwiftUI
 
 struct MapView: View {
     @EnvironmentObject var router: NavigationRouter
+    @EnvironmentObject var goalViewModel: GoalViewModel
     let destination = City(name: "Tokyo", coordinate: CLLocationCoordinate2D(latitude: 35.6684411, longitude: 139.6004407))
     
     /// State for markers displayed on the map for each city in `cities`
@@ -38,6 +39,7 @@ struct MapView: View {
                         Spacer()
                     }
                     Button(action: {
+                        print(goalViewModel.selectedCategory)
                         router.items.append(.itemDrop)
                     }, label: {
                         Text("到着")
