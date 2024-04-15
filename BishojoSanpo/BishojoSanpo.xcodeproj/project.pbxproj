@@ -29,6 +29,7 @@
 		22986D3D2BC500A50018DCFC /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22986D3C2BC500A50018DCFC /* MapViewController.swift */; };
 		22986D412BC5010D0018DCFC /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22986D402BC5010D0018DCFC /* MapView.swift */; };
 		22986D432BC5016B0018DCFC /* MapViewControllerBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22986D422BC5016B0018DCFC /* MapViewControllerBridge.swift */; };
+		4515603B2BCD4257006C8EAA /* SelectGoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4515603A2BCD4257006C8EAA /* SelectGoalView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		22986D3C2BC500A50018DCFC /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		22986D402BC5010D0018DCFC /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		22986D422BC5016B0018DCFC /* MapViewControllerBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewControllerBridge.swift; sourceTree = "<group>"; };
+		4515603A2BCD4257006C8EAA /* SelectGoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SelectGoalView.swift; path = BishojoSanpo/Features/SelectedGoal/SelectGoalView.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				2285D1442BCAB76E00F0D8A6 /* SelectGoalViewSample.swift */,
+				4515603A2BCD4257006C8EAA /* SelectGoalView.swift */,
 			);
 			path = SelectGoal;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 				22969ABC2BBE7B0400D8FC26 /* BishojoSanpoApp.swift in Sources */,
 				2285D1432BCA0ACF00F0D8A6 /* NavigationRouter.swift in Sources */,
 				2285D1552BCBFD8900F0D8A6 /* ImageLoader.swift in Sources */,
+				4515603B2BCD4257006C8EAA /* SelectGoalView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
