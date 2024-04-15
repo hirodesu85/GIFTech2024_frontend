@@ -9,10 +9,7 @@ import SwiftUI
 
 struct HeaderView: View {
     var body: some View {
-        Text("ここはヘッダー")
-            .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: 50)
-            .background(Color.cyan)
-            .foregroundStyle(.white)
+        WebPImageView(imageName: "Header.webp")
     }
 }
 
