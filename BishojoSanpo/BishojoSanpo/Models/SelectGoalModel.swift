@@ -7,15 +7,15 @@
 
 import SwiftUI
 
-class GoalViewModel: ObservableObject{
-    @Published var currentLatitude: Double = 0.0
-    @Published var currentLongitude: Double = 0.0
-    @Published var selectedCategory: String = ""
-    @Published var selectedDistance: String = ""
-    @Published var placeId: String = ""
-    @Published var latitude: Double = 0.0
-    @Published var longitude: Double = 0.0
-    @Published var errorMessage: String?
+class SelectGoalModel: ObservableObject{
+    var currentLatitude: Double = 0.0
+    var currentLongitude: Double = 0.0
+    var selectedCategory: String = ""
+    var selectedDistance: String = ""
+    var placeId: String = ""
+    var latitude: Double = 0.0
+    var longitude: Double = 0.0
+    var errorMessage: String?
     
     func fetchSuggestedPlace() async {
         let urlString = "\(Constants.backendApiHost)/api/places/suggest?category=\(selectedCategory)&distance=\(selectedDistance)&lat=\(currentLatitude)&lng=\(currentLongitude)"
