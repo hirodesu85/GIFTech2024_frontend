@@ -30,6 +30,9 @@
 		22986D412BC5010D0018DCFC /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22986D402BC5010D0018DCFC /* MapView.swift */; };
 		22986D432BC5016B0018DCFC /* MapViewControllerBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22986D422BC5016B0018DCFC /* MapViewControllerBridge.swift */; };
 		4515603B2BCD4257006C8EAA /* SelectGoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4515603A2BCD4257006C8EAA /* SelectGoalView.swift */; };
+		4515603D2BCD4460006C8EAA /* GirlChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4515603C2BCD4460006C8EAA /* GirlChatView.swift */; };
+		4515603F2BCD44A2006C8EAA /* MyChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4515603E2BCD44A2006C8EAA /* MyChatView.swift */; };
+		451560412BCD44C6006C8EAA /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451560402BCD44C6006C8EAA /* HeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +55,9 @@
 		22986D402BC5010D0018DCFC /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		22986D422BC5016B0018DCFC /* MapViewControllerBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewControllerBridge.swift; sourceTree = "<group>"; };
 		4515603A2BCD4257006C8EAA /* SelectGoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SelectGoalView.swift; path = BishojoSanpo/Features/SelectedGoal/SelectGoalView.swift; sourceTree = SOURCE_ROOT; };
+		4515603C2BCD4460006C8EAA /* GirlChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GirlChatView.swift; path = BishojoSanpo/Features/SelectedGoal/GirlChatView.swift; sourceTree = SOURCE_ROOT; };
+		4515603E2BCD44A2006C8EAA /* MyChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyChatView.swift; path = BishojoSanpo/Features/SelectedGoal/MyChatView.swift; sourceTree = SOURCE_ROOT; };
+		451560402BCD44C6006C8EAA /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HeaderView.swift; path = BishojoSanpo/Features/SelectedGoal/HeaderView.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +127,9 @@
 			children = (
 				2285D1442BCAB76E00F0D8A6 /* SelectGoalViewSample.swift */,
 				4515603A2BCD4257006C8EAA /* SelectGoalView.swift */,
+				4515603C2BCD4460006C8EAA /* GirlChatView.swift */,
+				4515603E2BCD44A2006C8EAA /* MyChatView.swift */,
+				451560402BCD44C6006C8EAA /* HeaderView.swift */,
 			);
 			path = SelectGoal;
 			sourceTree = "<group>";
@@ -330,17 +339,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				22986D412BC5010D0018DCFC /* MapView.swift in Sources */,
+				451560412BCD44C6006C8EAA /* HeaderView.swift in Sources */,
 				22986D432BC5016B0018DCFC /* MapViewControllerBridge.swift in Sources */,
 				22969ABE2BBE7B0400D8FC26 /* HomeView.swift in Sources */,
 				22986D3B2BC4FF930018DCFC /* City.swift in Sources */,
 				2285D1412BCA024600F0D8A6 /* ItemListView.swift in Sources */,
 				2285D14B2BCACD0E00F0D8A6 /* GoalViewModel.swift in Sources */,
+				4515603D2BCD4460006C8EAA /* GirlChatView.swift in Sources */,
 				2285D13F2BCA022C00F0D8A6 /* ItemDropView.swift in Sources */,
 				2285D1452BCAB76E00F0D8A6 /* SelectGoalViewSample.swift in Sources */,
 				2285D13B2BC76A9000F0D8A6 /* Constants.swift in Sources */,
 				22986D3D2BC500A50018DCFC /* MapViewController.swift in Sources */,
 				2285D1572BCBFE2000F0D8A6 /* WebPImageView.swift in Sources */,
 				22969ABC2BBE7B0400D8FC26 /* BishojoSanpoApp.swift in Sources */,
+				4515603F2BCD44A2006C8EAA /* MyChatView.swift in Sources */,
 				2285D1432BCA0ACF00F0D8A6 /* NavigationRouter.swift in Sources */,
 				2285D1552BCBFD8900F0D8A6 /* ImageLoader.swift in Sources */,
 				4515603B2BCD4257006C8EAA /* SelectGoalView.swift in Sources */,
