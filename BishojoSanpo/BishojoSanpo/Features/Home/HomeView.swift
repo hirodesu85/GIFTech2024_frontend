@@ -8,7 +8,7 @@ import SwiftUI
 
 struct HomeView: View {
     @StateObject private var router = NavigationRouter()
-    @StateObject var goalViewModel = SelectGoalModel()
+    @StateObject var selectGoalModel = SelectGoalModel()
     var body: some View {
         NavigationStack(path: $router.items){
             VStack {
