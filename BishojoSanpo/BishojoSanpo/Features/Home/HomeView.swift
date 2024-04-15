@@ -8,7 +8,7 @@ import SwiftUI
 
 struct HomeView: View {
     @StateObject private var router = NavigationRouter()
-    @StateObject var goalViewModel = GoalViewModel()
+    @StateObject var goalViewModel = SelectGoalModel()
     var body: some View {
         NavigationStack(path: $router.items){
             VStack {
@@ -32,8 +32,8 @@ struct HomeView: View {
                 switch item{
                 case .selectGoal:
                     SelectGoalViewSample()
-                case .map:
-                    MapView()
+                case .map(let goalData):
+                    MapView(goalData: goalData)
                 case .itemDrop:
                     ItemDropView()
                 case .itemList:

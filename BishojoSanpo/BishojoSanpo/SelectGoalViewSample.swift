@@ -11,7 +11,8 @@ import SwiftUI
 struct SelectGoalViewSample: View {
     // --- 以下の一行を追加 ---
     @EnvironmentObject var router: NavigationRouter
-    @EnvironmentObject var goalViewModel: GoalViewModel
+    var goalViewModel: SelectGoalModel = SelectGoalModel()
+    @State var sendToMapData: GoalData = GoalData()
     // ----------------------
     var body: some View {
         VStack{
@@ -22,26 +23,25 @@ struct SelectGoalViewSample: View {
                 Text("APIを叩いてMapViewへ")
             })
             Button(action: {
-                router.items.removeLast(router.items.count) // Homeへ
+                router.returnToHome() // 変更点
                 
             }, label: {
                 Text("Home")
             })
-            
         }
         .navigationBarBackButtonHidden(true)
     }
-    func getDestinationAndNavigate(){
+    private func getDestinationAndNavigate() {
+        // ここでSelectGoalModelのプロパティが設定されます。
         goalViewModel.selectedCategory = "サウナ"// 選択されたカテゴリをこの変数に入れる
-        goalViewModel.selectedDistance = "far" // カテゴリと同様
+                goalViewModel.selectedDistance = "far" // カテゴリと同様
         Task {
-            await goalViewModel.fetchSuggestedPlace()
-            print("errorMessage: \(String(describing: goalViewModel.errorMessage))")
-            print("placeId: \(goalViewModel.placeId)")
-            print("latitude: \(goalViewModel.latitude)")
-            print("longitude: \(goalViewModel.longitude)")
+            await goalViewModel.fetchSuggestedPlace()  // API呼び出しと内部状態の更新
+            // GoalDataにSelectGoalModelのデータを反映
+            sendToMapData.update(from: goalViewModel)
+            // 更新されたGoalDataを持ってナビゲーション
+            router.navigateToMap(with: sendToMapData)
         }
-        router.items.append(.map) //Map画面へ遷移
     }
     
 }
