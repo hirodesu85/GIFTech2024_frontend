@@ -33,12 +33,12 @@ struct SelectGoalViewSample: View {
     }
     private func getDestinationAndNavigate() {
         // ここでSelectGoalModelのプロパティが設定されます。
-        goalViewModel.selectedCategory = "サウナ"// 選択されたカテゴリをこの変数に入れる
-                goalViewModel.selectedDistance = "far" // カテゴリと同様
+        selectGoalModel.selectedCategory = "サウナ"// 選択されたカテゴリをこの変数に入れる
+                selectGoalModel.selectedDistance = "far" // カテゴリと同様
         Task {
-            await goalViewModel.fetchSuggestedPlace()  // API呼び出しと内部状態の更新
+            await selectGoalModel.fetchSuggestedPlace()  // API呼び出しと内部状態の更新
             // GoalDataにSelectGoalModelのデータを反映
-            sendToMapData.update(from: goalViewModel)
+            sendToMapData.update(from: selectGoalModel)
             // 更新されたGoalDataを持ってナビゲーション
             router.navigateToMap(with: sendToMapData)
         }

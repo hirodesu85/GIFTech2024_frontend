@@ -42,7 +42,6 @@ struct HomeView: View {
             }
         }
         .environmentObject(router)
-        .environmentObject(goalViewModel)
         
     }
 }
