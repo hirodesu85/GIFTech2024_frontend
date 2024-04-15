@@ -11,7 +11,7 @@ import SwiftUI
 struct SelectGoalViewSample: View {
     // --- 以下の一行を追加 ---
     @EnvironmentObject var router: NavigationRouter
-    var goalViewModel: SelectGoalModel = SelectGoalModel()
+    var selectGoalModel: SelectGoalModel = SelectGoalModel()
     @State var sendToMapData: GoalData = GoalData()
     // ----------------------
     var body: some View {
