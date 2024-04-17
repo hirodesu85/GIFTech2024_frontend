@@ -12,18 +12,19 @@ import SwiftUI
 
 struct MapView: View {
     @EnvironmentObject var router: NavigationRouter
+    var locationManager: LocationManager
     let goalData: GoalData
-    let destination = City(name: "Tokyo", coordinate: CLLocationCoordinate2D(latitude: 35.6684411, longitude: 139.6004407))
+    @State var polyline: GMSPolyline?
     
-    /// State for markers displayed on the map for each city in `cities`
-    @State var destinationMarker: GMSMarker
     @State var zoomInCenter: Bool = false
+    let directionModel = DirectionModel()
+    @ObservedObject var markerManager: MarkerManager
     
-    init(goalData: GoalData) {
+    init(locationManager: LocationManager, goalData: GoalData) {
+        self.locationManager = locationManager
         self.goalData = goalData
-        print(goalData.placeId)
-        self.destinationMarker = GMSMarker(position: destination.coordinate)
-        destinationMarker.title = destination.name
+        self.markerManager = MarkerManager(coordinate: CLLocationCoordinate2D(latitude: goalData.latitude, longitude: goalData.longtitude))
+        
     }
     
     var body: some View {
@@ -33,11 +34,10 @@ struct MapView: View {
         GeometryReader { geometry in
             ZStack{
                 VStack{
-                    Text(goalData.placeId)
                     Spacer()
                     HStack{
                         Spacer()
-                        MapContainerView(zoomInCenter: $zoomInCenter, marker: $destinationMarker)
+                        MapContainerView(polyline: $polyline, zoomInCenter: $zoomInCenter, marker: $markerManager.destinationMarker)
                             .frame(width: geometry.size.width * 0.9, height: geometry.size.height * 0.9, alignment: .center)
                         Spacer()
                     }
@@ -51,28 +51,60 @@ struct MapView: View {
                 
             }
         }
+        .onAppear{
+            loadDirection()
+        }
         .navigationBarBackButtonHidden(true)
+        
+    }
+    func loadDirection() {
+        let destination = "place_id:\(goalData.placeId)"
+        let startLocation = "\(goalData.latitude),\(goalData.longtitude)"
+        
+        // 前述した同期関数を使用してDirectionを取得
+        DispatchQueue.global(qos: .userInitiated).async {
+            let directionResult = directionModel.getDirection(destination: destination, start: startLocation)
+            if let directionResult = directionResult {
+                DispatchQueue.main.async {
+                    self.polyline = directionModel.createPolyline(from: directionResult)
+                }
+            } else {
+                // directionResult が nil の場合のエラーハンドリング
+                print("DirectionAPI失敗")
+            }
+
+        }
     }
 }
 
 
 struct MapContainerView: View {
     
+    @Binding var polyline: GMSPolyline?
     @Binding var zoomInCenter: Bool
     @Binding var marker: GMSMarker
     
     var body: some View {
         GeometryReader { geometry in
             let diameter = zoomInCenter ? geometry.size.width : (geometry.size.height * 2)
-            MapViewControllerBridge(marker: $marker,onAnimationEnded: {
-                      self.zoomInCenter = true
+            MapViewControllerBridge(polyline: $polyline, marker: $marker,onAnimationEnded: {
+                self.zoomInCenter = true
             })
-                
+            
         }
     }
 }
 
 #Preview{
     let goalData = GoalData(placeId: "", latitude: 22, longtitude: 11, selectedDistance: "")
-    return MapView(goalData: goalData)
+    let locationManager = LocationManager()
+    return MapView(locationManager: locationManager, goalData: goalData)
+}
+
+class MarkerManager: ObservableObject {
+    @Published var destinationMarker: GMSMarker
+    
+    init(coordinate: CLLocationCoordinate2D) {
+        self.destinationMarker = GMSMarker(position: coordinate)
+    }
 }

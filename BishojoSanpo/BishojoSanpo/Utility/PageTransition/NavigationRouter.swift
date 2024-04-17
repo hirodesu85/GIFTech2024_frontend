@@ -30,7 +30,7 @@ struct GoalData: Hashable {
     var latitude: Double = 0
     var longtitude: Double = 0
     var selectedDistance: String = ""
-
+    
     mutating func update(from viewModel: SelectGoalModel) {
         placeId = viewModel.placeId
         latitude = viewModel.latitude

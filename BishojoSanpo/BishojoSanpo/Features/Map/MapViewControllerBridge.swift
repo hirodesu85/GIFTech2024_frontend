@@ -10,8 +10,16 @@ import GoogleMaps
 import SwiftUI
 
 struct MapViewControllerBridge: UIViewControllerRepresentable {
+    @Binding var polyline:  GMSPolyline?
     @Binding var marker: GMSMarker
+    
+    
     var onAnimationEnded: () -> ()
+    let directionModel = DirectionModel()
+    
+    
+    // アニメーションが完了したかどうかを追跡する状態
+    @State private var isAnimationCompleted = false
     
     func makeUIViewController(context: Context) -> MapViewController {
         // Replace this line
@@ -22,7 +30,15 @@ struct MapViewControllerBridge: UIViewControllerRepresentable {
     
     func updateUIViewController(_ uiViewController: MapViewController, context: Context) {
         marker.map = uiViewController.map
-        animateToSelectedMarker(viewController: uiViewController)
+        // アニメーションが未完了の場合のみアニメーションを実行
+        if !isAnimationCompleted {
+            animateToSelectedMarker(viewController: uiViewController)
+            
+        }
+        if polyline?.map != nil, let polyline = polyline {
+                polyline.map = uiViewController.map
+            print("a")
+            }
     }
     private func animateToSelectedMarker(viewController: MapViewController) {
         let map = viewController.map
@@ -35,6 +51,7 @@ struct MapViewControllerBridge: UIViewControllerRepresentable {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
                         map.animate(toZoom: 12)
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
+                            self.isAnimationCompleted = true
                             // Invoke onAnimationEnded() once the animation sequence completes
                             onAnimationEnded()
                         })
