@@ -10,18 +10,16 @@ import SwiftUI
 struct GirlChatView: View {
     let girlText :String
     var body: some View {
-        HStack {
-            Image("SampleIcon")
-                .resizable()
-                .frame(width: 60, height: 60)
-                .padding()
+        HStack(spacing: 0) {
+            WebPImageView(imageName: "GirlIcon.webp")
+                .frame(width: 100, height: 100)
+                .padding(10)
             ZStack {
-                Image("GirlChat")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width:150, height: 60)
+                WebPImageView(imageName: "ChatNormalLeft.webp")
                 Text(girlText)
+                    .padding(.bottom, 25)
             }
+            .padding(.bottom, 100)
             Spacer()
         }
     }

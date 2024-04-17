@@ -15,29 +15,38 @@ struct MyChatView: View {
     
     var body: some View {
         HStack {
-            Spacer()
             ZStack {
-                Image("UserChat")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width:170, height:170)
+                WebPImageView(imageName: "SelectChat.webp")
                 
                 VStack {
                     ForEach(0..<options.count, id: \.self) { index in
-                        Button(action: {
-                            self.selectedOption = index
-                            self.isSelected = true
-                        }) {
-                            Text(options[index])
-                                .foregroundColor(self.selectedOption == index ? .white : .black)
-                                .padding(8)
-                                .background(self.selectedOption == index ? Color.cyan : Color.clear)
+                        if isSelected {
+                            Button(action: {
+                            }) {
+                                if self.selectedOption == index {
+                                    WebPImageView(imageName: "NoSelectedButton.webp")
+                                        .padding(.horizontal, 20)
+                                } else {
+                                    WebPImageView(imageName: "NoSelectedButton.webp")
+                                        .padding(.horizontal, 20)
+                                }
+                            }
+                            .disabled(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
+                        } else {
+                            Button(action: {
+                                self.selectedOption = index
+                                self.isSelected = true
+                            }) {
+                                WebPImageView(imageName: "WaitingButton.webp")
+                                    .padding(.horizontal, 20)
+                            }
                         }
-                        .disabled(isSelected)
                     }
                 }
+                .padding(.bottom, 35)
             }
-            .padding()
+            .padding(.leading, 119)
+            Spacer()
         }
     }
 }

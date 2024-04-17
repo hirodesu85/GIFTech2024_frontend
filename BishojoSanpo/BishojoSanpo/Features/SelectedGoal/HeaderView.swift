@@ -9,7 +9,9 @@ import SwiftUI
 
 struct HeaderView: View {
     var body: some View {
-        WebPImageView(imageName: "Header.webp")
+        WebPImageView(imageName: "SelectedButton.webp")
+            .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/)
+            .edgesIgnoringSafeArea(.all)
     }
 }
 
