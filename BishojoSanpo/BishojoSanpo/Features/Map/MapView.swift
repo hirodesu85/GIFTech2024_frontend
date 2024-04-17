@@ -12,14 +12,16 @@ import SwiftUI
 
 struct MapView: View {
     @EnvironmentObject var router: NavigationRouter
-    @EnvironmentObject var goalViewModel: GoalViewModel
+    let goalData: GoalData
     let destination = City(name: "Tokyo", coordinate: CLLocationCoordinate2D(latitude: 35.6684411, longitude: 139.6004407))
     
     /// State for markers displayed on the map for each city in `cities`
     @State var destinationMarker: GMSMarker
     @State var zoomInCenter: Bool = false
     
-    init() {
+    init(goalData: GoalData) {
+        self.goalData = goalData
+        print(goalData.placeId)
         self.destinationMarker = GMSMarker(position: destination.coordinate)
         destinationMarker.title = destination.name
     }
@@ -31,6 +33,7 @@ struct MapView: View {
         GeometryReader { geometry in
             ZStack{
                 VStack{
+                    Text(goalData.placeId)
                     Spacer()
                     HStack{
                         Spacer()
@@ -39,7 +42,6 @@ struct MapView: View {
                         Spacer()
                     }
                     Button(action: {
-                        print(goalViewModel.selectedCategory)
                         router.items.append(.itemDrop)
                     }, label: {
                         Text("到着")
@@ -71,5 +73,6 @@ struct MapContainerView: View {
 }
 
 #Preview{
-    return MapView()
+    let goalData = GoalData(placeId: "", latitude: 22, longtitude: 11, selectedDistance: "")
+    return MapView(goalData: goalData)
 }
