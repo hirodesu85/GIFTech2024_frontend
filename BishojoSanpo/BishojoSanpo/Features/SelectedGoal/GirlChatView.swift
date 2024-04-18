@@ -19,9 +19,10 @@ struct GirlChatView: View {
                 Text(girlText)
                     .padding(.bottom, 25)
             }
-            .padding(.bottom, 100)
+            .offset(x: 0, y: -40)
             Spacer()
         }
+        .padding(.top, 50)
     }
 }
 

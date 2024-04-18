@@ -24,10 +24,10 @@ struct MyChatView: View {
                             Button(action: {
                             }) {
                                 if self.selectedOption == index {
-                                    WebPImageView(imageName: "NoSelectedButton.webp")
+                                    WebPImageView(imageName: "SelectedButton.webp")
                                         .padding(.horizontal, 20)
                                 } else {
-                                    WebPImageView(imageName: "NoSelectedButton.webp")
+                                    WebPImageView(imageName: "NewNotSelectedButton.webp")
                                         .padding(.horizontal, 20)
                                 }
                             }
@@ -46,6 +46,7 @@ struct MyChatView: View {
                 .padding(.bottom, 35)
             }
             .padding(.leading, 119)
+            .padding(.bottom, 30)
             Spacer()
         }
     }

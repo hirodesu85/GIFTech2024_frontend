@@ -33,6 +33,8 @@
 		4515603D2BCD4460006C8EAA /* GirlChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4515603C2BCD4460006C8EAA /* GirlChatView.swift */; };
 		4515603F2BCD44A2006C8EAA /* MyChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4515603E2BCD44A2006C8EAA /* MyChatView.swift */; };
 		451560412BCD44C6006C8EAA /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451560402BCD44C6006C8EAA /* HeaderView.swift */; };
+		45904E462BD0AD6F007F304A /* NewNotSelectedButton.webp in Resources */ = {isa = PBXBuildFile; fileRef = 45904E452BD0AD6F007F304A /* NewNotSelectedButton.webp */; };
+		45904E482BD0AD7C007F304A /* NewHeader.webp in Resources */ = {isa = PBXBuildFile; fileRef = 45904E472BD0AD7C007F304A /* NewHeader.webp */; };
 		45C38DA72BCD87A1004440A6 /* WaitingButton.webp in Resources */ = {isa = PBXBuildFile; fileRef = 45C38DA62BCD87A1004440A6 /* WaitingButton.webp */; };
 		45C38DA92BCD8837004440A6 /* SelectedButton.webp in Resources */ = {isa = PBXBuildFile; fileRef = 45C38DA82BCD8837004440A6 /* SelectedButton.webp */; };
 		45C38DAB2BCD8848004440A6 /* SelectChat.webp in Resources */ = {isa = PBXBuildFile; fileRef = 45C38DAA2BCD8848004440A6 /* SelectChat.webp */; };
@@ -68,6 +70,8 @@
 		4515603C2BCD4460006C8EAA /* GirlChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GirlChatView.swift; path = BishojoSanpo/Features/SelectedGoal/GirlChatView.swift; sourceTree = SOURCE_ROOT; };
 		4515603E2BCD44A2006C8EAA /* MyChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyChatView.swift; path = BishojoSanpo/Features/SelectedGoal/MyChatView.swift; sourceTree = SOURCE_ROOT; };
 		451560402BCD44C6006C8EAA /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HeaderView.swift; path = BishojoSanpo/Features/SelectedGoal/HeaderView.swift; sourceTree = SOURCE_ROOT; };
+		45904E452BD0AD6F007F304A /* NewNotSelectedButton.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = NewNotSelectedButton.webp; sourceTree = "<group>"; };
+		45904E472BD0AD7C007F304A /* NewHeader.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = NewHeader.webp; sourceTree = "<group>"; };
 		45C38DA62BCD87A1004440A6 /* WaitingButton.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = WaitingButton.webp; sourceTree = "<group>"; };
 		45C38DA82BCD8837004440A6 /* SelectedButton.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = SelectedButton.webp; sourceTree = "<group>"; };
 		45C38DAA2BCD8848004440A6 /* SelectChat.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = SelectChat.webp; sourceTree = "<group>"; };
@@ -182,6 +186,8 @@
 		2285D1582BCBFF0300F0D8A6 /* SelectGoal */ = {
 			isa = PBXGroup;
 			children = (
+				45904E472BD0AD7C007F304A /* NewHeader.webp */,
+				45904E452BD0AD6F007F304A /* NewNotSelectedButton.webp */,
 				45C38DB12BCD885B004440A6 /* Background.webp */,
 				45C38DAE2BCD885A004440A6 /* ChatNormalLeft.webp */,
 				45C38DAD2BCD885A004440A6 /* ChatNormalRight.webp */,
@@ -359,11 +365,13 @@
 				45C38DB32BCD885B004440A6 /* Header.webp in Resources */,
 				45C38DB52BCD885B004440A6 /* ChatNormalLeft.webp in Resources */,
 				45C38DB82BCD885B004440A6 /* Background.webp in Resources */,
+				45904E482BD0AD7C007F304A /* NewHeader.webp in Resources */,
 				45C38DAB2BCD8848004440A6 /* SelectChat.webp in Resources */,
 				45C38DB72BCD885B004440A6 /* NoSelectedButton.webp in Resources */,
 				22969AC32BBE7B0500D8FC26 /* Preview Assets.xcassets in Resources */,
 				45C38DA72BCD87A1004440A6 /* WaitingButton.webp in Resources */,
 				45C38DB92BCD885B004440A6 /* GirlIcon.webp in Resources */,
+				45904E462BD0AD6F007F304A /* NewNotSelectedButton.webp in Resources */,
 				22969AC02BBE7B0500D8FC26 /* Assets.xcassets in Resources */,
 				2285D1622BCCD64700F0D8A6 /* SampleWebP.webp in Resources */,
 				45C38DB62BCD885B004440A6 /* HomeButton.webp in Resources */,
