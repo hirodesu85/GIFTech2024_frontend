@@ -23,25 +23,32 @@ struct SelectGoalView: View {
                 .edgesIgnoringSafeArea(.all)
 
             ZStack(alignment: .top) {
-                ScrollView {
-                    VStack {
-                        Color.clear
-                            .frame(width: .infinity, height: 80)
-                        
-                        GirlChatView(girlText: "どこに行く？")
-                        MyChatView(isSelected: $isSelectedCategory,
-                                   selectedOption: $selectedCategory,
-                                   options: categoryOptions)
-                        if isSelectedCategory {
-                            GirlChatView(girlText: "どこまで行く？")
-                            MyChatView(isSelected: $isSelectedDistance,
-                                       selectedOption: $selectedDistance,
-                                       options: distanceOptions)
+                ScrollViewReader { proxy in
+                    ScrollView {
+                        VStack {
                             Color.clear
                                 .frame(width: .infinity, height: 80)
+                            
+                            GirlChatView(girlText: "どこに行く？")
+                            MyChatView(isSelected: $isSelectedCategory,
+                                       selectedOption: $selectedCategory,
+                                       options: categoryOptions)
+                            if isSelectedCategory {
+                                GirlChatView(girlText: "どこまで行く？")
+                                MyChatView(isSelected: $isSelectedDistance,
+                                           selectedOption: $selectedDistance,
+                                           options: distanceOptions)
+                                Color.clear.id(1)
+                                    .frame(width: .infinity, height: 80)
+                            }
+                        }
+                        .frame(maxWidth: .infinity)
+                    }
+                    .onChange(of: isSelectedCategory) { _ in
+                        withAnimation {
+                            proxy.scrollTo(1)
                         }
                     }
-                    .frame(maxWidth: .infinity)
                 }
                 HeaderView()
             }
