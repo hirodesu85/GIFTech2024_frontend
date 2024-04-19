@@ -9,8 +9,28 @@ import SwiftUI
 
 struct HeaderView: View {
     var body: some View {
-        WebPImageView(imageName: "NewHeader.webp")
-            .edgesIgnoringSafeArea(.all)
+        ZStack {
+            WebPImageView(imageName: "NewHeader.webp")
+                .edgesIgnoringSafeArea(.all)
+                .shadow(color: Color(red: 0, green: 0, blue: 0.2, opacity: 0.35),
+                        radius: 10,
+                        x: 0, y: 5)
+            HStack {
+                Text("ここに名前")
+                    .padding(.leading, 10)
+                    .padding(.top, 30)
+                    .foregroundStyle(.white)
+                    .font(.system(size: 25))
+                Spacer()
+                Button(action: {
+                }) {
+                    WebPImageView(imageName: "HomeButton.webp")
+                        .frame(width: 70, height: 70)
+                        .padding(.trailing, 15)
+                }
+                
+            }
+        }
     }
 }
 
