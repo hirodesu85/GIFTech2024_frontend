@@ -7,45 +7,56 @@
 
 
 import SwiftUI
+import CoreLocation
 
 struct SelectGoalViewSample: View {
-    // --- 以下の一行を追加 ---
+
     @EnvironmentObject var router: NavigationRouter
-    var selectGoalModel: SelectGoalModel = SelectGoalModel()
     @State var sendToMapData: GoalData = GoalData()
-    // ----------------------
+    @State var hasUpdateLocation = false
+    var selectGoalModel: SelectGoalModel = SelectGoalModel()
+    var locationManager: LocationManager
+    let directionModel = DirectionModel()
+
     var body: some View {
         VStack{
-            // デバッグ用ボタン
-            Button(action: {
-                getDestinationAndNavigate()
-            }, label: {
-                Text("APIを叩いてMapViewへ")
-            })
-            Button(action: {
-                router.returnToHome() // 変更点
-                
-            }, label: {
-                Text("Home")
-            })
+            Button(action: locationManager.fetchLocation, label: {Text("APIを叩いてMapViewへ")})
+            Button(action: router.returnToHome, label: {Text("Home")})
         }
+        // --- ※ onAppear, DisAppearが必要かどうかは要検証 ---
         .navigationBarBackButtonHidden(true)
+        .onAppear {
+            locationManager.onLocationUpdate = { newLocation in
+                if !hasUpdateLocation {getDestinationAndNavigate(newLocation: newLocation)}
+            }
+        }
+        .onDisappear {
+                        locationManager.onLocationUpdate = nil
+                    }
+
     }
-    private func getDestinationAndNavigate() {
-        // ここでSelectGoalModelのプロパティが設定されます。
+    
+
+    private func getDestinationAndNavigate(newLocation: CLLocation) {
+
         selectGoalModel.selectedCategory = "サウナ"// 選択されたカテゴリをこの変数に入れる
-                selectGoalModel.selectedDistance = "far" // カテゴリと同様
+        selectGoalModel.selectedDistance = "far" // カテゴリと同様
+        
+        hasUpdateLocation = true
+        selectGoalModel.currentLatitude = newLocation.coordinate.latitude // 位置情報を更新
+        selectGoalModel.currentLongitude = newLocation.coordinate.longitude
+        
         Task {
             await selectGoalModel.fetchSuggestedPlace()  // API呼び出しと内部状態の更新
-            // GoalDataにSelectGoalModelのデータを反映
-            sendToMapData.update(from: selectGoalModel)
-            // 更新されたGoalDataを持ってナビゲーション
-            router.navigateToMap(with: sendToMapData)
+            sendToMapData.update(from: selectGoalModel) // GoalDataにSelectGoalModelのデータを反映
+            router.navigateToMap(with: sendToMapData) // 更新されたGoalDataを持ってナビゲーション
         }
     }
+
     
 }
 
 #Preview {
-    SelectGoalViewSample()
+    let locationManager = LocationManager()
+    return SelectGoalViewSample(locationManager: locationManager)
 }

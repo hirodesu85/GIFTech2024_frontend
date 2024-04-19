@@ -9,10 +9,12 @@ import SwiftUI
 
 struct ItemDropView: View {
     @EnvironmentObject var router: NavigationRouter
+    let goalData: GoalData
     var body: some View {
         VStack{
             Text("ItemDrop")
-            
+            Text("PlaceId : "+goalData.placeId)
+            Text("selectedDistance : "+goalData.selectedDistance)
             Button(action: {
                 router.items.removeLast(router.items.count)
                 
@@ -34,5 +36,6 @@ struct ItemDropView: View {
 }
 
 #Preview {
-    ItemDropView()
+    let goalData = GoalData(placeId: "", currentLatitude: 22, currentLongtitude: 11, selectedDistance: "")
+    return ItemDropView(goalData: goalData)
 }
