@@ -392,23 +392,17 @@
 				45C38DAB2BCD8848004440A6 /* SelectChat.webp in Resources */,
 				45C38DB72BCD885B004440A6 /* NoSelectedButton.webp in Resources */,
 				22969AC32BBE7B0500D8FC26 /* Preview Assets.xcassets in Resources */,
-<<<<<<< HEAD
 				45C38DA72BCD87A1004440A6 /* WaitingButton.webp in Resources */,
 				45C38DB92BCD885B004440A6 /* GirlIcon.webp in Resources */,
 				45904E462BD0AD6F007F304A /* NewNotSelectedButton.webp in Resources */,
-=======
 				2285D1772BD23C7C00F0D8A6 /* NoTextButton.webp in Resources */,
->>>>>>> 15a55a190f05ca0623cdbe1d112b8246f028a029
 				22969AC02BBE7B0500D8FC26 /* Assets.xcassets in Resources */,
 				2285D1762BD23C7C00F0D8A6 /* ArrivedButton.webp in Resources */,
 				2285D1752BD23C7C00F0D8A6 /* HeartFrame.webp in Resources */,
 				2285D1622BCCD64700F0D8A6 /* SampleWebP.webp in Resources */,
-<<<<<<< HEAD
 				45C38DB62BCD885B004440A6 /* HomeButton.webp in Resources */,
 				45C38DB42BCD885B004440A6 /* ChatNormalRight.webp in Resources */,
-=======
 				2285D1782BD23C7C00F0D8A6 /* HeartBase.webp in Resources */,
->>>>>>> 15a55a190f05ca0623cdbe1d112b8246f028a029
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
