@@ -27,15 +27,20 @@ final class NavigationRouter: ObservableObject {
 
 struct GoalData: Hashable {
     var placeId: String = ""
-    var latitude: Double = 0
-    var longtitude: Double = 0
+    var currentLatitude: Double = 0
+    var currentLongtitude: Double = 0
+    var destinationLatitude: Double = 0
+    var destinationLongtitude: Double = 0
     var selectedDistance: String = ""
     
     mutating func update(from viewModel: SelectGoalModel) {
         placeId = viewModel.placeId
-        latitude = viewModel.latitude
-        longtitude = viewModel.longitude
+        currentLatitude = viewModel.currentLatitude
+        currentLongtitude = viewModel.currentLongitude
+        destinationLatitude = viewModel.latitude
+        destinationLongtitude = viewModel.longitude
         selectedDistance = viewModel.selectedDistance
+        
     }
 }
 

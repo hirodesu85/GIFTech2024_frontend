@@ -15,6 +15,7 @@ struct MapView: View {
     var locationManager: LocationManager
     let goalData: GoalData
     @State var polyline: GMSPolyline?
+    @State var isChangedPolyline = false
     
     @State var zoomInCenter: Bool = false
     let directionModel = DirectionModel()
@@ -23,7 +24,7 @@ struct MapView: View {
     init(locationManager: LocationManager, goalData: GoalData) {
         self.locationManager = locationManager
         self.goalData = goalData
-        self.markerManager = MarkerManager(coordinate: CLLocationCoordinate2D(latitude: goalData.latitude, longitude: goalData.longtitude))
+        self.markerManager = MarkerManager(coordinate: CLLocationCoordinate2D(latitude: goalData.destinationLatitude, longitude: goalData.destinationLongtitude))
         
     }
     
@@ -37,7 +38,7 @@ struct MapView: View {
                     Spacer()
                     HStack{
                         Spacer()
-                        MapContainerView(polyline: $polyline, zoomInCenter: $zoomInCenter, marker: $markerManager.destinationMarker)
+                        MapContainerView(polyline: $polyline, zoomInCenter: $zoomInCenter, marker: $markerManager.destinationMarker, isChangedPolyline: $isChangedPolyline)
                             .frame(width: geometry.size.width * 0.9, height: geometry.size.height * 0.9, alignment: .center)
                         Spacer()
                     }
@@ -59,7 +60,7 @@ struct MapView: View {
     }
     func loadDirection() {
         let destination = "place_id:\(goalData.placeId)"
-        let startLocation = "\(goalData.latitude),\(goalData.longtitude)"
+        let startLocation = "\(goalData.currentLatitude),\(goalData.currentLongtitude)"
         
         // 前述した同期関数を使用してDirectionを取得
         DispatchQueue.global(qos: .userInitiated).async {
@@ -67,6 +68,7 @@ struct MapView: View {
             if let directionResult = directionResult {
                 DispatchQueue.main.async {
                     self.polyline = directionModel.createPolyline(from: directionResult)
+                    isChangedPolyline = true
                 }
             } else {
                 // directionResult が nil の場合のエラーハンドリング
@@ -83,22 +85,17 @@ struct MapContainerView: View {
     @Binding var polyline: GMSPolyline?
     @Binding var zoomInCenter: Bool
     @Binding var marker: GMSMarker
+    @Binding var isChangedPolyline: Bool
     
     var body: some View {
         GeometryReader { geometry in
             let diameter = zoomInCenter ? geometry.size.width : (geometry.size.height * 2)
-            MapViewControllerBridge(polyline: $polyline, marker: $marker,onAnimationEnded: {
+            MapViewControllerBridge(polyline: $polyline,marker: $marker, isChangedPolyline: $isChangedPolyline,onAnimationEnded: {
                 self.zoomInCenter = true
             })
             
         }
     }
-}
-
-#Preview{
-    let goalData = GoalData(placeId: "", latitude: 22, longtitude: 11, selectedDistance: "")
-    let locationManager = LocationManager()
-    return MapView(locationManager: locationManager, goalData: goalData)
 }
 
 class MarkerManager: ObservableObject {
@@ -108,3 +105,11 @@ class MarkerManager: ObservableObject {
         self.destinationMarker = GMSMarker(position: coordinate)
     }
 }
+
+#Preview{
+    let goalData = GoalData(placeId: "", currentLatitude: 22, currentLongtitude: 11, selectedDistance: "")
+    let locationManager = LocationManager()
+    return MapView(locationManager: locationManager, goalData: goalData)
+}
+
+

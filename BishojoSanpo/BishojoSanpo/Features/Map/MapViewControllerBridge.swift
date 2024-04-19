@@ -12,6 +12,7 @@ import SwiftUI
 struct MapViewControllerBridge: UIViewControllerRepresentable {
     @Binding var polyline:  GMSPolyline?
     @Binding var marker: GMSMarker
+    @Binding var isChangedPolyline: Bool
     
     
     var onAnimationEnded: () -> ()
@@ -35,9 +36,9 @@ struct MapViewControllerBridge: UIViewControllerRepresentable {
             animateToSelectedMarker(viewController: uiViewController)
             
         }
-        if polyline?.map != nil, let polyline = polyline {
+        if isChangedPolyline, let polyline = polyline {
                 polyline.map = uiViewController.map
-            print("a")
+                print("Polyline is changed and added to the map.")
             }
     }
     private func animateToSelectedMarker(viewController: MapViewController) {
