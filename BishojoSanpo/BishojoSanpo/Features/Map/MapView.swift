@@ -34,14 +34,11 @@ struct MapView: View {
             WebPImageView(imageName: "HeartBase.webp")
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .scaledToFill()
-                .offset(y: -7)
                 .allowsHitTesting(false)
             WebPImageView(imageName: "HeartFrame.webp")
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .scaledToFill()
-                .offset(y: -7)
                 .allowsHitTesting(false)
-            
             Button(action: {
                 router.items.append(.itemDrop(goalData: goalData))
             }, label: {
@@ -51,7 +48,7 @@ struct MapView: View {
                     .padding(.leading, 18)
                     .padding(.bottom, 55)
             })
-        }
+        }.offset(y:-7)
         
         .onAppear{
             loadDirection()

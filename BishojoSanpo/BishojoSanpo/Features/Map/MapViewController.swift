@@ -11,7 +11,7 @@ import UIKit
 
 class MapViewController: UIViewController {
     
-    let map =  GMSMapView(frame: .zero)
+    let map =  GMSMapView(frame: .zero, mapID: GMSMapID(identifier: Constants.mapId), camera: GMSCameraPosition.camera(withLatitude: 35.681111, longitude: 139.766667, zoom: 15.0) )
     var isAnimating: Bool = false
     
     override func loadView() {
