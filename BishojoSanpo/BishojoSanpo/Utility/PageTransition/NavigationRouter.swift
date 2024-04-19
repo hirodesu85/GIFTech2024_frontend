@@ -12,7 +12,7 @@ final class NavigationRouter: ObservableObject {
     enum Item: Hashable {
         case selectGoal
         case map(goalData: GoalData)
-        case itemDrop
+        case itemDrop(goalData: GoalData)
         case itemList
     }
     
@@ -23,24 +23,28 @@ final class NavigationRouter: ObservableObject {
     @MainActor func returnToHome() {
         items.removeAll()  // Homeへ完全に戻る
     }
+    @MainActor func navigateToItemDrop(with data: GoalData) {
+        items.append(.itemDrop(goalData: data))
+    }
 }
 
 struct GoalData: Hashable {
     var placeId: String = ""
-    var latitude: Double = 0
-    var longtitude: Double = 0
+    var currentLatitude: Double = 0
+    var currentLongtitude: Double = 0
+    var destinationLatitude: Double = 0
+    var destinationLongtitude: Double = 0
     var selectedDistance: String = ""
-
+    
     mutating func update(from viewModel: SelectGoalModel) {
         placeId = viewModel.placeId
-        latitude = viewModel.latitude
-        longtitude = viewModel.longitude
+        currentLatitude = viewModel.currentLatitude
+        currentLongtitude = viewModel.currentLongitude
+        destinationLatitude = viewModel.latitude
+        destinationLongtitude = viewModel.longitude
         selectedDistance = viewModel.selectedDistance
+        
     }
-}
-
-struct RewardData: Hashable {
-    
 }
 
 struct ItemData: Hashable {

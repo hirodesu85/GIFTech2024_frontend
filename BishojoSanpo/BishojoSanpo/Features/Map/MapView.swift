@@ -12,67 +12,81 @@ import SwiftUI
 
 struct MapView: View {
     @EnvironmentObject var router: NavigationRouter
-    let goalData: GoalData
-    let destination = City(name: "Tokyo", coordinate: CLLocationCoordinate2D(latitude: 35.6684411, longitude: 139.6004407))
-    
-    /// State for markers displayed on the map for each city in `cities`
-    @State var destinationMarker: GMSMarker
+    @ObservedObject var markerManager: MarkerManager
+    @State var polyline: GMSPolyline?
+    @State var isChangedPolyline = false
     @State var zoomInCenter: Bool = false
+    var locationManager: LocationManager
+    let goalData: GoalData
+    let directionModel = DirectionModel()
     
-    init(goalData: GoalData) {
+    init(locationManager: LocationManager, goalData: GoalData) {
+        self.locationManager = locationManager
         self.goalData = goalData
-        print(goalData.placeId)
-        self.destinationMarker = GMSMarker(position: destination.coordinate)
-        destinationMarker.title = destination.name
+        self.markerManager = MarkerManager(coordinate: CLLocationCoordinate2D(latitude: goalData.destinationLatitude, longitude: goalData.destinationLongtitude))
     }
     
     var body: some View {
         
-        let scrollViewHeight: CGFloat = 80
+        ZStack{
+            MapViewControllerBridge(polyline: $polyline,marker: $markerManager.destinationMarker, isChangedPolyline: $isChangedPolyline,goalData: goalData)
+           
+            WebPImageView(imageName: "HeartBase.webp")
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .scaledToFill()
+                .allowsHitTesting(false)
+            WebPImageView(imageName: "HeartFrame.webp")
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .scaledToFill()
+                .allowsHitTesting(false)
+            Button(action: {
+                router.items.append(.itemDrop(goalData: goalData))
+            }, label: {
+                WebPImageView(imageName: "ArrivedButton.webp")
+                    .frame(width: 150)
+                    .frame(maxWidth: .infinity,maxHeight: .infinity, alignment: .bottomLeading)
+                    .padding(.leading, 18)
+                    .padding(.bottom, 55)
+            })
+        }.offset(y:-7)
         
-        GeometryReader { geometry in
-            ZStack{
-                VStack{
-                    Text(goalData.placeId)
-                    Spacer()
-                    HStack{
-                        Spacer()
-                        MapContainerView(zoomInCenter: $zoomInCenter, marker: $destinationMarker)
-                            .frame(width: geometry.size.width * 0.9, height: geometry.size.height * 0.9, alignment: .center)
-                        Spacer()
-                    }
-                    Button(action: {
-                        router.items.append(.itemDrop)
-                    }, label: {
-                        Text("到着")
-                    })
-                    Spacer()
-                }
-                
-            }
+        .onAppear{
+            loadDirection()
         }
         .navigationBarBackButtonHidden(true)
     }
+    func loadDirection() {
+        let destination = "place_id:\(goalData.placeId)"
+        let startLocation = "\(goalData.currentLatitude),\(goalData.currentLongtitude)"
+        
+        DispatchQueue.global(qos: .userInitiated).async {
+            // 経路情報取得
+            let directionResult = directionModel.getDirection(destination: destination, start: startLocation)
+            // 取得した経路情報を用いてpolylineを作成
+            if let directionResult = directionResult {
+                DispatchQueue.main.async {
+                    self.polyline = directionModel.createPolyline(from: directionResult)
+                    isChangedPolyline = true // MapViewControllerBridgeに変更を検知させるためのフラグをtrueに
+                }
+            }
+        }
+    }
+    
 }
 
 
-struct MapContainerView: View {
+class MarkerManager: ObservableObject {
+    @Published var destinationMarker: GMSMarker
     
-    @Binding var zoomInCenter: Bool
-    @Binding var marker: GMSMarker
-    
-    var body: some View {
-        GeometryReader { geometry in
-            let diameter = zoomInCenter ? geometry.size.width : (geometry.size.height * 2)
-            MapViewControllerBridge(marker: $marker,onAnimationEnded: {
-                      self.zoomInCenter = true
-            })
-                
-        }
+    init(coordinate: CLLocationCoordinate2D) {
+        self.destinationMarker = GMSMarker(position: coordinate)
     }
 }
 
 #Preview{
-    let goalData = GoalData(placeId: "", latitude: 22, longtitude: 11, selectedDistance: "")
-    return MapView(goalData: goalData)
+    let goalData = GoalData(placeId: "", currentLatitude: 22, currentLongtitude: 11, selectedDistance: "")
+    let locationManager = LocationManager()
+    return MapView(locationManager: locationManager, goalData: goalData)
 }
+
+

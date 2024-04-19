@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-class SelectGoalModel: ObservableObject{
+class SelectGoalModel {
     var currentLatitude: Double = 0.0
     var currentLongitude: Double = 0.0
     var selectedCategory: String = ""

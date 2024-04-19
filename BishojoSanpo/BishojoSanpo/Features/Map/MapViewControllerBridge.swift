@@ -10,8 +10,12 @@ import GoogleMaps
 import SwiftUI
 
 struct MapViewControllerBridge: UIViewControllerRepresentable {
+    @Binding var polyline:  GMSPolyline?
     @Binding var marker: GMSMarker
-    var onAnimationEnded: () -> ()
+    @Binding var isChangedPolyline: Bool
+    let directionModel = DirectionModel()
+    let goalData: GoalData
+    
     
     func makeUIViewController(context: Context) -> MapViewController {
         // Replace this line
@@ -22,28 +26,17 @@ struct MapViewControllerBridge: UIViewControllerRepresentable {
     
     func updateUIViewController(_ uiViewController: MapViewController, context: Context) {
         marker.map = uiViewController.map
-        animateToSelectedMarker(viewController: uiViewController)
-    }
-    private func animateToSelectedMarker(viewController: MapViewController) {
-        let map = viewController.map
-        if map.selectedMarker != marker {
-            map.selectedMarker = marker
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                map.animate(toZoom: kGMSMinZoomLevel) //ZoomLevel 2~21
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                    map.animate(with: GMSCameraUpdate.setTarget(marker.position))
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
-                        map.animate(toZoom: 12)
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
-                            // Invoke onAnimationEnded() once the animation sequence completes
-                            onAnimationEnded()
-                        })
-                    })
-                }
-            }
-            
+        // アニメーションが未完了の場合のみアニメーションを実行
+        if isChangedPolyline, let polyline = polyline {
+            polyline.map = uiViewController.map
+            updateCameraZoom(startLat: goalData.currentLatitude,
+                             startLng: goalData.currentLongtitude,
+                             endLat: goalData.destinationLatitude,
+                             endLng: goalData.destinationLongtitude,
+                             uiViewController: uiViewController)
         }
     }
+    
     final class MapViewCoordinator: NSObject, GMSMapViewDelegate {
         var mapViewControllerBridge: MapViewControllerBridge
         
@@ -53,5 +46,12 @@ struct MapViewControllerBridge: UIViewControllerRepresentable {
     }
     func makeCoordinator() -> MapViewCoordinator {
         return MapViewCoordinator(self)
+    }
+    private func updateCameraZoom(startLat: Double, startLng: Double, endLat: Double, endLng: Double, uiViewController: MapViewController) {
+        let startCoordinate = CLLocationCoordinate2D(latitude: startLat, longitude: startLng)
+        let endCoordinate = CLLocationCoordinate2D(latitude: endLat, longitude: endLng)
+        let bounds = GMSCoordinateBounds(coordinate: startCoordinate, coordinate: endCoordinate)
+        let cameraUpdate = GMSCameraUpdate.fit(bounds, withPadding: 100.0)
+        uiViewController.map.moveCamera(cameraUpdate)
     }
 }

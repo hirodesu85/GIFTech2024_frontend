@@ -17,6 +17,12 @@
 		2285D1572BCBFE2000F0D8A6 /* WebPImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2285D1562BCBFE2000F0D8A6 /* WebPImageView.swift */; };
 		2285D1622BCCD64700F0D8A6 /* SampleWebP.webp in Resources */ = {isa = PBXBuildFile; fileRef = 2285D1612BCCD64700F0D8A6 /* SampleWebP.webp */; };
 		2285D1662BCD128800F0D8A6 /* SelectGoalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2285D1652BCD128800F0D8A6 /* SelectGoalModel.swift */; };
+		2285D16E2BCE890D00F0D8A6 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2285D16D2BCE890D00F0D8A6 /* LocationManager.swift */; };
+		2285D1702BCFDD4400F0D8A6 /* DirectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2285D16F2BCFDD4400F0D8A6 /* DirectionModel.swift */; };
+		2285D1752BD23C7C00F0D8A6 /* HeartFrame.webp in Resources */ = {isa = PBXBuildFile; fileRef = 2285D1712BD23C7C00F0D8A6 /* HeartFrame.webp */; };
+		2285D1762BD23C7C00F0D8A6 /* ArrivedButton.webp in Resources */ = {isa = PBXBuildFile; fileRef = 2285D1722BD23C7C00F0D8A6 /* ArrivedButton.webp */; };
+		2285D1772BD23C7C00F0D8A6 /* NoTextButton.webp in Resources */ = {isa = PBXBuildFile; fileRef = 2285D1732BD23C7C00F0D8A6 /* NoTextButton.webp */; };
+		2285D1782BD23C7C00F0D8A6 /* HeartBase.webp in Resources */ = {isa = PBXBuildFile; fileRef = 2285D1742BD23C7C00F0D8A6 /* HeartBase.webp */; };
 		22969ABC2BBE7B0400D8FC26 /* BishojoSanpoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22969ABB2BBE7B0400D8FC26 /* BishojoSanpoApp.swift */; };
 		22969ABE2BBE7B0400D8FC26 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22969ABD2BBE7B0400D8FC26 /* HomeView.swift */; };
 		22969AC02BBE7B0500D8FC26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22969ABF2BBE7B0500D8FC26 /* Assets.xcassets */; };
@@ -25,7 +31,6 @@
 		22986D302BC4FCD70018DCFC /* GoogleMapsBase in Frameworks */ = {isa = PBXBuildFile; productRef = 22986D2F2BC4FCD70018DCFC /* GoogleMapsBase */; };
 		22986D322BC4FCD70018DCFC /* GoogleMapsCore in Frameworks */ = {isa = PBXBuildFile; productRef = 22986D312BC4FCD70018DCFC /* GoogleMapsCore */; };
 		22986D342BC4FCD70018DCFC /* GoogleMapsM4B in Frameworks */ = {isa = PBXBuildFile; productRef = 22986D332BC4FCD70018DCFC /* GoogleMapsM4B */; };
-		22986D3B2BC4FF930018DCFC /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22986D3A2BC4FF930018DCFC /* City.swift */; };
 		22986D3D2BC500A50018DCFC /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22986D3C2BC500A50018DCFC /* MapViewController.swift */; };
 		22986D412BC5010D0018DCFC /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22986D402BC5010D0018DCFC /* MapView.swift */; };
 		22986D432BC5016B0018DCFC /* MapViewControllerBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22986D422BC5016B0018DCFC /* MapViewControllerBridge.swift */; };
@@ -57,12 +62,17 @@
 		2285D1562BCBFE2000F0D8A6 /* WebPImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPImageView.swift; sourceTree = "<group>"; };
 		2285D1612BCCD64700F0D8A6 /* SampleWebP.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = SampleWebP.webp; sourceTree = "<group>"; };
 		2285D1652BCD128800F0D8A6 /* SelectGoalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectGoalModel.swift; sourceTree = "<group>"; };
+		2285D16D2BCE890D00F0D8A6 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		2285D16F2BCFDD4400F0D8A6 /* DirectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionModel.swift; sourceTree = "<group>"; };
+		2285D1712BD23C7C00F0D8A6 /* HeartFrame.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = HeartFrame.webp; sourceTree = "<group>"; };
+		2285D1722BD23C7C00F0D8A6 /* ArrivedButton.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = ArrivedButton.webp; sourceTree = "<group>"; };
+		2285D1732BD23C7C00F0D8A6 /* NoTextButton.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = NoTextButton.webp; sourceTree = "<group>"; };
+		2285D1742BD23C7C00F0D8A6 /* HeartBase.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = HeartBase.webp; sourceTree = "<group>"; };
 		22969AB82BBE7B0400D8FC26 /* BishojoSanpo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BishojoSanpo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22969ABB2BBE7B0400D8FC26 /* BishojoSanpoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BishojoSanpoApp.swift; sourceTree = "<group>"; };
 		22969ABD2BBE7B0400D8FC26 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		22969ABF2BBE7B0500D8FC26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22969AC22BBE7B0500D8FC26 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		22986D3A2BC4FF930018DCFC /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		22986D3C2BC500A50018DCFC /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		22986D402BC5010D0018DCFC /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		22986D422BC5016B0018DCFC /* MapViewControllerBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewControllerBridge.swift; sourceTree = "<group>"; };
@@ -177,6 +187,7 @@
 		2285D1532BCBFD5F00F0D8A6 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				2285D16C2BCE83D800F0D8A6 /* Loacation */,
 				2285D1672BCD12B600F0D8A6 /* PageTransition */,
 				2285D15E2BCC04B600F0D8A6 /* WebP */,
 			);
@@ -223,6 +234,10 @@
 		2285D15D2BCC001500F0D8A6 /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				2285D1722BD23C7C00F0D8A6 /* ArrivedButton.webp */,
+				2285D1742BD23C7C00F0D8A6 /* HeartBase.webp */,
+				2285D1712BD23C7C00F0D8A6 /* HeartFrame.webp */,
+				2285D1732BD23C7C00F0D8A6 /* NoTextButton.webp */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -242,6 +257,14 @@
 				2285D1422BCA0ACF00F0D8A6 /* NavigationRouter.swift */,
 			);
 			path = PageTransition;
+			sourceTree = "<group>";
+		};
+		2285D16C2BCE83D800F0D8A6 /* Loacation */ = {
+			isa = PBXGroup;
+			children = (
+				2285D16D2BCE890D00F0D8A6 /* LocationManager.swift */,
+			);
+			path = Loacation;
 			sourceTree = "<group>";
 		};
 		22969AAF2BBE7B0400D8FC26 = {
@@ -286,8 +309,8 @@
 		22986D382BC4FF610018DCFC /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				22986D3A2BC4FF930018DCFC /* City.swift */,
 				2285D1652BCD128800F0D8A6 /* SelectGoalModel.swift */,
+				2285D16F2BCFDD4400F0D8A6 /* DirectionModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -369,13 +392,23 @@
 				45C38DAB2BCD8848004440A6 /* SelectChat.webp in Resources */,
 				45C38DB72BCD885B004440A6 /* NoSelectedButton.webp in Resources */,
 				22969AC32BBE7B0500D8FC26 /* Preview Assets.xcassets in Resources */,
+<<<<<<< HEAD
 				45C38DA72BCD87A1004440A6 /* WaitingButton.webp in Resources */,
 				45C38DB92BCD885B004440A6 /* GirlIcon.webp in Resources */,
 				45904E462BD0AD6F007F304A /* NewNotSelectedButton.webp in Resources */,
+=======
+				2285D1772BD23C7C00F0D8A6 /* NoTextButton.webp in Resources */,
+>>>>>>> 15a55a190f05ca0623cdbe1d112b8246f028a029
 				22969AC02BBE7B0500D8FC26 /* Assets.xcassets in Resources */,
+				2285D1762BD23C7C00F0D8A6 /* ArrivedButton.webp in Resources */,
+				2285D1752BD23C7C00F0D8A6 /* HeartFrame.webp in Resources */,
 				2285D1622BCCD64700F0D8A6 /* SampleWebP.webp in Resources */,
+<<<<<<< HEAD
 				45C38DB62BCD885B004440A6 /* HomeButton.webp in Resources */,
 				45C38DB42BCD885B004440A6 /* ChatNormalRight.webp in Resources */,
+=======
+				2285D1782BD23C7C00F0D8A6 /* HeartBase.webp in Resources */,
+>>>>>>> 15a55a190f05ca0623cdbe1d112b8246f028a029
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,13 +422,14 @@
 				22986D412BC5010D0018DCFC /* MapView.swift in Sources */,
 				451560412BCD44C6006C8EAA /* HeaderView.swift in Sources */,
 				22986D432BC5016B0018DCFC /* MapViewControllerBridge.swift in Sources */,
+				2285D16E2BCE890D00F0D8A6 /* LocationManager.swift in Sources */,
 				2285D1662BCD128800F0D8A6 /* SelectGoalModel.swift in Sources */,
 				22969ABE2BBE7B0400D8FC26 /* HomeView.swift in Sources */,
-				22986D3B2BC4FF930018DCFC /* City.swift in Sources */,
 				2285D1412BCA024600F0D8A6 /* ItemListView.swift in Sources */,
 				4515603D2BCD4460006C8EAA /* GirlChatView.swift in Sources */,
 				2285D13F2BCA022C00F0D8A6 /* ItemDropView.swift in Sources */,
 				2285D1452BCAB76E00F0D8A6 /* SelectGoalViewSample.swift in Sources */,
+				2285D1702BCFDD4400F0D8A6 /* DirectionModel.swift in Sources */,
 				2285D13B2BC76A9000F0D8A6 /* Constants.swift in Sources */,
 				22986D3D2BC500A50018DCFC /* MapViewController.swift in Sources */,
 				2285D1572BCBFE2000F0D8A6 /* WebPImageView.swift in Sources */,
@@ -540,6 +574,7 @@
 				DEVELOPMENT_TEAM = SPP48BJ94J;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "君のいる場所を教えてね！";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -569,6 +604,7 @@
 				DEVELOPMENT_TEAM = SPP48BJ94J;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "君のいる場所を教えてね！";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
