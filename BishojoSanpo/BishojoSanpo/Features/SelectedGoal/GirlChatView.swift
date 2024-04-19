@@ -17,6 +17,8 @@ struct GirlChatView: View {
             ZStack {
                 WebPImageView(imageName: "ChatNormalLeft.webp")
                 Text(girlText)
+                    .foregroundStyle(Color(red: 0, green: 0.0235, blue: 0.23921))
+                    .font(.system(size: 25))
                     .padding(.bottom, 25)
             }
             .offset(x: 0, y: -40)

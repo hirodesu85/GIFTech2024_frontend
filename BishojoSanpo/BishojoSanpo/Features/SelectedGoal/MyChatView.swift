@@ -24,11 +24,22 @@ struct MyChatView: View {
                             Button(action: {
                             }) {
                                 if self.selectedOption == index {
-                                    WebPImageView(imageName: "SelectedButton.webp")
-                                        .padding(.horizontal, 20)
+                                    ZStack {
+                                        WebPImageView(imageName: "SelectedButton.webp")
+                                            .padding(.horizontal, 20)
+                                        Text(options[index])
+                                            .foregroundStyle(.white)
+                                            .font(.system(size: 25))
+                                    }
                                 } else {
-                                    WebPImageView(imageName: "NewNotSelectedButton.webp")
-                                        .padding(.horizontal, 20)
+                                    ZStack {
+                                        WebPImageView(imageName: "NewNotSelectedButton.webp")
+                                            .padding(.horizontal, 20)
+                                        Text(options[index])
+                                            .foregroundStyle(.white)
+                                            .font(.system(size: 25))
+                                    }
+                                    
                                 }
                             }
                             .disabled(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
@@ -37,8 +48,13 @@ struct MyChatView: View {
                                 self.selectedOption = index
                                 self.isSelected = true
                             }) {
-                                WebPImageView(imageName: "WaitingButton.webp")
-                                    .padding(.horizontal, 20)
+                                ZStack {
+                                    WebPImageView(imageName: "WaitingButton.webp")
+                                        .padding(.horizontal, 20)
+                                    Text(options[index])
+                                        .foregroundStyle(.white)
+                                        .font(.system(size: 25))
+                                }
                             }
                         }
                     }

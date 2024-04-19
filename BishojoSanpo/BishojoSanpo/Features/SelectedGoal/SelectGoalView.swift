@@ -13,8 +13,8 @@ struct SelectGoalView: View {
     @State var isSelectedDistance: Bool = false
     @State var selectedDistance: Int = -1
     
-    let categoryOptions = ["サウナ", "温泉", "散歩"]
-    let distanceOptions = ["遠くまで（60分）", "中距離（30分）", "近く（10分）"]
+    let categoryOptions = ["wwwwwwww", "www", "wwwwwwwwww"]
+    let distanceOptions = ["wwwwwwww", "www", "wwwwwwwwww"]
     
     var body: some View {
         ZStack {
@@ -29,12 +29,12 @@ struct SelectGoalView: View {
                             Color.clear
                                 .frame(width: .infinity, height: 80)
                             
-                            GirlChatView(girlText: "どこに行く？")
+                            GirlChatView(girlText: "wwwwwww")
                             MyChatView(isSelected: $isSelectedCategory,
                                        selectedOption: $selectedCategory,
                                        options: categoryOptions)
                             if isSelectedCategory {
-                                GirlChatView(girlText: "どこまで行く？")
+                                GirlChatView(girlText: "wwwwwwwwwww")
                                 MyChatView(isSelected: $isSelectedDistance,
                                            selectedOption: $selectedDistance,
                                            options: distanceOptions)

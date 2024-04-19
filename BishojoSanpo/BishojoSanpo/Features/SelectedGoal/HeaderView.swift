@@ -16,7 +16,7 @@ struct HeaderView: View {
                         radius: 10,
                         x: 0, y: 5)
             HStack {
-                Text("ここに名前")
+                Text("wwwwwwwww")
                     .padding(.leading, 10)
                     .padding(.top, 30)
                     .foregroundStyle(.white)
@@ -26,7 +26,7 @@ struct HeaderView: View {
                 }) {
                     WebPImageView(imageName: "HomeButton.webp")
                         .frame(width: 70, height: 70)
-                        .padding(.trailing, 15)
+                        .padding(.trailing, 12)
                 }
                 
             }
