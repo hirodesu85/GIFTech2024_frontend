@@ -12,7 +12,7 @@ final class NavigationRouter: ObservableObject {
     enum Item: Hashable {
         case selectGoal
         case map(goalData: GoalData)
-        case itemDrop
+        case itemDrop(goalData: GoalData)
         case itemList
     }
     
@@ -22,6 +22,9 @@ final class NavigationRouter: ObservableObject {
 
     @MainActor func returnToHome() {
         items.removeAll()  // Homeへ完全に戻る
+    }
+    @MainActor func navigateToItemDrop(with data: GoalData) {
+        items.append(.itemDrop(goalData: data))
     }
 }
 
@@ -42,10 +45,6 @@ struct GoalData: Hashable {
         selectedDistance = viewModel.selectedDistance
         
     }
-}
-
-struct RewardData: Hashable {
-    
 }
 
 struct ItemData: Hashable {

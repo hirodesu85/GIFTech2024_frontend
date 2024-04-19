@@ -29,8 +29,6 @@ struct MapView: View {
     var body: some View {
         
         ZStack{
-            
-            
             MapViewControllerBridge(polyline: $polyline,marker: $markerManager.destinationMarker, isChangedPolyline: $isChangedPolyline,goalData: goalData)
            
             WebPImageView(imageName: "HeartBase.webp")
@@ -45,7 +43,7 @@ struct MapView: View {
                 .allowsHitTesting(false)
             
             Button(action: {
-                router.items.append(.itemDrop)
+                router.items.append(.itemDrop(goalData: goalData))
             }, label: {
                 WebPImageView(imageName: "ArrivedButton.webp")
                     .frame(width: 150)
@@ -53,9 +51,6 @@ struct MapView: View {
                     .padding(.leading, 18)
                     .padding(.bottom, 55)
             })
-            
-            
-            
         }
         
         .onAppear{

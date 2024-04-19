@@ -34,8 +34,8 @@ struct HomeView: View {
                     SelectGoalViewSample(locationManager: locationManager)
                 case .map(let goalData):
                     MapView(locationManager: locationManager, goalData: goalData)
-                case .itemDrop:
-                    ItemDropView()
+                case .itemDrop(let goalData):
+                    ItemDropView(goalData: goalData)
                 case .itemList:
                     ItemListView()
                 }
