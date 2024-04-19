@@ -22,14 +22,12 @@ struct SelectGoalView: View {
                 .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
                 .edgesIgnoringSafeArea(.all)
 
-            VStack(spacing: 0) {
-//                HeaderView()
-                Rectangle()
-                    .frame(width: .infinity, height: 100)
-                    .foregroundStyle(.cyan)
-                    .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+            ZStack(alignment: .top) {
                 ScrollView {
                     VStack {
+                        Color.clear
+                            .frame(width: .infinity, height: 80)
+                        
                         GirlChatView(girlText: "どこに行く？")
                         MyChatView(isSelected: $isSelectedCategory,
                                    selectedOption: $selectedCategory,
@@ -39,10 +37,13 @@ struct SelectGoalView: View {
                             MyChatView(isSelected: $isSelectedDistance,
                                        selectedOption: $selectedDistance,
                                        options: distanceOptions)
+                            Color.clear
+                                .frame(width: .infinity, height: 80)
                         }
                     }
                     .frame(maxWidth: .infinity)
                 }
+                HeaderView()
             }
         }
     }
