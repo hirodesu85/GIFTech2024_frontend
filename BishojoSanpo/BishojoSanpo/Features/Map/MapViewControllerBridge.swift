@@ -51,7 +51,7 @@ struct MapViewControllerBridge: UIViewControllerRepresentable {
         let startCoordinate = CLLocationCoordinate2D(latitude: startLat, longitude: startLng)
         let endCoordinate = CLLocationCoordinate2D(latitude: endLat, longitude: endLng)
         let bounds = GMSCoordinateBounds(coordinate: startCoordinate, coordinate: endCoordinate)
-        let cameraUpdate = GMSCameraUpdate.fit(bounds, withPadding: 16.0)
+        let cameraUpdate = GMSCameraUpdate.fit(bounds, withPadding: 100.0)
         uiViewController.map.moveCamera(cameraUpdate)
     }
 }

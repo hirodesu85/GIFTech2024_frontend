@@ -29,13 +29,31 @@ struct MapView: View {
     var body: some View {
         
         ZStack{
+            
+            
+            MapViewControllerBridge(polyline: $polyline,marker: $markerManager.destinationMarker, isChangedPolyline: $isChangedPolyline,goalData: goalData)
+           
+            WebPImageView(imageName: "HeartBase.webp")
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .scaledToFill()
+                .offset(y: -7)
+                .allowsHitTesting(false)
+            WebPImageView(imageName: "HeartFrame.webp")
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .scaledToFill()
+                .offset(y: -7)
+                .allowsHitTesting(false)
+            
             Button(action: {
                 router.items.append(.itemDrop)
             }, label: {
-                Text("到着")
+                WebPImageView(imageName: "ArrivedButton.webp")
+                    .frame(width: 150)
+                    .frame(maxWidth: .infinity,maxHeight: .infinity, alignment: .bottomLeading)
+                    .padding(.leading, 18)
+                    .padding(.bottom, 55)
             })
             
-            MapViewControllerBridge(polyline: $polyline,marker: $markerManager.destinationMarker, isChangedPolyline: $isChangedPolyline,goalData: goalData)
             
             
         }

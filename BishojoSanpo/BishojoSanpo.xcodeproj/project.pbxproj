@@ -19,6 +19,10 @@
 		2285D1662BCD128800F0D8A6 /* SelectGoalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2285D1652BCD128800F0D8A6 /* SelectGoalModel.swift */; };
 		2285D16E2BCE890D00F0D8A6 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2285D16D2BCE890D00F0D8A6 /* LocationManager.swift */; };
 		2285D1702BCFDD4400F0D8A6 /* DirectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2285D16F2BCFDD4400F0D8A6 /* DirectionModel.swift */; };
+		2285D1752BD23C7C00F0D8A6 /* HeartFrame.webp in Resources */ = {isa = PBXBuildFile; fileRef = 2285D1712BD23C7C00F0D8A6 /* HeartFrame.webp */; };
+		2285D1762BD23C7C00F0D8A6 /* ArrivedButton.webp in Resources */ = {isa = PBXBuildFile; fileRef = 2285D1722BD23C7C00F0D8A6 /* ArrivedButton.webp */; };
+		2285D1772BD23C7C00F0D8A6 /* NoTextButton.webp in Resources */ = {isa = PBXBuildFile; fileRef = 2285D1732BD23C7C00F0D8A6 /* NoTextButton.webp */; };
+		2285D1782BD23C7C00F0D8A6 /* HeartBase.webp in Resources */ = {isa = PBXBuildFile; fileRef = 2285D1742BD23C7C00F0D8A6 /* HeartBase.webp */; };
 		22969ABC2BBE7B0400D8FC26 /* BishojoSanpoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22969ABB2BBE7B0400D8FC26 /* BishojoSanpoApp.swift */; };
 		22969ABE2BBE7B0400D8FC26 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22969ABD2BBE7B0400D8FC26 /* HomeView.swift */; };
 		22969AC02BBE7B0500D8FC26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22969ABF2BBE7B0500D8FC26 /* Assets.xcassets */; };
@@ -44,6 +48,10 @@
 		2285D1652BCD128800F0D8A6 /* SelectGoalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectGoalModel.swift; sourceTree = "<group>"; };
 		2285D16D2BCE890D00F0D8A6 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		2285D16F2BCFDD4400F0D8A6 /* DirectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionModel.swift; sourceTree = "<group>"; };
+		2285D1712BD23C7C00F0D8A6 /* HeartFrame.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = HeartFrame.webp; sourceTree = "<group>"; };
+		2285D1722BD23C7C00F0D8A6 /* ArrivedButton.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = ArrivedButton.webp; sourceTree = "<group>"; };
+		2285D1732BD23C7C00F0D8A6 /* NoTextButton.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = NoTextButton.webp; sourceTree = "<group>"; };
+		2285D1742BD23C7C00F0D8A6 /* HeartBase.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = HeartBase.webp; sourceTree = "<group>"; };
 		22969AB82BBE7B0400D8FC26 /* BishojoSanpo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BishojoSanpo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22969ABB2BBE7B0400D8FC26 /* BishojoSanpoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BishojoSanpoApp.swift; sourceTree = "<group>"; };
 		22969ABD2BBE7B0400D8FC26 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -178,6 +186,10 @@
 		2285D15D2BCC001500F0D8A6 /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				2285D1722BD23C7C00F0D8A6 /* ArrivedButton.webp */,
+				2285D1742BD23C7C00F0D8A6 /* HeartBase.webp */,
+				2285D1712BD23C7C00F0D8A6 /* HeartFrame.webp */,
+				2285D1732BD23C7C00F0D8A6 /* NoTextButton.webp */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -325,8 +337,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				22969AC32BBE7B0500D8FC26 /* Preview Assets.xcassets in Resources */,
+				2285D1772BD23C7C00F0D8A6 /* NoTextButton.webp in Resources */,
 				22969AC02BBE7B0500D8FC26 /* Assets.xcassets in Resources */,
+				2285D1762BD23C7C00F0D8A6 /* ArrivedButton.webp in Resources */,
+				2285D1752BD23C7C00F0D8A6 /* HeartFrame.webp in Resources */,
 				2285D1622BCCD64700F0D8A6 /* SampleWebP.webp in Resources */,
+				2285D1782BD23C7C00F0D8A6 /* HeartBase.webp in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
