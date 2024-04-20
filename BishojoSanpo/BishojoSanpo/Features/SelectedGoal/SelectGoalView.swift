@@ -39,13 +39,13 @@ struct SelectGoalView: View {
                             Color.clear
                                 .frame(height: 80)
                             
-                            GirlChatView(girlText: "wwwwwww")
+                            GirlChatView(girlText: "どこに行く？")
                             
                             MyChatView(isSelected: $isSelectedCategory,
                                        selectedOption: $selectedCategory,
                                        options: categoryOptions)
                             if isSelectedCategory {
-                                GirlChatView(girlText: "wwwwwwwwwww")
+                                GirlChatView(girlText: "どこまで行く？")
                                 
                                 MyChatView(isSelected: $isSelectedDistance,
                                            selectedOption: $selectedDistance,
