@@ -21,7 +21,7 @@ struct HomeView: View {
                 })
                 
                 Button(action: {
-                    router.items.append(.itemList)
+                    router.items.append(.dressUp)
                     
                 }, label: {
                     Text("着替える")
@@ -36,8 +36,8 @@ struct HomeView: View {
                     MapView(locationManager: locationManager, goalData: goalData)
                 case .itemDrop(let goalData):
                     ItemDropView(goalData: goalData)
-                case .itemList:
-                    ItemListView()
+                case .dressUp:
+                    DressUpView()
                 }
             }
         }
