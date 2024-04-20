@@ -34,6 +34,22 @@
 		22986D3D2BC500A50018DCFC /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22986D3C2BC500A50018DCFC /* MapViewController.swift */; };
 		22986D412BC5010D0018DCFC /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22986D402BC5010D0018DCFC /* MapView.swift */; };
 		22986D432BC5016B0018DCFC /* MapViewControllerBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22986D422BC5016B0018DCFC /* MapViewControllerBridge.swift */; };
+		4515603B2BCD4257006C8EAA /* SelectGoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4515603A2BCD4257006C8EAA /* SelectGoalView.swift */; };
+		4515603D2BCD4460006C8EAA /* GirlChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4515603C2BCD4460006C8EAA /* GirlChatView.swift */; };
+		4515603F2BCD44A2006C8EAA /* MyChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4515603E2BCD44A2006C8EAA /* MyChatView.swift */; };
+		451560412BCD44C6006C8EAA /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451560402BCD44C6006C8EAA /* HeaderView.swift */; };
+		45904E462BD0AD6F007F304A /* NewNotSelectedButton.webp in Resources */ = {isa = PBXBuildFile; fileRef = 45904E452BD0AD6F007F304A /* NewNotSelectedButton.webp */; };
+		45904E482BD0AD7C007F304A /* NewHeader.webp in Resources */ = {isa = PBXBuildFile; fileRef = 45904E472BD0AD7C007F304A /* NewHeader.webp */; };
+		45C38DA72BCD87A1004440A6 /* WaitingButton.webp in Resources */ = {isa = PBXBuildFile; fileRef = 45C38DA62BCD87A1004440A6 /* WaitingButton.webp */; };
+		45C38DA92BCD8837004440A6 /* SelectedButton.webp in Resources */ = {isa = PBXBuildFile; fileRef = 45C38DA82BCD8837004440A6 /* SelectedButton.webp */; };
+		45C38DAB2BCD8848004440A6 /* SelectChat.webp in Resources */ = {isa = PBXBuildFile; fileRef = 45C38DAA2BCD8848004440A6 /* SelectChat.webp */; };
+		45C38DB32BCD885B004440A6 /* Header.webp in Resources */ = {isa = PBXBuildFile; fileRef = 45C38DAC2BCD885A004440A6 /* Header.webp */; };
+		45C38DB42BCD885B004440A6 /* ChatNormalRight.webp in Resources */ = {isa = PBXBuildFile; fileRef = 45C38DAD2BCD885A004440A6 /* ChatNormalRight.webp */; };
+		45C38DB52BCD885B004440A6 /* ChatNormalLeft.webp in Resources */ = {isa = PBXBuildFile; fileRef = 45C38DAE2BCD885A004440A6 /* ChatNormalLeft.webp */; };
+		45C38DB62BCD885B004440A6 /* HomeButton.webp in Resources */ = {isa = PBXBuildFile; fileRef = 45C38DAF2BCD885A004440A6 /* HomeButton.webp */; };
+		45C38DB72BCD885B004440A6 /* NoSelectedButton.webp in Resources */ = {isa = PBXBuildFile; fileRef = 45C38DB02BCD885B004440A6 /* NoSelectedButton.webp */; };
+		45C38DB82BCD885B004440A6 /* Background.webp in Resources */ = {isa = PBXBuildFile; fileRef = 45C38DB12BCD885B004440A6 /* Background.webp */; };
+		45C38DB92BCD885B004440A6 /* GirlIcon.webp in Resources */ = {isa = PBXBuildFile; fileRef = 45C38DB22BCD885B004440A6 /* GirlIcon.webp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +76,22 @@
 		22986D3C2BC500A50018DCFC /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		22986D402BC5010D0018DCFC /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		22986D422BC5016B0018DCFC /* MapViewControllerBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewControllerBridge.swift; sourceTree = "<group>"; };
+		4515603A2BCD4257006C8EAA /* SelectGoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SelectGoalView.swift; path = BishojoSanpo/Features/SelectedGoal/SelectGoalView.swift; sourceTree = SOURCE_ROOT; };
+		4515603C2BCD4460006C8EAA /* GirlChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GirlChatView.swift; path = BishojoSanpo/Features/SelectedGoal/GirlChatView.swift; sourceTree = SOURCE_ROOT; };
+		4515603E2BCD44A2006C8EAA /* MyChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyChatView.swift; path = BishojoSanpo/Features/SelectedGoal/MyChatView.swift; sourceTree = SOURCE_ROOT; };
+		451560402BCD44C6006C8EAA /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HeaderView.swift; path = BishojoSanpo/Features/SelectedGoal/HeaderView.swift; sourceTree = SOURCE_ROOT; };
+		45904E452BD0AD6F007F304A /* NewNotSelectedButton.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = NewNotSelectedButton.webp; sourceTree = "<group>"; };
+		45904E472BD0AD7C007F304A /* NewHeader.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = NewHeader.webp; sourceTree = "<group>"; };
+		45C38DA62BCD87A1004440A6 /* WaitingButton.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = WaitingButton.webp; sourceTree = "<group>"; };
+		45C38DA82BCD8837004440A6 /* SelectedButton.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = SelectedButton.webp; sourceTree = "<group>"; };
+		45C38DAA2BCD8848004440A6 /* SelectChat.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = SelectChat.webp; sourceTree = "<group>"; };
+		45C38DAC2BCD885A004440A6 /* Header.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = Header.webp; sourceTree = "<group>"; };
+		45C38DAD2BCD885A004440A6 /* ChatNormalRight.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = ChatNormalRight.webp; sourceTree = "<group>"; };
+		45C38DAE2BCD885A004440A6 /* ChatNormalLeft.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = ChatNormalLeft.webp; sourceTree = "<group>"; };
+		45C38DAF2BCD885A004440A6 /* HomeButton.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = HomeButton.webp; sourceTree = "<group>"; };
+		45C38DB02BCD885B004440A6 /* NoSelectedButton.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = NoSelectedButton.webp; sourceTree = "<group>"; };
+		45C38DB12BCD885B004440A6 /* Background.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = Background.webp; sourceTree = "<group>"; };
+		45C38DB22BCD885B004440A6 /* GirlIcon.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = GirlIcon.webp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +160,10 @@
 			isa = PBXGroup;
 			children = (
 				2285D1442BCAB76E00F0D8A6 /* SelectGoalViewSample.swift */,
+				4515603A2BCD4257006C8EAA /* SelectGoalView.swift */,
+				4515603C2BCD4460006C8EAA /* GirlChatView.swift */,
+				4515603E2BCD44A2006C8EAA /* MyChatView.swift */,
+				451560402BCD44C6006C8EAA /* HeaderView.swift */,
 			);
 			path = SelectGoal;
 			sourceTree = "<group>";
@@ -161,6 +197,18 @@
 		2285D1582BCBFF0300F0D8A6 /* SelectGoal */ = {
 			isa = PBXGroup;
 			children = (
+				45904E472BD0AD7C007F304A /* NewHeader.webp */,
+				45904E452BD0AD6F007F304A /* NewNotSelectedButton.webp */,
+				45C38DB12BCD885B004440A6 /* Background.webp */,
+				45C38DAE2BCD885A004440A6 /* ChatNormalLeft.webp */,
+				45C38DAD2BCD885A004440A6 /* ChatNormalRight.webp */,
+				45C38DB22BCD885B004440A6 /* GirlIcon.webp */,
+				45C38DAC2BCD885A004440A6 /* Header.webp */,
+				45C38DAF2BCD885A004440A6 /* HomeButton.webp */,
+				45C38DB02BCD885B004440A6 /* NoSelectedButton.webp */,
+				45C38DAA2BCD8848004440A6 /* SelectChat.webp */,
+				45C38DA82BCD8837004440A6 /* SelectedButton.webp */,
+				45C38DA62BCD87A1004440A6 /* WaitingButton.webp */,
 			);
 			path = SelectGoal;
 			sourceTree = "<group>";
@@ -336,12 +384,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45C38DA92BCD8837004440A6 /* SelectedButton.webp in Resources */,
+				45C38DB32BCD885B004440A6 /* Header.webp in Resources */,
+				45C38DB52BCD885B004440A6 /* ChatNormalLeft.webp in Resources */,
+				45C38DB82BCD885B004440A6 /* Background.webp in Resources */,
+				45904E482BD0AD7C007F304A /* NewHeader.webp in Resources */,
+				45C38DAB2BCD8848004440A6 /* SelectChat.webp in Resources */,
+				45C38DB72BCD885B004440A6 /* NoSelectedButton.webp in Resources */,
 				22969AC32BBE7B0500D8FC26 /* Preview Assets.xcassets in Resources */,
+				45C38DA72BCD87A1004440A6 /* WaitingButton.webp in Resources */,
+				45C38DB92BCD885B004440A6 /* GirlIcon.webp in Resources */,
+				45904E462BD0AD6F007F304A /* NewNotSelectedButton.webp in Resources */,
 				2285D1772BD23C7C00F0D8A6 /* NoTextButton.webp in Resources */,
 				22969AC02BBE7B0500D8FC26 /* Assets.xcassets in Resources */,
 				2285D1762BD23C7C00F0D8A6 /* ArrivedButton.webp in Resources */,
 				2285D1752BD23C7C00F0D8A6 /* HeartFrame.webp in Resources */,
 				2285D1622BCCD64700F0D8A6 /* SampleWebP.webp in Resources */,
+				45C38DB62BCD885B004440A6 /* HomeButton.webp in Resources */,
+				45C38DB42BCD885B004440A6 /* ChatNormalRight.webp in Resources */,
 				2285D1782BD23C7C00F0D8A6 /* HeartBase.webp in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -354,11 +414,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				22986D412BC5010D0018DCFC /* MapView.swift in Sources */,
+				451560412BCD44C6006C8EAA /* HeaderView.swift in Sources */,
 				22986D432BC5016B0018DCFC /* MapViewControllerBridge.swift in Sources */,
 				2285D16E2BCE890D00F0D8A6 /* LocationManager.swift in Sources */,
 				2285D1662BCD128800F0D8A6 /* SelectGoalModel.swift in Sources */,
 				22969ABE2BBE7B0400D8FC26 /* HomeView.swift in Sources */,
 				2285D1412BCA024600F0D8A6 /* ItemListView.swift in Sources */,
+				4515603D2BCD4460006C8EAA /* GirlChatView.swift in Sources */,
 				2285D13F2BCA022C00F0D8A6 /* ItemDropView.swift in Sources */,
 				2285D1452BCAB76E00F0D8A6 /* SelectGoalViewSample.swift in Sources */,
 				2285D1702BCFDD4400F0D8A6 /* DirectionModel.swift in Sources */,
@@ -366,8 +428,10 @@
 				22986D3D2BC500A50018DCFC /* MapViewController.swift in Sources */,
 				2285D1572BCBFE2000F0D8A6 /* WebPImageView.swift in Sources */,
 				22969ABC2BBE7B0400D8FC26 /* BishojoSanpoApp.swift in Sources */,
+				4515603F2BCD44A2006C8EAA /* MyChatView.swift in Sources */,
 				2285D1432BCA0ACF00F0D8A6 /* NavigationRouter.swift in Sources */,
 				2285D1552BCBFD8900F0D8A6 /* ImageLoader.swift in Sources */,
+				4515603B2BCD4257006C8EAA /* SelectGoalView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -31,7 +31,7 @@ struct HomeView: View {
             .navigationDestination(for: NavigationRouter.Item.self) { item in
                 switch item{
                 case .selectGoal:
-                    SelectGoalViewSample(locationManager: locationManager)
+                    SelectGoalView(locationManager: locationManager)
                 case .map(let goalData):
                     MapView(locationManager: locationManager, goalData: goalData)
                 case .itemDrop(let goalData):
