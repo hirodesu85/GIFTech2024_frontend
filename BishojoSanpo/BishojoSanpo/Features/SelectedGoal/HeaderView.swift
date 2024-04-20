@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct HeaderView: View {
+    
+    @EnvironmentObject var router: NavigationRouter
+    
     var body: some View {
         ZStack {
             WebPImageView(imageName: "NewHeader.webp")
@@ -23,6 +26,7 @@ struct HeaderView: View {
                     .font(.system(size: 25))
                 Spacer()
                 Button(action: {
+                    router.returnToHome()
                 }) {
                     WebPImageView(imageName: "HomeButton.webp")
                         .frame(width: 70, height: 70)
