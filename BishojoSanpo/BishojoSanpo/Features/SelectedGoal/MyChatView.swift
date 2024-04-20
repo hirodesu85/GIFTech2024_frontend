@@ -28,7 +28,7 @@ struct MyChatView: View {
                                         WebPImageView(imageName: "SelectedButton.webp")
                                             .padding(.horizontal, 20)
                                         Text(options[index])
-                                            .foregroundStyle(.white)
+                                            .foregroundStyle(Color("SelectedButtonColor"))
                                             .font(.system(size: 25))
                                     }
                                 } else {
@@ -36,7 +36,7 @@ struct MyChatView: View {
                                         WebPImageView(imageName: "NewNotSelectedButton.webp")
                                             .padding(.horizontal, 20)
                                         Text(options[index])
-                                            .foregroundStyle(.white)
+                                            .foregroundStyle(Color("NoSelectedButtonColor"))
                                             .font(.system(size: 25))
                                     }
                                     
