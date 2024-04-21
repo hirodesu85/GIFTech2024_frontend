@@ -20,6 +20,7 @@ struct ItemDropView: View {
                 Text("Tap Open!")
                 if let dropItem = rewardModel.dropItem{
                     Text("アイテム獲得！")
+                    Text(dropItem.name)
                 }else{
                     Text("アイテムをロード中")
                 }
@@ -32,7 +33,9 @@ struct ItemDropView: View {
         .ignoresSafeArea()
         .navigationBarBackButtonHidden(true)
         .onAppear{
-            rewardModel.fetchRewardData(goalData: goalData)
+            Task {
+                await rewardModel.fetchRewardData(goalData: goalData)
+            }
         }
         
         
