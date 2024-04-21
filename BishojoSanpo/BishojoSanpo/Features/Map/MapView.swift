@@ -11,7 +11,7 @@ import SwiftUI
 
 
 struct MapView: View {
-    
+    @EnvironmentObject var router: NavigationRouter
     @ObservedObject var markerManager: MarkerManager
     @State var polyline: GMSPolyline?
     @State var isChangedPolyline = false
@@ -30,7 +30,7 @@ struct MapView: View {
         
         ZStack{
             MapViewControllerBridge(polyline: $polyline,marker: $markerManager.destinationMarker, isChangedPolyline: $isChangedPolyline,goalData: goalData)
-           
+            
             WebPImageView(imageName: "HeartBase.webp")
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .scaledToFill()
@@ -42,7 +42,8 @@ struct MapView: View {
             ArrivedButtonView(goalData: goalData)
             HomeButtonView()
             
-        }.offset(y:-7)
+        }
+        .ignoresSafeArea()
         
         .onAppear{
             loadDirection()

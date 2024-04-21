@@ -10,19 +10,26 @@ import SwiftUI
 struct HomeButtonView: View {
     @EnvironmentObject var router: NavigationRouter
     var body: some View {
-        
-        Button(action: {
-            router.returnToHome()
-        }) {
-            WebPImageView(imageName: "HomeButton.webp")
-                .frame(width: 70, height: 70)
-                .padding(.trailing, 12)
-                .frame(maxWidth: .infinity,maxHeight: .infinity, alignment: .topTrailing)
-                .padding(.top, 30)
-            
+        ZStack {
+            // 画面の右上にボタンを配置する
+            HStack {
+                Spacer()
+                VStack {
+                    Button(action: {
+                        router.returnToHome()
+                    }) {
+                        WebPImageView(imageName: "HomeButton.webp")
+                            .frame(width: 70, height: 70)
+                            .padding(.top, 15)
+                            .padding(.trailing, 12)
+                    }
+                    Spacer()
+                }
+            }
         }
     }
 }
+
 
 #Preview {
     HomeButtonView()
