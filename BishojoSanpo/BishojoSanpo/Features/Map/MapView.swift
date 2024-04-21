@@ -11,7 +11,7 @@ import SwiftUI
 
 
 struct MapView: View {
-    @EnvironmentObject var router: NavigationRouter
+    
     @ObservedObject var markerManager: MarkerManager
     @State var polyline: GMSPolyline?
     @State var isChangedPolyline = false
@@ -39,15 +39,9 @@ struct MapView: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .scaledToFill()
                 .allowsHitTesting(false)
-            Button(action: {
-                router.items.append(.itemDrop(goalData: goalData))
-            }, label: {
-                WebPImageView(imageName: "ArrivedButton.webp")
-                    .frame(width: 150)
-                    .frame(maxWidth: .infinity,maxHeight: .infinity, alignment: .bottomLeading)
-                    .padding(.leading, 18)
-                    .padding(.bottom, 55)
-            })
+            ArrivedButtonView(goalData: goalData)
+            HomeButtonView()
+            
         }.offset(y:-7)
         
         .onAppear{
