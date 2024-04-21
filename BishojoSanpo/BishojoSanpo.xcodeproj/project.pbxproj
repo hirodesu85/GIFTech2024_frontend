@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22080F492BD413CD00D3FF38 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 22080F482BD413CD00D3FF38 /* Lottie */; };
+		22080F4C2BD413F100D3FF38 /* haikei_0418.json in Resources */ = {isa = PBXBuildFile; fileRef = 22080F4B2BD413F100D3FF38 /* haikei_0418.json */; };
+		22080F4E2BD415D300D3FF38 /* LottieLego.json in Resources */ = {isa = PBXBuildFile; fileRef = 22080F4D2BD415D300D3FF38 /* LottieLego.json */; };
+		22080F512BD491E900D3FF38 /* LottieSampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22080F502BD491E900D3FF38 /* LottieSampleView.swift */; };
 		2285D13B2BC76A9000F0D8A6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2285D13A2BC76A9000F0D8A6 /* Constants.swift */; };
 		2285D13F2BCA022C00F0D8A6 /* ItemDropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2285D13E2BCA022C00F0D8A6 /* ItemDropView.swift */; };
 		2285D1412BCA024600F0D8A6 /* ItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2285D1402BCA024600F0D8A6 /* ItemListView.swift */; };
@@ -53,6 +57,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		22080F4B2BD413F100D3FF38 /* haikei_0418.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = haikei_0418.json; sourceTree = "<group>"; };
+		22080F4D2BD415D300D3FF38 /* LottieLego.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LottieLego.json; sourceTree = "<group>"; };
+		22080F502BD491E900D3FF38 /* LottieSampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieSampleView.swift; sourceTree = "<group>"; };
 		2285D13A2BC76A9000F0D8A6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2285D13E2BCA022C00F0D8A6 /* ItemDropView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDropView.swift; sourceTree = "<group>"; };
 		2285D1402BCA024600F0D8A6 /* ItemListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListView.swift; sourceTree = "<group>"; };
@@ -104,15 +111,34 @@
 				22986D342BC4FCD70018DCFC /* GoogleMapsM4B in Frameworks */,
 				2285D1502BCBFB6A00F0D8A6 /* SDWebImageWebPCoder in Frameworks */,
 				22986D302BC4FCD70018DCFC /* GoogleMapsBase in Frameworks */,
+				22080F492BD413CD00D3FF38 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22080F4A2BD413DC00D3FF38 /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				22080F4D2BD415D300D3FF38 /* LottieLego.json */,
+				22080F4B2BD413F100D3FF38 /* haikei_0418.json */,
+			);
+			path = Lottie;
+			sourceTree = "<group>";
+		};
+		22080F4F2BD491CD00D3FF38 /* LottieSample */ = {
+			isa = PBXGroup;
+			children = (
+				22080F502BD491E900D3FF38 /* LottieSampleView.swift */,
+			);
+			path = LottieSample;
+			sourceTree = "<group>";
+		};
 		2214DE562BBEB065000E883F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				22080F4A2BD413DC00D3FF38 /* Lottie */,
 				2285D1592BCBFF3000F0D8A6 /* WebPImage */,
 				2214DE582BBEB0CA000E883F /* Sounds */,
 			);
@@ -187,6 +213,7 @@
 		2285D1532BCBFD5F00F0D8A6 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				22080F4F2BD491CD00D3FF38 /* LottieSample */,
 				2285D16C2BCE83D800F0D8A6 /* Loacation */,
 				2285D1672BCD12B600F0D8A6 /* PageTransition */,
 				2285D15E2BCC04B600F0D8A6 /* WebP */,
@@ -337,6 +364,7 @@
 				22986D312BC4FCD70018DCFC /* GoogleMapsCore */,
 				22986D332BC4FCD70018DCFC /* GoogleMapsM4B */,
 				2285D14F2BCBFB6A00F0D8A6 /* SDWebImageWebPCoder */,
+				22080F482BD413CD00D3FF38 /* Lottie */,
 			);
 			productName = BishojoSanpo;
 			productReference = 22969AB82BBE7B0400D8FC26 /* BishojoSanpo.app */;
@@ -369,6 +397,7 @@
 			packageReferences = (
 				22986D2C2BC4FCD70018DCFC /* XCRemoteSwiftPackageReference "ios-maps-sdk" */,
 				2285D14E2BCBFB6A00F0D8A6 /* XCRemoteSwiftPackageReference "SDWebImageWebPCoder" */,
+				22080F472BD413CD00D3FF38 /* XCRemoteSwiftPackageReference "lottie-spm" */,
 			);
 			productRefGroup = 22969AB92BBE7B0400D8FC26 /* Products */;
 			projectDirPath = "";
@@ -389,6 +418,7 @@
 				45C38DB52BCD885B004440A6 /* ChatNormalLeft.webp in Resources */,
 				45C38DB82BCD885B004440A6 /* Background.webp in Resources */,
 				45904E482BD0AD7C007F304A /* NewHeader.webp in Resources */,
+				22080F4E2BD415D300D3FF38 /* LottieLego.json in Resources */,
 				45C38DAB2BCD8848004440A6 /* SelectChat.webp in Resources */,
 				45C38DB72BCD885B004440A6 /* NoSelectedButton.webp in Resources */,
 				22969AC32BBE7B0500D8FC26 /* Preview Assets.xcassets in Resources */,
@@ -399,6 +429,7 @@
 				22969AC02BBE7B0500D8FC26 /* Assets.xcassets in Resources */,
 				2285D1762BD23C7C00F0D8A6 /* ArrivedButton.webp in Resources */,
 				2285D1752BD23C7C00F0D8A6 /* HeartFrame.webp in Resources */,
+				22080F4C2BD413F100D3FF38 /* haikei_0418.json in Resources */,
 				2285D1622BCCD64700F0D8A6 /* SampleWebP.webp in Resources */,
 				45C38DB62BCD885B004440A6 /* HomeButton.webp in Resources */,
 				45C38DB42BCD885B004440A6 /* ChatNormalRight.webp in Resources */,
@@ -432,6 +463,7 @@
 				2285D1432BCA0ACF00F0D8A6 /* NavigationRouter.swift in Sources */,
 				2285D1552BCBFD8900F0D8A6 /* ImageLoader.swift in Sources */,
 				4515603B2BCD4257006C8EAA /* SelectGoalView.swift in Sources */,
+				22080F512BD491E900D3FF38 /* LottieSampleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -641,6 +673,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		22080F472BD413CD00D3FF38 /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.4.3;
+			};
+		};
 		2285D14E2BCBFB6A00F0D8A6 /* XCRemoteSwiftPackageReference "SDWebImageWebPCoder" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SDWebImage/SDWebImageWebPCoder?tab=readme-ov-file";
@@ -660,6 +700,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		22080F482BD413CD00D3FF38 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 22080F472BD413CD00D3FF38 /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
+		};
 		2285D14F2BCBFB6A00F0D8A6 /* SDWebImageWebPCoder */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 2285D14E2BCBFB6A00F0D8A6 /* XCRemoteSwiftPackageReference "SDWebImageWebPCoder" */;
