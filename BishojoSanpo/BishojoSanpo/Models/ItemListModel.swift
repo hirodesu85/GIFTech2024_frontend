@@ -6,41 +6,61 @@
 //
 
 import Foundation
+import Combine
 
-class ItemListModel: ObservableObject{
+class ItemListModel: ObservableObject {
     @Published var catalog: Catalog?
-    
-    // APIからカタログデータを非同期で取得するメソッドの例(ChatGPT出力です。自由に変えてくださって大丈夫です！)
-    func loadCatalogData() {
-        let url = URL(string: "https://example.com/api/catalog")! // APIのURLに置き換えてください
-        let task = URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
-            guard let data = data, error == nil else {
-                return
-            }
-            do {
-                let decoder = JSONDecoder()
-                decoder.dateDecodingStrategy = .iso8601 // 日付の形式に応じて変更する
-                let catalogData = try decoder.decode(Catalog.self, from: data)
-                DispatchQueue.main.async {
-                    self?.catalog = catalogData
+    private var cancellables: Set<AnyCancellable> = []
+
+    func fetchCatalog() async {
+        let url = URL(string: "\(Constants.backendApiHost)/api/items")!
+        URLSession.shared.dataTaskPublisher(for: url)
+            .tryMap { data, response in
+                guard let httpResponse = response as? HTTPURLResponse,
+                httpResponse.statusCode == 200 else {
+                    throw URLError(.badServerResponse)
                 }
-            } catch {
-                print("Decoding error: \(error)")
+                return data
             }
-        }
-        task.resume()
+            .decode(type: Catalog.self, decoder: JSONDecoder())
+            .receive(on: DispatchQueue.main)
+            .sink(receiveCompletion: { completion in
+                switch completion {
+                case .failure(let error):
+                    print("Decoding error: \(error)")
+                case .finished:
+                    break
+                }
+            }, receiveValue: { [weak self] catalog in
+                self?.catalog = catalog
+            })
+            .store(in: &cancellables)
     }
 }
 
 // アイテムを表す構造体
-struct Item: Codable {
+struct Item: Codable, Identifiable {
     var id: Int
     var name: String
     var imageUrl: String
     var gainedAt: Date
-    
+
     enum CodingKeys: String, CodingKey {
         case id, name, imageUrl = "image_url", gainedAt = "gained_at"
+    }
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        id = try container.decode(Int.self, forKey: .id)
+        name = try container.decode(String.self, forKey: .name)
+        imageUrl = try container.decode(String.self, forKey: .imageUrl)
+
+        let dateString = try container.decode(String.self, forKey: .gainedAt)
+        if let formattedDate = DateFormatter.iso8601Full.date(from: dateString) {
+            gainedAt = formattedDate
+        } else {
+            throw DecodingError.dataCorruptedError(forKey: .gainedAt, in: container, debugDescription: "Expected date string to be ISO8601-formatted.")
+        }
     }
 }
 
@@ -52,4 +72,13 @@ struct Catalog: Codable {
     var tops: [Item]
 }
 
-
+extension DateFormatter {
+    static let iso8601Full: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZZZZZ"
+        formatter.calendar = Calendar(identifier: .iso8601)
+        formatter.timeZone = TimeZone(secondsFromGMT: 9 * 60 * 60)
+        formatter.locale = Locale(identifier: "ja-JP")
+        return formatter
+    }()
+}

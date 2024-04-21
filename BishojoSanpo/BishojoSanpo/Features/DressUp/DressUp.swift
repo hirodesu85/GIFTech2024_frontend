@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-import SwiftUI
-
 struct DressUpView: View {
     @EnvironmentObject var router: NavigationRouter
 
