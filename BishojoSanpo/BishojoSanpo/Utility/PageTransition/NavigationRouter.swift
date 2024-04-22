@@ -13,7 +13,7 @@ final class NavigationRouter: ObservableObject {
         case selectGoal
         case map(goalData: GoalData)
         case itemDrop(goalData: GoalData)
-        case itemList
+        case dressUp
     }
     
     @MainActor func navigateToMap(with data: GoalData) {
@@ -45,8 +45,4 @@ struct GoalData: Hashable {
         selectedDistance = viewModel.selectedDistance
         
     }
-}
-
-struct ItemData: Hashable {
-    
 }
