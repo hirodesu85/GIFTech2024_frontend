@@ -78,7 +78,6 @@ struct SelectGoalView: View {
         .onChange(of: isSelectedDistance) { _ in
             locationManager.fetchLocation()
         }
-        .font(.custom("NotoSansJP-Black", size: 25))
     }
     
     private func getDestinationAndNavigate(newLocation: CLLocation) {
