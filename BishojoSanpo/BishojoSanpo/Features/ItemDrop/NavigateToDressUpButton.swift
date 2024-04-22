@@ -12,7 +12,7 @@ struct NavigateToDressUpButton: View {
     var body: some View {
         Button(action: {
             router.items.removeLast(router.items.count)
-            router.items.append(.itemList)
+            router.items.append(.dressUp)
         }, label: {
             Text("着せ替えする")
         })
