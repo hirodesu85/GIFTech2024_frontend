@@ -29,10 +29,12 @@ class RewardModel: ObservableObject {
             request.httpBody = try JSONEncoder().encode(requestBody)
             let (data, _) = try await URLSession.shared.data(for: request)
             let responseBody: ArriveResponseBody = try JSONDecoder().decode(ArriveResponseBody.self, from: data)
-            self.dropItem = responseBody.item
-            self.rank = responseBody.rank
-            self.untilNextRank = responseBody.until_next_rank
-            self.getRankPoint = responseBody.get_rank_point
+            DispatchQueue.main.async {
+                self.dropItem = responseBody.item
+                self.rank = responseBody.rank
+                self.untilNextRank = responseBody.until_next_rank
+                self.getRankPoint = responseBody.get_rank_point
+            }
         } catch {
             self.errorMessage = error.localizedDescription
         }
