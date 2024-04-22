@@ -4,9 +4,7 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
-		<string></string>
+		<string>NotoSansJP-Black.ttf</string>
 	</array>
-	<key>Item 0</key>
-	<string>NotoSansJP-VariableFont_wght.ttf</string>
 </dict>
 </plist>

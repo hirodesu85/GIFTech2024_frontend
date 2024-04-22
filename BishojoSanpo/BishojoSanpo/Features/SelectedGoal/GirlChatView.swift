@@ -19,7 +19,6 @@ struct GirlChatView: View {
                 HStack {
                     Text(girlText)
                         .foregroundStyle(Color("ChatColor"))
-                        .font(.custom("NotoSansJP-VariableFont_wght", size: 25))
                         .padding(.bottom, 25)
                         .padding(.leading, 20)
                     Spacer()
