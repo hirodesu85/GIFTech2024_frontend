@@ -35,6 +35,7 @@ struct HomeView: View {
                 switch item{
                 case .selectGoal:
                     SelectGoalView(locationManager: locationManager)
+                        .environment(\.font, .custom("NotoSansJP-Black", size: 25))
                 case .map(let goalData):
                     MapView(locationManager: locationManager, goalData: goalData)
                 case .itemDrop(let goalData):

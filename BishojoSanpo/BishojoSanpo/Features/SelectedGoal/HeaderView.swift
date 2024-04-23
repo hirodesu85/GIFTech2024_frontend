@@ -23,7 +23,6 @@ struct HeaderView: View {
                     .padding(.leading, 10)
                     .padding(.top, 30)
                     .foregroundStyle(.white)
-                    .font(.system(size: 25))
                 Spacer()
                 Button(action: {
                     router.returnToHome()
