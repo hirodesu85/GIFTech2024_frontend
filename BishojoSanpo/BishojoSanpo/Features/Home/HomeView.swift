@@ -9,23 +9,21 @@ import SwiftUI
 struct HomeView: View {
     @StateObject private var router = NavigationRouter()
     @StateObject var locationManager = LocationManager()
+    let bishojoViewWidth: Double = 350
     var body: some View {
         NavigationStack(path: $router.items){
-            VStack {
+            ZStack {
                 
-                Button(action: {
-                    router.items.append(.selectGoal)
-                    print(router)
-                }, label: {
-                    Text("お散歩")
-                })
+                BishojoView()
+                    .position(x:170,y:400)
+                    .scaleEffect(1.7)
+                    .onTapGesture {
+                        print("Tapped")
+                    }
+            
                 
-                Button(action: {
-                    router.items.append(.dressUp)
-                    
-                }, label: {
-                    Text("着替える")
-                })
+                NavigateToDressUpButton()
+                NavigateToSelectGoalButton()
             }
             // 画面遷移定義
             .navigationDestination(for: NavigationRouter.Item.self) { item in
