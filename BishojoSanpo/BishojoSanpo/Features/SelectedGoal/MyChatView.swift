@@ -29,7 +29,6 @@ struct MyChatView: View {
                                             .padding(.horizontal, 20)
                                         Text(options[index])
                                             .foregroundStyle(Color("SelectedButtonColor"))
-                                            .font(.system(size: 25))
                                     }
                                 } else {
                                     ZStack {
@@ -37,7 +36,6 @@ struct MyChatView: View {
                                             .padding(.horizontal, 20)
                                         Text(options[index])
                                             .foregroundStyle(Color("NoSelectedButtonColor"))
-                                            .font(.system(size: 25))
                                     }
                                     
                                 }
@@ -53,7 +51,6 @@ struct MyChatView: View {
                                         .padding(.horizontal, 20)
                                     Text(options[index])
                                         .foregroundStyle(.white)
-                                        .font(.system(size: 25))
                                 }
                             }
                         }

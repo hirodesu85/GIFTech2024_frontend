@@ -39,6 +39,7 @@
 		4515603D2BCD4460006C8EAA /* GirlChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4515603C2BCD4460006C8EAA /* GirlChatView.swift */; };
 		4515603F2BCD44A2006C8EAA /* MyChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4515603E2BCD44A2006C8EAA /* MyChatView.swift */; };
 		451560412BCD44C6006C8EAA /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451560402BCD44C6006C8EAA /* HeaderView.swift */; };
+		45806DA42BD6678E00976D79 /* NotoSansJP-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 45806DA32BD6678E00976D79 /* NotoSansJP-Black.ttf */; };
 		45904E462BD0AD6F007F304A /* NewNotSelectedButton.webp in Resources */ = {isa = PBXBuildFile; fileRef = 45904E452BD0AD6F007F304A /* NewNotSelectedButton.webp */; };
 		45904E482BD0AD7C007F304A /* NewHeader.webp in Resources */ = {isa = PBXBuildFile; fileRef = 45904E472BD0AD7C007F304A /* NewHeader.webp */; };
 		45C38DA72BCD87A1004440A6 /* WaitingButton.webp in Resources */ = {isa = PBXBuildFile; fileRef = 45C38DA62BCD87A1004440A6 /* WaitingButton.webp */; };
@@ -51,6 +52,7 @@
 		45C38DB72BCD885B004440A6 /* NoSelectedButton.webp in Resources */ = {isa = PBXBuildFile; fileRef = 45C38DB02BCD885B004440A6 /* NoSelectedButton.webp */; };
 		45C38DB82BCD885B004440A6 /* Background.webp in Resources */ = {isa = PBXBuildFile; fileRef = 45C38DB12BCD885B004440A6 /* Background.webp */; };
 		45C38DB92BCD885B004440A6 /* GirlIcon.webp in Resources */ = {isa = PBXBuildFile; fileRef = 45C38DB22BCD885B004440A6 /* GirlIcon.webp */; };
+		45C8E8FC2BD657990043C975 /* NotoSansJP-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 45C8E8FB2BD657990043C975 /* NotoSansJP-VariableFont_wght.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +84,7 @@
 		4515603C2BCD4460006C8EAA /* GirlChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GirlChatView.swift; path = BishojoSanpo/Features/SelectedGoal/GirlChatView.swift; sourceTree = SOURCE_ROOT; };
 		4515603E2BCD44A2006C8EAA /* MyChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyChatView.swift; path = BishojoSanpo/Features/SelectedGoal/MyChatView.swift; sourceTree = SOURCE_ROOT; };
 		451560402BCD44C6006C8EAA /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HeaderView.swift; path = BishojoSanpo/Features/SelectedGoal/HeaderView.swift; sourceTree = SOURCE_ROOT; };
+		45806DA32BD6678E00976D79 /* NotoSansJP-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansJP-Black.ttf"; sourceTree = "<group>"; };
 		45904E452BD0AD6F007F304A /* NewNotSelectedButton.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = NewNotSelectedButton.webp; sourceTree = "<group>"; };
 		45904E472BD0AD7C007F304A /* NewHeader.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = NewHeader.webp; sourceTree = "<group>"; };
 		45C38DA62BCD87A1004440A6 /* WaitingButton.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = WaitingButton.webp; sourceTree = "<group>"; };
@@ -94,6 +97,8 @@
 		45C38DB02BCD885B004440A6 /* NoSelectedButton.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = NoSelectedButton.webp; sourceTree = "<group>"; };
 		45C38DB12BCD885B004440A6 /* Background.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = Background.webp; sourceTree = "<group>"; };
 		45C38DB22BCD885B004440A6 /* GirlIcon.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = GirlIcon.webp; sourceTree = "<group>"; };
+		45C8E8FB2BD657990043C975 /* NotoSansJP-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansJP-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		45C8E8FD2BD658E00043C975 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -288,6 +293,8 @@
 		22969ABA2BBE7B0400D8FC26 /* BishojoSanpo */ = {
 			isa = PBXGroup;
 			children = (
+				45C8E8FD2BD658E00043C975 /* Info.plist */,
+				45C8E8FA2BD657310043C975 /* fonts */,
 				2285D1532BCBFD5F00F0D8A6 /* Utility */,
 				22986D382BC4FF610018DCFC /* Models */,
 				2214DE592BBEB0DA000E883F /* Features */,
@@ -316,6 +323,15 @@
 				22080F422BD3F66A00D3FF38 /* ItemListModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		45C8E8FA2BD657310043C975 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				45806DA32BD6678E00976D79 /* NotoSansJP-Black.ttf */,
+				45C8E8FB2BD657990043C975 /* NotoSansJP-VariableFont_wght.ttf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -388,6 +404,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				45C38DA92BCD8837004440A6 /* SelectedButton.webp in Resources */,
+				45806DA42BD6678E00976D79 /* NotoSansJP-Black.ttf in Resources */,
 				45C38DB32BCD885B004440A6 /* Header.webp in Resources */,
 				45C38DB52BCD885B004440A6 /* ChatNormalLeft.webp in Resources */,
 				45C38DB82BCD885B004440A6 /* Background.webp in Resources */,
@@ -403,6 +420,7 @@
 				2285D1762BD23C7C00F0D8A6 /* ArrivedButton.webp in Resources */,
 				2285D1752BD23C7C00F0D8A6 /* HeartFrame.webp in Resources */,
 				2285D1622BCCD64700F0D8A6 /* SampleWebP.webp in Resources */,
+				45C8E8FC2BD657990043C975 /* NotoSansJP-VariableFont_wght.ttf in Resources */,
 				45C38DB62BCD885B004440A6 /* HomeButton.webp in Resources */,
 				45C38DB42BCD885B004440A6 /* ChatNormalRight.webp in Resources */,
 				2285D1782BD23C7C00F0D8A6 /* HeartBase.webp in Resources */,
@@ -572,6 +590,7 @@
 				DEVELOPMENT_TEAM = SPP48BJ94J;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BishojoSanpo/Info.plist;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "君のいる場所を教えてね！";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -602,6 +621,7 @@
 				DEVELOPMENT_TEAM = SPP48BJ94J;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BishojoSanpo/Info.plist;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "君のいる場所を教えてね！";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

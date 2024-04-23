@@ -13,13 +13,13 @@ struct GirlChatView: View {
         HStack(spacing: 0) {
             WebPImageView(imageName: "GirlIcon.webp")
                 .frame(width: 100, height: 100)
+                .font(.system(size: 25))
                 .padding(10)
             ZStack {
                 WebPImageView(imageName: "ChatNormalLeft.webp")
                 HStack {
                     Text(girlText)
                         .foregroundStyle(Color("ChatColor"))
-                        .font(.system(size: 25))
                         .padding(.bottom, 25)
                         .padding(.leading, 20)
                     Spacer()
