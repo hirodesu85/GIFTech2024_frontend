@@ -30,6 +30,9 @@
 		22080F982BD7572500D3FF38 /* DressUpButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22080F972BD7572500D3FF38 /* DressUpButton.swift */; };
 		22080F9A2BD7589600D3FF38 /* RankPointBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22080F992BD7589600D3FF38 /* RankPointBarView.swift */; };
 		22080F9C2BD75CAC00D3FF38 /* HP_Move.webp in Resources */ = {isa = PBXBuildFile; fileRef = 22080F9B2BD75CAC00D3FF38 /* HP_Move.webp */; };
+		22080F9E2BD7A82500D3FF38 /* SerifView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22080F9D2BD7A82500D3FF38 /* SerifView.swift */; };
+		22080FA12BD7AAF600D3FF38 /* BishojoSerif.json in Resources */ = {isa = PBXBuildFile; fileRef = 22080FA02BD7AAF600D3FF38 /* BishojoSerif.json */; };
+		22080FA32BD7B28D00D3FF38 /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = 22080FA22BD7B28D00D3FF38 /* test.json */; };
 		2285D13B2BC76A9000F0D8A6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2285D13A2BC76A9000F0D8A6 /* Constants.swift */; };
 		2285D13F2BCA022C00F0D8A6 /* ItemDropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2285D13E2BCA022C00F0D8A6 /* ItemDropView.swift */; };
 		2285D1412BCA024600F0D8A6 /* ItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2285D1402BCA024600F0D8A6 /* ItemListView.swift */; };
@@ -100,6 +103,9 @@
 		22080F972BD7572500D3FF38 /* DressUpButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DressUpButton.swift; sourceTree = "<group>"; };
 		22080F992BD7589600D3FF38 /* RankPointBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankPointBarView.swift; sourceTree = "<group>"; };
 		22080F9B2BD75CAC00D3FF38 /* HP_Move.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = HP_Move.webp; sourceTree = "<group>"; };
+		22080F9D2BD7A82500D3FF38 /* SerifView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerifView.swift; sourceTree = "<group>"; };
+		22080FA02BD7AAF600D3FF38 /* BishojoSerif.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BishojoSerif.json; sourceTree = "<group>"; };
+		22080FA22BD7B28D00D3FF38 /* test.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
 		2285D13A2BC76A9000F0D8A6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2285D13E2BCA022C00F0D8A6 /* ItemDropView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDropView.swift; sourceTree = "<group>"; };
 		2285D1402BCA024600F0D8A6 /* ItemListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListView.swift; sourceTree = "<group>"; };
@@ -176,9 +182,19 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		22080F9F2BD7AA9200D3FF38 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				22080FA02BD7AAF600D3FF38 /* BishojoSerif.json */,
+				22080FA22BD7B28D00D3FF38 /* test.json */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
 		2214DE562BBEB065000E883F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				22080F9F2BD7AA9200D3FF38 /* JSON */,
 				2285D1592BCBFF3000F0D8A6 /* WebPImage */,
 				2214DE582BBEB0CA000E883F /* Sounds */,
 			);
@@ -213,6 +229,7 @@
 				22080F932BD6941400D3FF38 /* RankView.swift */,
 				22080F972BD7572500D3FF38 /* DressUpButton.swift */,
 				22080F992BD7589600D3FF38 /* RankPointBarView.swift */,
+				22080F9D2BD7A82500D3FF38 /* SerifView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -474,6 +491,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22080FA12BD7AAF600D3FF38 /* BishojoSerif.json in Resources */,
 				45C38DA92BCD8837004440A6 /* SelectedButton.webp in Resources */,
 				45806DA42BD6678E00976D79 /* NotoSansJP-Black.ttf in Resources */,
 				45C38DB32BCD885B004440A6 /* Header.webp in Resources */,
@@ -493,6 +511,7 @@
 				2285D1772BD23C7C00F0D8A6 /* NoTextButton.webp in Resources */,
 				22080F902BD6843500D3FF38 /* Character.webp in Resources */,
 				22080F892BD6756800D3FF38 /* Home_Button_Clothes.webp in Resources */,
+				22080FA32BD7B28D00D3FF38 /* test.json in Resources */,
 				22969AC02BBE7B0500D8FC26 /* Assets.xcassets in Resources */,
 				2285D1762BD23C7C00F0D8A6 /* ArrivedButton.webp in Resources */,
 				2285D1752BD23C7C00F0D8A6 /* HeartFrame.webp in Resources */,
@@ -545,6 +564,7 @@
 				2285D1552BCBFD8900F0D8A6 /* ImageLoader.swift in Sources */,
 				22080F962BD745E400D3FF38 /* UserDefaultsModel.swift in Sources */,
 				22080F572BD49ED800D3FF38 /* NavigateToDressUpButton.swift in Sources */,
+				22080F9E2BD7A82500D3FF38 /* SerifView.swift in Sources */,
 				4515603B2BCD4257006C8EAA /* SelectGoalView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

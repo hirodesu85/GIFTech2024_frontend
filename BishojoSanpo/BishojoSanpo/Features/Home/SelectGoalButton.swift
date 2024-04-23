@@ -14,7 +14,6 @@ struct SelectGoalButton: View {
         GeometryReader { geometry in
             Button(action: {
                 router.items.append(.selectGoal)
-                userDefaultsModel.currentRankPoint += 10
                 print(userDefaultsModel.currentRankPoint)
             }, label: {
                 WebPImageView(imageName: "Home_Button_Go.webp")

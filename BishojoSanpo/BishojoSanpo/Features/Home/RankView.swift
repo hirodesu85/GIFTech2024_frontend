@@ -8,12 +8,10 @@
 import SwiftUI
 
 struct RankView: View {
-    let rank: Int
+    @ObservedObject var userDefaultsModel: UserDefaultsModel
+
     var body: some View {
-        WebPImageView(imageName: "Rank_\(rank).webp")
+        WebPImageView(imageName: "Rank_\(userDefaultsModel.rank).webp")
     }
 }
 
-#Preview {
-    RankView(rank: 8)
-}
