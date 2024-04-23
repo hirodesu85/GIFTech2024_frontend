@@ -10,6 +10,9 @@ struct HomeView: View {
     @StateObject private var router = NavigationRouter()
     @StateObject var locationManager = LocationManager()
     let bishojoViewWidth: Double = 350
+    init(){
+        UserDefaults.standard.register(defaults: ["rank": 7])
+    }
     var body: some View {
         NavigationStack(path: $router.items){
             ZStack {
@@ -21,7 +24,9 @@ struct HomeView: View {
                         print("Tapped")
                     }
             
-                
+                RankView(rank: UserDefaults.standard.integer(forKey: "rank"))
+                    .position(x:-200, y:-720)
+                    .scaleEffect(0.3)
                 NavigateToDressUpButton()
                 NavigateToSelectGoalButton()
             }

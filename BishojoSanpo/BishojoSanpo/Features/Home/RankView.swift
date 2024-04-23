@@ -11,7 +11,6 @@ struct RankView: View {
     let rank: Int
     var body: some View {
         WebPImageView(imageName: "Rank_\(rank).webp")
-        
     }
 }
 

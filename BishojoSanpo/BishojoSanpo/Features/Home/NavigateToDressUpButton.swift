@@ -13,7 +13,6 @@ struct NavigateToDressUpButton: View {
     var body: some View {
         GeometryReader { geometry in
             Button(action: {
-                print("a")
                 router.items.append(.dressUp)
             }, label: {
                 WebPImageView(imageName: "Home_Button_Clothes.webp")
