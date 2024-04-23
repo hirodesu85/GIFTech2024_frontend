@@ -22,7 +22,7 @@ struct HomeView: View {
                 VStack {
                     HStack() {
                         Spacer(minLength: 20)
-                        RankView(userDefaultsModel: userDefaultsModel)
+                        RankView(rank: userDefaultsModel.rank)
                             .frame(width: 135)
                         RankPointBarView(nowRankPoint: userDefaultsModel.currentRankPoint, nextRankPoint: userDefaultsModel.untilNextRank)
                             .offset(y:-18)
@@ -54,17 +54,25 @@ struct HomeView: View {
                     Button {
                         userDefaultsModel.updateCurrentRankPoint(newCurrentRankPoint: userDefaultsModel.currentRankPoint + 100)
                         userDefaultsModel.updateUntilNextRank(newUntilNextRank: userDefaultsModel.untilNextRank - 100)
-                        userDefaultsModel.updateRank(newRank: 8)
                     } label: {
                         Text("ポイントが100増える").background(Color.white)
                     }
                     Button(action: {
                         userDefaultsModel.updateCurrentRankPoint(newCurrentRankPoint: 0)
                         userDefaultsModel.updateUntilNextRank(newUntilNextRank: 700)
-                        userDefaultsModel.updateRank(newRank: 7)
                     }, label: {
                         Text("ポイントをリセット").background(Color.white)
                     })
+                    Button {
+                        userDefaultsModel.updateRank(newRank: 8)
+                    } label: {
+                        Text("ランクを8にする").background(Color.white)
+                    }
+                    Button {
+                        userDefaultsModel.updateRank(newRank: 7)
+                    } label: {
+                        Text("ランクを7にする").background(Color.white)
+                    }
                 }
                 // デモボタンここまで
                 

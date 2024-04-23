@@ -25,6 +25,9 @@ struct WebPImageView: View {
         .onAppear {
             loadImage()
         }
+        .onChange(of: imageName) { newImageName in
+            updateImage(imageName: newImageName)
+        }
     }
 
     private func loadImage() {
@@ -32,7 +35,14 @@ struct WebPImageView: View {
             image = Image(uiImage: uiImage)
         }
     }
+    private func updateImage(imageName: String) {
+        if let uiImage = ImageLoader.loadWebPImage(from: imageName) {
+            image = Image(uiImage: uiImage)
+        }
+    }
 }
+
+
 #Preview {
     WebPImageView(imageName: "SampleWebP.webp")
 }
