@@ -27,8 +27,8 @@ struct HomeView: View {
                 RankView(rank: UserDefaults.standard.integer(forKey: "rank"))
                     .position(x:-200, y:-720)
                     .scaleEffect(0.3)
-                NavigateToDressUpButton()
-                NavigateToSelectGoalButton()
+                DressUpButton()
+                SelectGoalButton()
             }
             // 画面遷移定義
             .navigationDestination(for: NavigationRouter.Item.self) { item in

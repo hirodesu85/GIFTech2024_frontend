@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct NavigateToSelectGoalButton: View {
+struct SelectGoalButton: View {
     @EnvironmentObject var router: NavigationRouter
     var body: some View {
         GeometryReader { geometry in
@@ -24,5 +24,5 @@ struct NavigateToSelectGoalButton: View {
 }
 
 #Preview {
-    NavigateToSelectGoalButton()
+    SelectGoalButton()
 }

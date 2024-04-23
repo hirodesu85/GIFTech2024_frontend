@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct NavigateToDressUpButton: View {
+struct DressUpButton: View {
     @EnvironmentObject var router: NavigationRouter
     
     var body: some View {
@@ -25,5 +25,5 @@ struct NavigateToDressUpButton: View {
 }
 
 #Preview {
-    NavigateToDressUpButton()
+    DressUpButton()
 }
