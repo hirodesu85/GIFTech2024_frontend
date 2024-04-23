@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22080F532BD4967D00D3FF38 /* ArrivedButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22080F522BD4967D00D3FF38 /* ArrivedButtonView.swift */; };
+		22080F552BD4978C00D3FF38 /* HomeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22080F542BD4978C00D3FF38 /* HomeButtonView.swift */; };
+		22080F572BD49ED800D3FF38 /* NavigateToDressUpButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22080F562BD49ED800D3FF38 /* NavigateToDressUpButton.swift */; };
+		22080F592BD4A05D00D3FF38 /* DetectTapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22080F582BD4A05D00D3FF38 /* DetectTapView.swift */; };
+		22080F5D2BD4A3C100D3FF38 /* RewardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22080F5C2BD4A3C100D3FF38 /* RewardModel.swift */; };
 		22080F432BD3F66A00D3FF38 /* ItemListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22080F422BD3F66A00D3FF38 /* ItemListModel.swift */; };
 		22080F452BD3FF9500D3FF38 /* DressUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22080F442BD3FF9500D3FF38 /* DressUp.swift */; };
 		2285D13B2BC76A9000F0D8A6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2285D13A2BC76A9000F0D8A6 /* Constants.swift */; };
@@ -56,6 +61,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		22080F522BD4967D00D3FF38 /* ArrivedButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrivedButtonView.swift; sourceTree = "<group>"; };
+		22080F542BD4978C00D3FF38 /* HomeButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeButtonView.swift; sourceTree = "<group>"; };
+		22080F562BD49ED800D3FF38 /* NavigateToDressUpButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigateToDressUpButton.swift; sourceTree = "<group>"; };
+		22080F582BD4A05D00D3FF38 /* DetectTapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectTapView.swift; sourceTree = "<group>"; };
+		22080F5C2BD4A3C100D3FF38 /* RewardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardModel.swift; sourceTree = "<group>"; };
 		22080F422BD3F66A00D3FF38 /* ItemListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListModel.swift; sourceTree = "<group>"; };
 		22080F442BD3FF9500D3FF38 /* DressUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DressUp.swift; sourceTree = "<group>"; };
 		2285D13A2BC76A9000F0D8A6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -159,6 +169,8 @@
 				22986D3C2BC500A50018DCFC /* MapViewController.swift */,
 				22986D402BC5010D0018DCFC /* MapView.swift */,
 				22986D422BC5016B0018DCFC /* MapViewControllerBridge.swift */,
+				22080F522BD4967D00D3FF38 /* ArrivedButtonView.swift */,
+				22080F542BD4978C00D3FF38 /* HomeButtonView.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -187,6 +199,8 @@
 			isa = PBXGroup;
 			children = (
 				2285D13E2BCA022C00F0D8A6 /* ItemDropView.swift */,
+				22080F562BD49ED800D3FF38 /* NavigateToDressUpButton.swift */,
+				22080F582BD4A05D00D3FF38 /* DetectTapView.swift */,
 			);
 			path = ItemDrop;
 			sourceTree = "<group>";
@@ -320,6 +334,7 @@
 			children = (
 				2285D1652BCD128800F0D8A6 /* SelectGoalModel.swift */,
 				2285D16F2BCFDD4400F0D8A6 /* DirectionModel.swift */,
+				22080F5C2BD4A3C100D3FF38 /* RewardModel.swift */,
 				22080F422BD3F66A00D3FF38 /* ItemListModel.swift */,
 			);
 			path = Models;
@@ -438,8 +453,11 @@
 				451560412BCD44C6006C8EAA /* HeaderView.swift in Sources */,
 				22986D432BC5016B0018DCFC /* MapViewControllerBridge.swift in Sources */,
 				2285D16E2BCE890D00F0D8A6 /* LocationManager.swift in Sources */,
+				22080F552BD4978C00D3FF38 /* HomeButtonView.swift in Sources */,
 				2285D1662BCD128800F0D8A6 /* SelectGoalModel.swift in Sources */,
 				22969ABE2BBE7B0400D8FC26 /* HomeView.swift in Sources */,
+				22080F532BD4967D00D3FF38 /* ArrivedButtonView.swift in Sources */,
+				22080F592BD4A05D00D3FF38 /* DetectTapView.swift in Sources */,
 				2285D1412BCA024600F0D8A6 /* ItemListView.swift in Sources */,
 				4515603D2BCD4460006C8EAA /* GirlChatView.swift in Sources */,
 				2285D13F2BCA022C00F0D8A6 /* ItemDropView.swift in Sources */,
@@ -449,10 +467,12 @@
 				22986D3D2BC500A50018DCFC /* MapViewController.swift in Sources */,
 				2285D1572BCBFE2000F0D8A6 /* WebPImageView.swift in Sources */,
 				22969ABC2BBE7B0400D8FC26 /* BishojoSanpoApp.swift in Sources */,
+				22080F5D2BD4A3C100D3FF38 /* RewardModel.swift in Sources */,
 				22080F452BD3FF9500D3FF38 /* DressUp.swift in Sources */,
 				4515603F2BCD44A2006C8EAA /* MyChatView.swift in Sources */,
 				2285D1432BCA0ACF00F0D8A6 /* NavigationRouter.swift in Sources */,
 				2285D1552BCBFD8900F0D8A6 /* ImageLoader.swift in Sources */,
+				22080F572BD49ED800D3FF38 /* NavigateToDressUpButton.swift in Sources */,
 				4515603B2BCD4257006C8EAA /* SelectGoalView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
