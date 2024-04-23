@@ -62,6 +62,7 @@
 		452FF31C2BD7E4EB00A0187D /* ItemPink.webp in Resources */ = {isa = PBXBuildFile; fileRef = 452FF30A2BD7E4EB00A0187D /* ItemPink.webp */; };
 		452FF31D2BD7E4EB00A0187D /* TagActiveHair.webp in Resources */ = {isa = PBXBuildFile; fileRef = 452FF30B2BD7E4EB00A0187D /* TagActiveHair.webp */; };
 		452FF31E2BD7E4EB00A0187D /* TagActiveOver.webp in Resources */ = {isa = PBXBuildFile; fileRef = 452FF30C2BD7E4EB00A0187D /* TagActiveOver.webp */; };
+		452FF3202BD7E78600A0187D /* ItemTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452FF31F2BD7E78600A0187D /* ItemTable.swift */; };
 		45806DA42BD6678E00976D79 /* NotoSansJP-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 45806DA32BD6678E00976D79 /* NotoSansJP-Black.ttf */; };
 		45904E462BD0AD6F007F304A /* NewNotSelectedButton.webp in Resources */ = {isa = PBXBuildFile; fileRef = 45904E452BD0AD6F007F304A /* NewNotSelectedButton.webp */; };
 		45904E482BD0AD7C007F304A /* NewHeader.webp in Resources */ = {isa = PBXBuildFile; fileRef = 45904E472BD0AD7C007F304A /* NewHeader.webp */; };
@@ -130,6 +131,7 @@
 		452FF30A2BD7E4EB00A0187D /* ItemPink.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = ItemPink.webp; sourceTree = "<group>"; };
 		452FF30B2BD7E4EB00A0187D /* TagActiveHair.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = TagActiveHair.webp; sourceTree = "<group>"; };
 		452FF30C2BD7E4EB00A0187D /* TagActiveOver.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = TagActiveOver.webp; sourceTree = "<group>"; };
+		452FF31F2BD7E78600A0187D /* ItemTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTable.swift; sourceTree = "<group>"; };
 		45806DA32BD6678E00976D79 /* NotoSansJP-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansJP-Black.ttf"; sourceTree = "<group>"; };
 		45904E452BD0AD6F007F304A /* NewNotSelectedButton.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = NewNotSelectedButton.webp; sourceTree = "<group>"; };
 		45904E472BD0AD7C007F304A /* NewHeader.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = NewHeader.webp; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 			children = (
 				2285D1402BCA024600F0D8A6 /* ItemListView.swift */,
 				22080F442BD3FF9500D3FF38 /* DressUp.swift */,
+				452FF31F2BD7E78600A0187D /* ItemTable.swift */,
 			);
 			path = DressUp;
 			sourceTree = "<group>";
@@ -548,6 +551,7 @@
 				2285D1572BCBFE2000F0D8A6 /* WebPImageView.swift in Sources */,
 				22969ABC2BBE7B0400D8FC26 /* BishojoSanpoApp.swift in Sources */,
 				22080F5D2BD4A3C100D3FF38 /* RewardModel.swift in Sources */,
+				452FF3202BD7E78600A0187D /* ItemTable.swift in Sources */,
 				22080F452BD3FF9500D3FF38 /* DressUp.swift in Sources */,
 				4515603F2BCD44A2006C8EAA /* MyChatView.swift in Sources */,
 				2285D1432BCA0ACF00F0D8A6 /* NavigationRouter.swift in Sources */,

@@ -87,7 +87,6 @@ struct ItemListView: View {
                 await itemListModel.fetchCatalog()
             }
         }
-        
     }
 }
 
