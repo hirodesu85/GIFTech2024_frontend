@@ -10,27 +10,34 @@ import SwiftUI
 struct ItemDropView: View {
     @EnvironmentObject var router: NavigationRouter
     let goalData: GoalData
+    @StateObject private var rewardModel = RewardModel()
+    @State private var isTapped = false
+    
     var body: some View {
-        VStack{
-            Text("ItemDrop")
-            Text("PlaceId : "+goalData.placeId)
-            Text("selectedDistance : "+goalData.selectedDistance)
-            Button(action: {
-                router.items.removeLast(router.items.count)
+        ZStack{
+            VStack{
+                Text("プレゼントの画像を表示")
+                Text("Tap Open!")
+                if let dropItem = rewardModel.dropItem{
+                    Text("アイテム獲得！")
+                    Text(dropItem.name)
+                }else{
+                    Text("アイテムをロード中")
+                }
+            }
+            DetectTapView(isTapped: $isTapped)
                 
-            }, label: {
-                Text("Home")
-            })
-            
-            Button(action: {
-                router.items.removeLast(router.items.count)
-                router.items.append(.dressUp)
+            HomeButtonView()
                 
-            }, label: {
-                Text("着せ替えする")
-            })
         }
+        .ignoresSafeArea()
         .navigationBarBackButtonHidden(true)
+        .onAppear{
+            Task {
+                await rewardModel.fetchRewardData(goalData: goalData)
+            }
+        }
+        
         
     }
 }

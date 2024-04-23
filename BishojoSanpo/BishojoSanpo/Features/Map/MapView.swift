@@ -30,7 +30,7 @@ struct MapView: View {
         
         ZStack{
             MapViewControllerBridge(polyline: $polyline,marker: $markerManager.destinationMarker, isChangedPolyline: $isChangedPolyline,goalData: goalData)
-           
+            
             WebPImageView(imageName: "HeartBase.webp")
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .scaledToFill()
@@ -39,16 +39,11 @@ struct MapView: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .scaledToFill()
                 .allowsHitTesting(false)
-            Button(action: {
-                router.items.append(.itemDrop(goalData: goalData))
-            }, label: {
-                WebPImageView(imageName: "ArrivedButton.webp")
-                    .frame(width: 150)
-                    .frame(maxWidth: .infinity,maxHeight: .infinity, alignment: .bottomLeading)
-                    .padding(.leading, 18)
-                    .padding(.bottom, 55)
-            })
-        }.offset(y:-7)
+            ArrivedButtonView(goalData: goalData)
+            HomeButtonView()
+            
+        }
+        .ignoresSafeArea()
         
         .onAppear{
             loadDirection()
