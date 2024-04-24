@@ -61,6 +61,9 @@ struct MapView: View {
             if let directionResult = directionResult {
                 DispatchQueue.main.async {
                     self.polyline = directionModel.createPolyline(from: directionResult)
+                    let endAddress = directionResult.routes.last?.legs.last?.endAddress.replacingOccurrences(of: "日本、", with: "") ?? ""
+                    let distanceText = directionResult.routes.last?.legs.last?.distance.text ?? ""
+                    self.markerManager.destinationMarker.snippet = "\(endAddress)\n移動距離: \(distanceText)"
                     isChangedPolyline = true // MapViewControllerBridgeに変更を検知させるためのフラグをtrueに
                 }
             }

@@ -91,11 +91,17 @@ struct Leg: Codable {
     let endLocation: LocationPoint
     /// 経路
     let steps: [Step]
+    // 目的地の住所
+    let endAddress: String
+    // 目的地までの移動距離
+    let distance: TextValueObject
     
     enum CodingKeys: String, CodingKey {
         case startLocation = "start_location"
         case endLocation = "end_location"
         case steps
+        case endAddress = "end_address"
+        case distance
     }
 }
 
@@ -112,4 +118,9 @@ struct Step: Codable {
 struct LocationPoint: Codable {
     let lat: Double
     let lng: Double
+}
+
+struct TextValueObject: Codable {
+    let text: String
+    let value: Int
 }
