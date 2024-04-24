@@ -12,12 +12,14 @@ class UserDefaultsModel: ObservableObject {
     @Published var rank: Int
     @Published var untilNextRank: Int
     @Published var currentRankPoint: Int
+    @Published var currentWearing: [String: [String: String]] = [:]
 
     init() {
         UserDefaults.standard.register(defaults: [
                     "rank": 7,
                     "untilNextRank": 100,
-                    "currentRankPoint": 0
+                    "currentRankPoint": 0,
+                    "currentWearing": [:]
                 ])
         // UserDefaults から初期値を読み込む
         self.rank = UserDefaults.standard.integer(forKey: "rank")
@@ -40,4 +42,10 @@ class UserDefaultsModel: ObservableObject {
         UserDefaults.standard.set(newCurrentRankPoint, forKey: "currentRankPoint")
         self.currentRankPoint = newCurrentRankPoint
     }
+    func updateWearingItem(category: String, itemId: String, imageUrl: String) {
+            let itemData = ["id": itemId, "imageUrl": imageUrl]
+            currentWearing[category] = itemData
+            UserDefaults.standard.set(currentWearing, forKey: "currentWearing")
+        }
 }
+
