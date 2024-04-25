@@ -12,6 +12,7 @@ struct ItemDropView: View {
     let goalData: GoalData
     @StateObject private var rewardModel = RewardModel()
     @State private var isTapped = false
+    @State private var getItemImageData: Data? = nil
     
     var body: some View {
         ZStack{
@@ -22,15 +23,6 @@ struct ItemDropView: View {
             VStack{
                 WebPImageView(imageName: "present_box.webp").aspectRatio(contentMode: .fit).frame(width: UIScreen.main.bounds.width * 0.8)
                 WebPImageView(imageName: "tap_to_open.webp").aspectRatio(contentMode: .fit).frame(width: UIScreen.main.bounds.width * 0.7)
-                /*
-                Text("プレゼントの画像を表示")
-                Text("Tap Open!")
-                if let dropItem = rewardModel.dropItem{
-                    Text("アイテム獲得！")
-                    Text(dropItem.name)
-                }else{
-                    Text("アイテムをロード中")
-                }*/
             }
             DetectTapView(isTapped: $isTapped)
             VStack {
@@ -38,7 +30,7 @@ struct ItemDropView: View {
                     router.returnToHome()
                 }) {
                     WebPImageView(imageName: "skip_button.webp").aspectRatio(contentMode: .fit)
-                        .frame(width: 70, height: 70)
+                        .frame(width: 70)
                         .padding(.top, 15)
                         .padding(.trailing, 12)
                 }
@@ -49,19 +41,12 @@ struct ItemDropView: View {
                     .topTrailing
             )
                 
-            if let dropItem = rewardModel.dropItem , isTapped {
-                AsyncImage(url: URL(string: dropItem.imageUrl)) { phase in
-                    if let dropItemImage = phase.image {
-                        ZStack {
-                            WebPImageView(imageName: "effect.webp")
-                            dropItemImage.resizable()
-                                .aspectRatio(contentMode: .fit)
-                        }
-                    } else if phase.error != nil {
-                        Text("画像読み込みエラー")
-                    } else {
-                        Text("ロード中")
-                    }
+            if let dropItemData = getItemImageData , isTapped {
+                ZStack {
+                    WebPImageView(imageName: "effect.webp")
+                    Image(uiImage: UIImage(data: dropItemData)!).resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: UIScreen.main.bounds.width * 0.35).padding(.bottom, 18)
                 }
             }
                 
@@ -71,6 +56,15 @@ struct ItemDropView: View {
         .onAppear{
             Task {
                 await rewardModel.fetchRewardData(goalData: goalData)
+                do {
+                    guard let url = URL(string: rewardModel.dropItem!.imageUrl) else {
+                        print("Invalid URL")
+                        return
+                    }
+                    (getItemImageData, _) = try await URLSession.shared.data(from: url)
+                } catch let err {
+                    print("Error : \(err.localizedDescription)")
+                }
             }
         }
         
