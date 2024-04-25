@@ -13,6 +13,7 @@ class SelectGoalModel {
     var selectedCategory: String = ""
     var selectedDistance: String = ""
     var placeId: String = ""
+    var placeName: String = ""
     var latitude: Double = 0.0
     var longitude: Double = 0.0
     var errorMessage: String?
@@ -28,6 +29,7 @@ class SelectGoalModel {
             let (data, _) = try await URLSession.shared.data(from: url)
             let suggestedPlace = try JSONDecoder().decode(SuggestedPlace.self, from: data)
             self.placeId = suggestedPlace.place_id
+            self.placeName = suggestedPlace.name
             self.latitude = suggestedPlace.latitude
             self.longitude = suggestedPlace.longitude
         } catch {
@@ -38,6 +40,7 @@ class SelectGoalModel {
 
 struct SuggestedPlace: Codable {
     let place_id: String
+    let name: String
     let latitude: Double
     let longitude: Double
 }
