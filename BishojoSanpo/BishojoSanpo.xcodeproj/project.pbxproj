@@ -63,6 +63,8 @@
 		452FF31D2BD7E4EB00A0187D /* TagActiveHair.webp in Resources */ = {isa = PBXBuildFile; fileRef = 452FF30B2BD7E4EB00A0187D /* TagActiveHair.webp */; };
 		452FF31E2BD7E4EB00A0187D /* TagActiveOver.webp in Resources */ = {isa = PBXBuildFile; fileRef = 452FF30C2BD7E4EB00A0187D /* TagActiveOver.webp */; };
 		452FF3202BD7E78600A0187D /* ItemTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452FF31F2BD7E78600A0187D /* ItemTable.swift */; };
+		452FF3222BD82A6E00A0187D /* Curtain.webp in Resources */ = {isa = PBXBuildFile; fileRef = 452FF3212BD82A6E00A0187D /* Curtain.webp */; };
+		452FF3242BD8B0A000A0187D /* NewBackWhite.webp in Resources */ = {isa = PBXBuildFile; fileRef = 452FF3232BD8B0A000A0187D /* NewBackWhite.webp */; };
 		45806DA42BD6678E00976D79 /* NotoSansJP-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 45806DA32BD6678E00976D79 /* NotoSansJP-Black.ttf */; };
 		45904E462BD0AD6F007F304A /* NewNotSelectedButton.webp in Resources */ = {isa = PBXBuildFile; fileRef = 45904E452BD0AD6F007F304A /* NewNotSelectedButton.webp */; };
 		45904E482BD0AD7C007F304A /* NewHeader.webp in Resources */ = {isa = PBXBuildFile; fileRef = 45904E472BD0AD7C007F304A /* NewHeader.webp */; };
@@ -132,6 +134,8 @@
 		452FF30B2BD7E4EB00A0187D /* TagActiveHair.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = TagActiveHair.webp; sourceTree = "<group>"; };
 		452FF30C2BD7E4EB00A0187D /* TagActiveOver.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = TagActiveOver.webp; sourceTree = "<group>"; };
 		452FF31F2BD7E78600A0187D /* ItemTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTable.swift; sourceTree = "<group>"; };
+		452FF3212BD82A6E00A0187D /* Curtain.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = Curtain.webp; sourceTree = "<group>"; };
+		452FF3232BD8B0A000A0187D /* NewBackWhite.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = NewBackWhite.webp; sourceTree = "<group>"; };
 		45806DA32BD6678E00976D79 /* NotoSansJP-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansJP-Black.ttf"; sourceTree = "<group>"; };
 		45904E452BD0AD6F007F304A /* NewNotSelectedButton.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = NewNotSelectedButton.webp; sourceTree = "<group>"; };
 		45904E472BD0AD7C007F304A /* NewHeader.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = NewHeader.webp; sourceTree = "<group>"; };
@@ -383,6 +387,8 @@
 		452FF2FA2BD7E4A500A0187D /* DressUp */ = {
 			isa = PBXGroup;
 			children = (
+				452FF3232BD8B0A000A0187D /* NewBackWhite.webp */,
+				452FF3212BD82A6E00A0187D /* Curtain.webp */,
 				452FF3002BD7E4EB00A0187D /* BackWhite.webp */,
 				452FF3032BD7E4EB00A0187D /* ButtonDecide.webp */,
 				452FF3082BD7E4EB00A0187D /* ButtonDropdown.webp */,
@@ -505,6 +511,7 @@
 				452FF31A2BD7E4EB00A0187D /* ButtonDropdown.webp in Resources */,
 				452FF30F2BD7E4EB00A0187D /* Cursor.webp in Resources */,
 				452FF3172BD7E4EB00A0187D /* TagNormalUnder.webp in Resources */,
+				452FF3222BD82A6E00A0187D /* Curtain.webp in Resources */,
 				452FF31D2BD7E4EB00A0187D /* TagActiveHair.webp in Resources */,
 				452FF30E2BD7E4EB00A0187D /* TagActiveUnder.webp in Resources */,
 				2285D1772BD23C7C00F0D8A6 /* NoTextButton.webp in Resources */,
@@ -516,6 +523,7 @@
 				452FF3122BD7E4EB00A0187D /* BackWhite.webp in Resources */,
 				452FF31B2BD7E4EB00A0187D /* ItemLock.webp in Resources */,
 				2285D1622BCCD64700F0D8A6 /* SampleWebP.webp in Resources */,
+				452FF3242BD8B0A000A0187D /* NewBackWhite.webp in Resources */,
 				45C8E8FC2BD657990043C975 /* NotoSansJP-VariableFont_wght.ttf in Resources */,
 				45C38DB62BCD885B004440A6 /* HomeButton.webp in Resources */,
 				452FF3192BD7E4EB00A0187D /* ItemBlank.webp in Resources */,
