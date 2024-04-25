@@ -113,7 +113,7 @@
 		45C38DAE2BCD885A004440A6 /* ChatNormalLeft.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = ChatNormalLeft.webp; sourceTree = "<group>"; };
 		45C38DAF2BCD885A004440A6 /* HomeButton.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = HomeButton.webp; sourceTree = "<group>"; };
 		45C38DB02BCD885B004440A6 /* NoSelectedButton.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = NoSelectedButton.webp; sourceTree = "<group>"; };
-		45C38DB12BCD885B004440A6 /* Background.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = Background.webp; sourceTree = "<group>"; };
+		45C38DB12BCD885B004440A6 /* Background.webp */ = {isa = PBXFileReference; lastKnownFileType = file; name = Background.webp; path = ../SelectGoal/Background.webp; sourceTree = "<group>"; };
 		45C38DB22BCD885B004440A6 /* GirlIcon.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = GirlIcon.webp; sourceTree = "<group>"; };
 		45C8E8FB2BD657990043C975 /* NotoSansJP-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansJP-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		45C8E8FD2BD658E00043C975 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -228,7 +228,6 @@
 			children = (
 				45904E472BD0AD7C007F304A /* NewHeader.webp */,
 				45904E452BD0AD6F007F304A /* NewNotSelectedButton.webp */,
-				45C38DB12BCD885B004440A6 /* Background.webp */,
 				45C38DAE2BCD885A004440A6 /* ChatNormalLeft.webp */,
 				45C38DAD2BCD885A004440A6 /* ChatNormalRight.webp */,
 				45C38DB22BCD885B004440A6 /* GirlIcon.webp */,
@@ -257,6 +256,7 @@
 		2285D15A2BCBFF9A00F0D8A6 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				45C38DB12BCD885B004440A6 /* Background.webp */,
 			);
 			path = Common;
 			sourceTree = "<group>";
