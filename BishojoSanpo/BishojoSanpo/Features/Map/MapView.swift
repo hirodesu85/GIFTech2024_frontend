@@ -56,7 +56,7 @@ struct MapView: View {
         
         DispatchQueue.global(qos: .userInitiated).async {
             // 経路情報取得
-            let directionResult = directionModel.getDirection(destination: destination, start: startLocation)
+            let directionResult = directionModel.getDirection(destination: destination, start: startLocation, selectedDistance: goalData.selectedDistance)
             // 取得した経路情報を用いてpolylineを作成
             if let directionResult = directionResult {
                 DispatchQueue.main.async {
