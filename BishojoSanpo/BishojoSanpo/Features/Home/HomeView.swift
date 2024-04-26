@@ -39,7 +39,7 @@ struct HomeView: View {
                         Spacer(minLength: 20)
                         RankView(rank: userDefaultsModel.rank)
                             .frame(width: 135)
-                        RankPointBarView(nowRankPoint: userDefaultsModel.currentRankPoint, nextRankPoint: userDefaultsModel.untilNextRank)
+                        HomeRankPointView(nowRankPoint: userDefaultsModel.currentRankPoint, nextRankPoint: userDefaultsModel.untilNextRank)
                             .offset(y:-18)
                         Spacer(minLength: 20)
                     }
