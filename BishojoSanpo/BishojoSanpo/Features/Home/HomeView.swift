@@ -8,6 +8,7 @@ import SwiftUI
 
 struct HomeView: View {
     @StateObject private var router = NavigationRouter()
+    @StateObject var locationManager = LocationManager()
     @ObservedObject var userDefaultsModel = UserDefaultsModel()
     @State var isSerifShowed: Bool =  false
     @State var reloadSerif: Bool = false
