@@ -12,6 +12,8 @@ struct ItemListView: View {
     @State var selectedCategory: Int = 0
     
     @EnvironmentObject var router: NavigationRouter
+    @ObservedObject var userDefaultsModel = UserDefaultsModel()
+    @State var selectedItemModel = SelectedItemModel()
     
     var body: some View {
         ZStack {
@@ -38,17 +40,22 @@ struct ItemListView: View {
             }
             .offset(x: 150, y: -370)
             
+            CharacterView(userDefaultsModel: userDefaultsModel)
+                .scaleEffect(0.83)
+                .offset(x:-75,y:35)
+            
             VStack(spacing: 0) {
                 Spacer()
                     .frame(height: 100)
                 if let catalog = itemListModel.catalog {
-                    ItemTable(itemListModel: itemListModel, selectedCategory: $selectedCategory)
+                    ItemTable(itemListModel: itemListModel, userDefaultsModel: userDefaultsModel, selectedCategory: $selectedCategory, selectedItemModel: selectedItemModel)
                         .padding(.leading, 145)
                 } else {
                     Text("データをロード中...")
                 }
                 
                 Button(action: {
+                    updateUserDefaulsWearing()
                 }) {
                     WebPImageView(imageName: "ButtonDecide.webp")
                         .frame(width: 230, height: 230)
@@ -61,6 +68,14 @@ struct ItemListView: View {
                 }
             }
         }
+    }
+    func updateUserDefaulsWearing(){
+        
+        userDefaultsModel.updateWearingItem(
+            hair: selectedItemModel.hair == -1 ? userDefaultsModel.currentWearingId["hair"]  as! Int : selectedItemModel.hair,
+            top: selectedItemModel.top == -1 ? userDefaultsModel.currentWearingId["top"] as! Int: selectedItemModel.top,
+            bottom: selectedItemModel.bottom == -1 ? userDefaultsModel.currentWearingId["bottom"] as! Int: selectedItemModel.bottom,
+            shoes: selectedItemModel.shoes == -1 ? userDefaultsModel.currentWearingId["shoes"] as! Int: selectedItemModel.shoes)
     }
 }
 
