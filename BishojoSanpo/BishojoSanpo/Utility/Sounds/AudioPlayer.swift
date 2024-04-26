@@ -1,8 +1,30 @@
-//
-//  AudioPlayer.swift
-//  BishojoSanpo
-//
-//  Created by 稲田裕次郎 on 2024/04/26.
-//
+import AVFoundation
 
-import Foundation
+class AudioPlayer {
+    static let shared = AudioPlayer()
+    var audioPlayer: AVAudioPlayer?
+
+    init() {
+        setupAudioPlayer(soundName: "clicksound")
+    }
+
+    func setupAudioPlayer(soundName: String) {
+        guard let path = Bundle.main.path(forResource: soundName, ofType: "mp3") else {
+            print("Failed to find the file path")
+            return
+        }
+
+        let url = URL(fileURLWithPath: path)  // この行はOptionalではない
+
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: url)
+            audioPlayer?.prepareToPlay()
+        } catch {
+            print("Failed to initialize the audio player: \(error)")
+        }
+    }
+
+    func playSound() {
+        audioPlayer?.play()
+    }
+}

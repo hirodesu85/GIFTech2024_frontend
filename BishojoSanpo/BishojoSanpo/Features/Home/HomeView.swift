@@ -16,18 +16,17 @@ struct HomeView: View {
                 Button(action: {
                     router.items.append(.selectGoal)
                     print(router)
+                    AudioPlayer.shared.playSound()
                 }, label: {
                     Text("お散歩")
                 })
-                .playSound(named: "clicksound.mp3")
                 
                 Button(action: {
                     router.items.append(.dressUp)
-                    
+                    AudioPlayer.shared.playSound()
                 }, label: {
                     Text("着替える")
                 })
-                .playSound(named: "clicksound.mp3")
             }
             // 画面遷移定義
             .navigationDestination(for: NavigationRouter.Item.self) { item in
