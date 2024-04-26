@@ -73,32 +73,39 @@ struct ItemTable: View {
                         .frame(width: 200, height: 450)
                         .clipped()
                         .blur(radius: 3.0)
-                    ScrollView {
-                        LazyVGrid(columns: columns, spacing: 5) {
-                            ForEach(itemsForSelectedCategory(catalog: catalog), id: \.self.id) { item in
-                                ZStack {
-                                    WebPImageView(imageName: "ItemBlank.webp")
+                    ScrollViewReader { proxy in
+                        ScrollView {
+                            LazyVGrid(columns: columns, spacing: 5) {
+                                ForEach(itemsForSelectedCategory(catalog: catalog), id: \.self.id) { item in
+                                    ZStack {
+                                        WebPImageView(imageName: "ItemBlank.webp")
+                                            .frame(width: 100, height: 100)
+                                        AsyncImage(url: URL(string: item.imageUrl)) { phase in
+                                            if let image = phase.image {
+                                                image.resizable()
+                                            } else if phase.error != nil {
+                                                Text("画像読み込みエラー")
+                                            } else {
+                                                Text("画像取得中...")
+                                            }
+                                        }.frame(width: 55, height: 55)
+                                            .offset(x: -3, y: 3)
+                                    }
+                                }
+                                
+                                ForEach(0..<12-itemsForSelectedCategory(catalog: catalog).count, id: \.self) { _ in
+                                    WebPImageView(imageName: "ItemLock.webp")
                                         .frame(width: 100, height: 100)
-                                    AsyncImage(url: URL(string: item.imageUrl)) { phase in
-                                        if let image = phase.image {
-                                            image.resizable()
-                                        } else if phase.error != nil {
-                                            Text("画像読み込みエラー")
-                                        } else {
-                                            Text("画像取得中...")
-                                        }
-                                    }.frame(width: 55, height: 55)
-                                        .offset(x: -3, y: 3)
                                 }
                             }
-                            
-                            ForEach(0..<12-itemsForSelectedCategory(catalog: catalog).count, id: \.self) { _ in
-                                WebPImageView(imageName: "ItemLock.webp")
-                                    .frame(width: 100, height: 100)
+                        }
+                        .frame(width: 200, height: 450)
+                        .onChange(of: selectedCategory) { _ in
+                            withAnimation {
+                                proxy.scrollTo(1)
                             }
                         }
                     }
-                    .frame(width: 200, height: 450)
                 }
             } else {
                 Text("データをロード中...")

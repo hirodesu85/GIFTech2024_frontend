@@ -11,6 +11,8 @@ struct ItemListView: View {
     @StateObject var itemListModel = ItemListModel()
     @State var selectedCategory: Int = 0
     
+    @EnvironmentObject var router: NavigationRouter
+    
     var body: some View {
         ZStack {
             WebPImageView(imageName: "Background.webp")
@@ -26,6 +28,15 @@ struct ItemListView: View {
                 .frame(width: 230, height: 200)
                 .offset(x: -80, y: -390)
                 .edgesIgnoringSafeArea(.all)
+            
+            Button(action: {
+                router.returnToHome()
+            }) {
+                WebPImageView(imageName: "HomeButton.webp")
+                    .frame(width: 70, height: 70)
+                    .padding(.trailing, 12)
+            }
+            .offset(x: 150, y: -370)
             
             VStack(spacing: 0) {
                 Spacer()
