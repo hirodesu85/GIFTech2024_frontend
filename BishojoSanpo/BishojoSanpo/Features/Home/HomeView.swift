@@ -48,7 +48,7 @@ struct HomeView: View {
                 
                 
                 if isSerifShowed {
-                    SerifView(reload: reloadSerif)
+                    SerifView(reload: reloadSerif, rank: userDefaultsModel.rank)
                         .position(x:300,y:215)
                         .scaleEffect(0.6)
                 }

@@ -10,7 +10,8 @@ import SwiftUI
 struct SerifView: View {
     var reload: Bool
     @State private var currentSerif: String = "Loading..."
-    @State private var lastSerif: String? = nil // 最後に表示されたセリフを記録
+    @State private var lastSerif: String? = nil //最後に表示されたセリフを記録
+    var rank: Int
     
     var body: some View {
         ZStack {
@@ -27,28 +28,23 @@ struct SerifView: View {
     }
     
     func loadRandomSerif() {
-        if let path = Bundle.main.path(forResource: "CharacterSerif", ofType: "json") {
-            do {
-                let data = try Data(contentsOf: URL(fileURLWithPath: path))
-                let serifs = try JSONDecoder().decode([String].self, from: data)
-                if !serifs.isEmpty {
-                    // 直前のセリフを除外してランダムに選択
-                    var newSerifs = serifs.filter { $0 != lastSerif }
-                    if newSerifs.isEmpty { // 万が一全てのセリフが同じ場合はフィルタリングをスキップ
-                        newSerifs = serifs
-                    }
-                    currentSerif = newSerifs.randomElement() ?? "No serifs found"
-                    lastSerif = currentSerif // 選択されたセリフを記録
-                }
-            } catch {
-                currentSerif = "Error loading serifs"
-                print(error)
-            }
+        let rankKey = String(rank)
+        if let path = Bundle.main.path(forResource: "CharacterSerif", ofType: "json"),
+           let data = try? Data(contentsOf: URL(fileURLWithPath: path)),
+           let serifsDict = try? JSONDecoder().decode([String: [String]].self, from: data),
+           let serifs = serifsDict[rankKey], !serifs.isEmpty {
+            var newSerifs = serifs.filter { $0 != lastSerif }
+            if newSerifs.isEmpty { newSerifs = serifs }
+            currentSerif = newSerifs.randomElement() ?? "No serifs found"
+            lastSerif = currentSerif
+        } else {
+            currentSerif = "Error loading serifs or no serifs for this rank"
         }
+        
     }
 }
 
 
 #Preview {
-    SerifView(reload: true)
+    SerifView(reload: true, rank: 7)
 }
