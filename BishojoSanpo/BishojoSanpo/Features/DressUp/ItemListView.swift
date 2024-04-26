@@ -8,86 +8,59 @@
 import SwiftUI
 
 struct ItemListView: View {
-    @StateObject private var itemListModel = ItemListModel()
-
+    @StateObject var itemListModel = ItemListModel()
+    @State var selectedCategory: Int = 0
+    
+    @EnvironmentObject var router: NavigationRouter
+    
     var body: some View {
-        VStack{
-            if let catalog = itemListModel.catalog {
-                ScrollView {
-                    ForEach(catalog.hairs, id: \.self.id) { hair in
-                        VStack {
-                            Text("hair_id: \(hair.id)")
-                            Text("hair_name: \(hair.name)")
-                            AsyncImage(url: URL(string: hair.imageUrl)) { phase in
-                                if let image = phase.image {
-                                    image.resizable()
-                                } else if phase.error != nil {
-                                    Text("画像読み込みエラー")
-                                } else {
-                                    Text("画像取得中...")
-                                }
-                            }.frame(width: 100, height: 100)
-                            Text("hair_gained_at: \(String(describing: hair.gainedAt))")
-                        }.padding(20)
-                    }
-                    ForEach(catalog.tops, id: \.self.id) { top in
-                        VStack {
-                            Text("top_id: \(top.id)")
-                            Text("top_name: \(top.name)")
-                            AsyncImage(url: URL(string: top.imageUrl)) { phase in
-                                if let image = phase.image {
-                                    image.resizable()
-                                } else if phase.error != nil {
-                                    Text("画像読み込みエラー")
-                                } else {
-                                    Text("画像取得中...")
-                                }
-                            }.frame(width: 100, height: 100)
-                            Text("top_gained_at: \(String(describing: top.gainedAt))")
-                        }.padding(20)
-                    }
-                    ForEach(catalog.bottoms, id: \.self.id) { bottom in
-                        VStack {
-                            Text("bottom_id: \(bottom.id)")
-                            Text("bottom_name: \(bottom.name)")
-                            AsyncImage(url:  URL(string: bottom.imageUrl)) { phase in
-                                if let image = phase.image {
-                                    image.resizable()
-                                } else if phase.error != nil {
-                                    Text("画像読み込みエラー")
-                                } else {
-                                    Text("画像取得中...")
-                                }
-                            }.frame(width: 100, height: 100)
-                            Text("bottom_gained_at: \(String(describing: bottom.gainedAt))")
-                        }.padding(20)
-                    }
-                    ForEach(catalog.shoes, id: \.self.id) { shoe in
-                        VStack {
-                            Text("shoe_id: \(shoe.id)")
-                            Text("shoe_name: \(shoe.name)")
-                            AsyncImage(url:  URL(string: shoe.imageUrl)) { phase in
-                                if let image = phase.image {
-                                    image.resizable()
-                                } else if phase.error != nil {
-                                    Text("画像読み込みエラー")
-                                } else {
-                                    Text("画像取得中...")
-                                }
-                            }.frame(width: 100, height: 100)
-                            Text("shoes_gained_at: \(String(describing: shoe.gainedAt))")
-                        }.padding(20)
-                    }
-                }
-            } else {
-                Text("データをロード中...")
+        ZStack {
+            WebPImageView(imageName: "Background.webp")
+                .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
+                .edgesIgnoringSafeArea(.all)
+            
+            WebPImageView(imageName: "Curtain.webp")
+                .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
+                .offset(x: -10, y: 0)
+                .edgesIgnoringSafeArea(.all)
+            
+            WebPImageView(imageName: "ItemSign.webp")
+                .frame(width: 230, height: 200)
+                .offset(x: -80, y: -390)
+                .edgesIgnoringSafeArea(.all)
+            
+            Button(action: {
+                router.returnToHome()
+            }) {
+                WebPImageView(imageName: "HomeButton.webp")
+                    .frame(width: 70, height: 70)
+                    .padding(.trailing, 12)
             }
-        }.onAppear {
-            Task {
-                await itemListModel.fetchCatalog()
+            .offset(x: 150, y: -370)
+            
+            VStack(spacing: 0) {
+                Spacer()
+                    .frame(height: 100)
+                if let catalog = itemListModel.catalog {
+                    ItemTable(itemListModel: itemListModel, selectedCategory: $selectedCategory)
+                        .padding(.leading, 145)
+                } else {
+                    Text("データをロード中...")
+                }
+                
+                Button(action: {
+                }) {
+                    WebPImageView(imageName: "ButtonDecide.webp")
+                        .frame(width: 230, height: 230)
+                        .offset(x: 0, y: -10)
+                }
+                .padding(.leading, 145)
+            }.onAppear {
+                Task {
+                    await itemListModel.fetchCatalog()
+                }
             }
         }
-        
     }
 }
 

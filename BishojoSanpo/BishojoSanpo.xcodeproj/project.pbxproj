@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22080F432BD3F66A00D3FF38 /* ItemListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22080F422BD3F66A00D3FF38 /* ItemListModel.swift */; };
+		22080F452BD3FF9500D3FF38 /* DressUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22080F442BD3FF9500D3FF38 /* DressUp.swift */; };
 		22080F532BD4967D00D3FF38 /* ArrivedButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22080F522BD4967D00D3FF38 /* ArrivedButtonView.swift */; };
 		22080F552BD4978C00D3FF38 /* HomeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22080F542BD4978C00D3FF38 /* HomeButtonView.swift */; };
 		22080F572BD49ED800D3FF38 /* NavigateToDressUpButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22080F562BD49ED800D3FF38 /* NavigateToDressUpButton.swift */; };
 		22080F592BD4A05D00D3FF38 /* DetectTapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22080F582BD4A05D00D3FF38 /* DetectTapView.swift */; };
 		22080F5D2BD4A3C100D3FF38 /* RewardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22080F5C2BD4A3C100D3FF38 /* RewardModel.swift */; };
-		22080F432BD3F66A00D3FF38 /* ItemListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22080F422BD3F66A00D3FF38 /* ItemListModel.swift */; };
-		22080F452BD3FF9500D3FF38 /* DressUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22080F442BD3FF9500D3FF38 /* DressUp.swift */; };
 		2285D13B2BC76A9000F0D8A6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2285D13A2BC76A9000F0D8A6 /* Constants.swift */; };
 		2285D13F2BCA022C00F0D8A6 /* ItemDropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2285D13E2BCA022C00F0D8A6 /* ItemDropView.swift */; };
 		2285D1412BCA024600F0D8A6 /* ItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2285D1402BCA024600F0D8A6 /* ItemListView.swift */; };
@@ -44,6 +44,27 @@
 		4515603D2BCD4460006C8EAA /* GirlChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4515603C2BCD4460006C8EAA /* GirlChatView.swift */; };
 		4515603F2BCD44A2006C8EAA /* MyChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4515603E2BCD44A2006C8EAA /* MyChatView.swift */; };
 		451560412BCD44C6006C8EAA /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451560402BCD44C6006C8EAA /* HeaderView.swift */; };
+		452FF30D2BD7E4EB00A0187D /* ItemBlue.webp in Resources */ = {isa = PBXBuildFile; fileRef = 452FF2FB2BD7E4EB00A0187D /* ItemBlue.webp */; };
+		452FF30E2BD7E4EB00A0187D /* TagActiveUnder.webp in Resources */ = {isa = PBXBuildFile; fileRef = 452FF2FC2BD7E4EB00A0187D /* TagActiveUnder.webp */; };
+		452FF30F2BD7E4EB00A0187D /* Cursor.webp in Resources */ = {isa = PBXBuildFile; fileRef = 452FF2FD2BD7E4EB00A0187D /* Cursor.webp */; };
+		452FF3102BD7E4EB00A0187D /* TagNormalHair.webp in Resources */ = {isa = PBXBuildFile; fileRef = 452FF2FE2BD7E4EB00A0187D /* TagNormalHair.webp */; };
+		452FF3112BD7E4EB00A0187D /* TagNormalOver.webp in Resources */ = {isa = PBXBuildFile; fileRef = 452FF2FF2BD7E4EB00A0187D /* TagNormalOver.webp */; };
+		452FF3122BD7E4EB00A0187D /* BackWhite.webp in Resources */ = {isa = PBXBuildFile; fileRef = 452FF3002BD7E4EB00A0187D /* BackWhite.webp */; };
+		452FF3132BD7E4EB00A0187D /* TagNormalShoes.webp in Resources */ = {isa = PBXBuildFile; fileRef = 452FF3012BD7E4EB00A0187D /* TagNormalShoes.webp */; };
+		452FF3142BD7E4EB00A0187D /* TagActiveShoes.webp in Resources */ = {isa = PBXBuildFile; fileRef = 452FF3022BD7E4EB00A0187D /* TagActiveShoes.webp */; };
+		452FF3152BD7E4EB00A0187D /* ButtonDecide.webp in Resources */ = {isa = PBXBuildFile; fileRef = 452FF3032BD7E4EB00A0187D /* ButtonDecide.webp */; };
+		452FF3162BD7E4EB00A0187D /* Equipment.webp in Resources */ = {isa = PBXBuildFile; fileRef = 452FF3042BD7E4EB00A0187D /* Equipment.webp */; };
+		452FF3172BD7E4EB00A0187D /* TagNormalUnder.webp in Resources */ = {isa = PBXBuildFile; fileRef = 452FF3052BD7E4EB00A0187D /* TagNormalUnder.webp */; };
+		452FF3182BD7E4EB00A0187D /* ItemSign.webp in Resources */ = {isa = PBXBuildFile; fileRef = 452FF3062BD7E4EB00A0187D /* ItemSign.webp */; };
+		452FF3192BD7E4EB00A0187D /* ItemBlank.webp in Resources */ = {isa = PBXBuildFile; fileRef = 452FF3072BD7E4EB00A0187D /* ItemBlank.webp */; };
+		452FF31A2BD7E4EB00A0187D /* ButtonDropdown.webp in Resources */ = {isa = PBXBuildFile; fileRef = 452FF3082BD7E4EB00A0187D /* ButtonDropdown.webp */; };
+		452FF31B2BD7E4EB00A0187D /* ItemLock.webp in Resources */ = {isa = PBXBuildFile; fileRef = 452FF3092BD7E4EB00A0187D /* ItemLock.webp */; };
+		452FF31C2BD7E4EB00A0187D /* ItemPink.webp in Resources */ = {isa = PBXBuildFile; fileRef = 452FF30A2BD7E4EB00A0187D /* ItemPink.webp */; };
+		452FF31D2BD7E4EB00A0187D /* TagActiveHair.webp in Resources */ = {isa = PBXBuildFile; fileRef = 452FF30B2BD7E4EB00A0187D /* TagActiveHair.webp */; };
+		452FF31E2BD7E4EB00A0187D /* TagActiveOver.webp in Resources */ = {isa = PBXBuildFile; fileRef = 452FF30C2BD7E4EB00A0187D /* TagActiveOver.webp */; };
+		452FF3202BD7E78600A0187D /* ItemTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452FF31F2BD7E78600A0187D /* ItemTable.swift */; };
+		452FF3222BD82A6E00A0187D /* Curtain.webp in Resources */ = {isa = PBXBuildFile; fileRef = 452FF3212BD82A6E00A0187D /* Curtain.webp */; };
+		452FF3242BD8B0A000A0187D /* NewBackWhite.webp in Resources */ = {isa = PBXBuildFile; fileRef = 452FF3232BD8B0A000A0187D /* NewBackWhite.webp */; };
 		45806DA42BD6678E00976D79 /* NotoSansJP-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 45806DA32BD6678E00976D79 /* NotoSansJP-Black.ttf */; };
 		45904E462BD0AD6F007F304A /* NewNotSelectedButton.webp in Resources */ = {isa = PBXBuildFile; fileRef = 45904E452BD0AD6F007F304A /* NewNotSelectedButton.webp */; };
 		45904E482BD0AD7C007F304A /* NewHeader.webp in Resources */ = {isa = PBXBuildFile; fileRef = 45904E472BD0AD7C007F304A /* NewHeader.webp */; };
@@ -61,13 +82,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		22080F422BD3F66A00D3FF38 /* ItemListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListModel.swift; sourceTree = "<group>"; };
+		22080F442BD3FF9500D3FF38 /* DressUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DressUp.swift; sourceTree = "<group>"; };
 		22080F522BD4967D00D3FF38 /* ArrivedButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrivedButtonView.swift; sourceTree = "<group>"; };
 		22080F542BD4978C00D3FF38 /* HomeButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeButtonView.swift; sourceTree = "<group>"; };
 		22080F562BD49ED800D3FF38 /* NavigateToDressUpButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigateToDressUpButton.swift; sourceTree = "<group>"; };
 		22080F582BD4A05D00D3FF38 /* DetectTapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectTapView.swift; sourceTree = "<group>"; };
 		22080F5C2BD4A3C100D3FF38 /* RewardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardModel.swift; sourceTree = "<group>"; };
-		22080F422BD3F66A00D3FF38 /* ItemListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListModel.swift; sourceTree = "<group>"; };
-		22080F442BD3FF9500D3FF38 /* DressUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DressUp.swift; sourceTree = "<group>"; };
 		2285D13A2BC76A9000F0D8A6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2285D13E2BCA022C00F0D8A6 /* ItemDropView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDropView.swift; sourceTree = "<group>"; };
 		2285D1402BCA024600F0D8A6 /* ItemListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListView.swift; sourceTree = "<group>"; };
@@ -94,6 +115,27 @@
 		4515603C2BCD4460006C8EAA /* GirlChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GirlChatView.swift; path = BishojoSanpo/Features/SelectedGoal/GirlChatView.swift; sourceTree = SOURCE_ROOT; };
 		4515603E2BCD44A2006C8EAA /* MyChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyChatView.swift; path = BishojoSanpo/Features/SelectedGoal/MyChatView.swift; sourceTree = SOURCE_ROOT; };
 		451560402BCD44C6006C8EAA /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HeaderView.swift; path = BishojoSanpo/Features/SelectedGoal/HeaderView.swift; sourceTree = SOURCE_ROOT; };
+		452FF2FB2BD7E4EB00A0187D /* ItemBlue.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = ItemBlue.webp; sourceTree = "<group>"; };
+		452FF2FC2BD7E4EB00A0187D /* TagActiveUnder.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = TagActiveUnder.webp; sourceTree = "<group>"; };
+		452FF2FD2BD7E4EB00A0187D /* Cursor.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = Cursor.webp; sourceTree = "<group>"; };
+		452FF2FE2BD7E4EB00A0187D /* TagNormalHair.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = TagNormalHair.webp; sourceTree = "<group>"; };
+		452FF2FF2BD7E4EB00A0187D /* TagNormalOver.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = TagNormalOver.webp; sourceTree = "<group>"; };
+		452FF3002BD7E4EB00A0187D /* BackWhite.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = BackWhite.webp; sourceTree = "<group>"; };
+		452FF3012BD7E4EB00A0187D /* TagNormalShoes.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = TagNormalShoes.webp; sourceTree = "<group>"; };
+		452FF3022BD7E4EB00A0187D /* TagActiveShoes.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = TagActiveShoes.webp; sourceTree = "<group>"; };
+		452FF3032BD7E4EB00A0187D /* ButtonDecide.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = ButtonDecide.webp; sourceTree = "<group>"; };
+		452FF3042BD7E4EB00A0187D /* Equipment.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = Equipment.webp; sourceTree = "<group>"; };
+		452FF3052BD7E4EB00A0187D /* TagNormalUnder.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = TagNormalUnder.webp; sourceTree = "<group>"; };
+		452FF3062BD7E4EB00A0187D /* ItemSign.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = ItemSign.webp; sourceTree = "<group>"; };
+		452FF3072BD7E4EB00A0187D /* ItemBlank.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = ItemBlank.webp; sourceTree = "<group>"; };
+		452FF3082BD7E4EB00A0187D /* ButtonDropdown.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = ButtonDropdown.webp; sourceTree = "<group>"; };
+		452FF3092BD7E4EB00A0187D /* ItemLock.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = ItemLock.webp; sourceTree = "<group>"; };
+		452FF30A2BD7E4EB00A0187D /* ItemPink.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = ItemPink.webp; sourceTree = "<group>"; };
+		452FF30B2BD7E4EB00A0187D /* TagActiveHair.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = TagActiveHair.webp; sourceTree = "<group>"; };
+		452FF30C2BD7E4EB00A0187D /* TagActiveOver.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = TagActiveOver.webp; sourceTree = "<group>"; };
+		452FF31F2BD7E78600A0187D /* ItemTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTable.swift; sourceTree = "<group>"; };
+		452FF3212BD82A6E00A0187D /* Curtain.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = Curtain.webp; sourceTree = "<group>"; };
+		452FF3232BD8B0A000A0187D /* NewBackWhite.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = NewBackWhite.webp; sourceTree = "<group>"; };
 		45806DA32BD6678E00976D79 /* NotoSansJP-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansJP-Black.ttf"; sourceTree = "<group>"; };
 		45904E452BD0AD6F007F304A /* NewNotSelectedButton.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = NewNotSelectedButton.webp; sourceTree = "<group>"; };
 		45904E472BD0AD7C007F304A /* NewHeader.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = NewHeader.webp; sourceTree = "<group>"; };
@@ -191,6 +233,7 @@
 			children = (
 				2285D1402BCA024600F0D8A6 /* ItemListView.swift */,
 				22080F442BD3FF9500D3FF38 /* DressUp.swift */,
+				452FF31F2BD7E78600A0187D /* ItemTable.swift */,
 			);
 			path = DressUp;
 			sourceTree = "<group>";
@@ -238,6 +281,7 @@
 			isa = PBXGroup;
 			children = (
 				2285D1612BCCD64700F0D8A6 /* SampleWebP.webp */,
+				452FF2FA2BD7E4A500A0187D /* DressUp */,
 				2285D15D2BCC001500F0D8A6 /* Map */,
 				2285D15A2BCBFF9A00F0D8A6 /* Common */,
 				2285D1582BCBFF0300F0D8A6 /* SelectGoal */,
@@ -340,6 +384,33 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		452FF2FA2BD7E4A500A0187D /* DressUp */ = {
+			isa = PBXGroup;
+			children = (
+				452FF3232BD8B0A000A0187D /* NewBackWhite.webp */,
+				452FF3212BD82A6E00A0187D /* Curtain.webp */,
+				452FF3002BD7E4EB00A0187D /* BackWhite.webp */,
+				452FF3032BD7E4EB00A0187D /* ButtonDecide.webp */,
+				452FF3082BD7E4EB00A0187D /* ButtonDropdown.webp */,
+				452FF2FD2BD7E4EB00A0187D /* Cursor.webp */,
+				452FF3042BD7E4EB00A0187D /* Equipment.webp */,
+				452FF3072BD7E4EB00A0187D /* ItemBlank.webp */,
+				452FF2FB2BD7E4EB00A0187D /* ItemBlue.webp */,
+				452FF3092BD7E4EB00A0187D /* ItemLock.webp */,
+				452FF30A2BD7E4EB00A0187D /* ItemPink.webp */,
+				452FF3062BD7E4EB00A0187D /* ItemSign.webp */,
+				452FF30B2BD7E4EB00A0187D /* TagActiveHair.webp */,
+				452FF30C2BD7E4EB00A0187D /* TagActiveOver.webp */,
+				452FF3022BD7E4EB00A0187D /* TagActiveShoes.webp */,
+				452FF2FC2BD7E4EB00A0187D /* TagActiveUnder.webp */,
+				452FF2FE2BD7E4EB00A0187D /* TagNormalHair.webp */,
+				452FF2FF2BD7E4EB00A0187D /* TagNormalOver.webp */,
+				452FF3012BD7E4EB00A0187D /* TagNormalShoes.webp */,
+				452FF3052BD7E4EB00A0187D /* TagNormalUnder.webp */,
+			);
+			path = DressUp;
+			sourceTree = "<group>";
+		};
 		45C8E8FA2BD657310043C975 /* fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -418,27 +489,47 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				452FF30D2BD7E4EB00A0187D /* ItemBlue.webp in Resources */,
 				45C38DA92BCD8837004440A6 /* SelectedButton.webp in Resources */,
 				45806DA42BD6678E00976D79 /* NotoSansJP-Black.ttf in Resources */,
 				45C38DB32BCD885B004440A6 /* Header.webp in Resources */,
 				45C38DB52BCD885B004440A6 /* ChatNormalLeft.webp in Resources */,
 				45C38DB82BCD885B004440A6 /* Background.webp in Resources */,
+				452FF3102BD7E4EB00A0187D /* TagNormalHair.webp in Resources */,
 				45904E482BD0AD7C007F304A /* NewHeader.webp in Resources */,
+				452FF31C2BD7E4EB00A0187D /* ItemPink.webp in Resources */,
 				45C38DAB2BCD8848004440A6 /* SelectChat.webp in Resources */,
+				452FF3142BD7E4EB00A0187D /* TagActiveShoes.webp in Resources */,
 				45C38DB72BCD885B004440A6 /* NoSelectedButton.webp in Resources */,
 				22969AC32BBE7B0500D8FC26 /* Preview Assets.xcassets in Resources */,
 				45C38DA72BCD87A1004440A6 /* WaitingButton.webp in Resources */,
+				452FF3182BD7E4EB00A0187D /* ItemSign.webp in Resources */,
 				45C38DB92BCD885B004440A6 /* GirlIcon.webp in Resources */,
 				45904E462BD0AD6F007F304A /* NewNotSelectedButton.webp in Resources */,
+				452FF3162BD7E4EB00A0187D /* Equipment.webp in Resources */,
+				452FF3132BD7E4EB00A0187D /* TagNormalShoes.webp in Resources */,
+				452FF31A2BD7E4EB00A0187D /* ButtonDropdown.webp in Resources */,
+				452FF30F2BD7E4EB00A0187D /* Cursor.webp in Resources */,
+				452FF3172BD7E4EB00A0187D /* TagNormalUnder.webp in Resources */,
+				452FF3222BD82A6E00A0187D /* Curtain.webp in Resources */,
+				452FF31D2BD7E4EB00A0187D /* TagActiveHair.webp in Resources */,
+				452FF30E2BD7E4EB00A0187D /* TagActiveUnder.webp in Resources */,
 				2285D1772BD23C7C00F0D8A6 /* NoTextButton.webp in Resources */,
+				452FF3112BD7E4EB00A0187D /* TagNormalOver.webp in Resources */,
 				22969AC02BBE7B0500D8FC26 /* Assets.xcassets in Resources */,
 				2285D1762BD23C7C00F0D8A6 /* ArrivedButton.webp in Resources */,
 				2285D1752BD23C7C00F0D8A6 /* HeartFrame.webp in Resources */,
+				452FF3152BD7E4EB00A0187D /* ButtonDecide.webp in Resources */,
+				452FF3122BD7E4EB00A0187D /* BackWhite.webp in Resources */,
+				452FF31B2BD7E4EB00A0187D /* ItemLock.webp in Resources */,
 				2285D1622BCCD64700F0D8A6 /* SampleWebP.webp in Resources */,
+				452FF3242BD8B0A000A0187D /* NewBackWhite.webp in Resources */,
 				45C8E8FC2BD657990043C975 /* NotoSansJP-VariableFont_wght.ttf in Resources */,
 				45C38DB62BCD885B004440A6 /* HomeButton.webp in Resources */,
+				452FF3192BD7E4EB00A0187D /* ItemBlank.webp in Resources */,
 				45C38DB42BCD885B004440A6 /* ChatNormalRight.webp in Resources */,
 				2285D1782BD23C7C00F0D8A6 /* HeartBase.webp in Resources */,
+				452FF31E2BD7E4EB00A0187D /* TagActiveOver.webp in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,6 +559,7 @@
 				2285D1572BCBFE2000F0D8A6 /* WebPImageView.swift in Sources */,
 				22969ABC2BBE7B0400D8FC26 /* BishojoSanpoApp.swift in Sources */,
 				22080F5D2BD4A3C100D3FF38 /* RewardModel.swift in Sources */,
+				452FF3202BD7E78600A0187D /* ItemTable.swift in Sources */,
 				22080F452BD3FF9500D3FF38 /* DressUp.swift in Sources */,
 				4515603F2BCD44A2006C8EAA /* MyChatView.swift in Sources */,
 				2285D1432BCA0ACF00F0D8A6 /* NavigationRouter.swift in Sources */,
