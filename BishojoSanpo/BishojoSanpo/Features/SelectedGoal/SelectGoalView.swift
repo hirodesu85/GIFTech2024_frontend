@@ -14,7 +14,7 @@ struct SelectGoalView: View {
     @State var sendToMapData: GoalData = GoalData()
     @State var hasUpdateLocation = false
     var selectGoalModel: SelectGoalModel = SelectGoalModel()
-    var locationManager: LocationManager
+    var locationManager = LocationManager()
     let directionModel = DirectionModel()
     
     @State var isSelectedCategory: Bool = false
@@ -80,9 +80,6 @@ struct SelectGoalView: View {
                 locationManager.onLocationUpdate = { newLocation in
                     if !hasUpdateLocation {getDestinationAndNavigate(newLocation: newLocation)}
                 }
-            }
-            .onDisappear {
-                locationManager.onLocationUpdate = nil
             }
             .onChange(of: isSelectedDistance) { _ in
                 locationManager.fetchLocation()

@@ -104,10 +104,10 @@ struct HomeView: View {
             .navigationDestination(for: NavigationRouter.Item.self) { item in
                 switch item {
                 case .selectGoal:
-                    SelectGoalView(locationManager: locationManager)
+                    SelectGoalView()
                         .environment(\.font, .custom("NotoSansJP-Black", size: 25))
                 case .map(let goalData):
-                    MapView(locationManager: locationManager, goalData: goalData)
+                    MapView(goalData: goalData)
                 case .itemDrop(let goalData):
                     ItemDropView(goalData: goalData)
                 case .dressUp:
