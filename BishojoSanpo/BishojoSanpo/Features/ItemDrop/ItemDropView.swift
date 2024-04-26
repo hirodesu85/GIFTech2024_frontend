@@ -44,9 +44,12 @@ struct ItemDropView: View {
             if let dropItemData = getItemImageData , isTapped {
                 ZStack {
                     WebPImageView(imageName: "effect.webp")
-                    Image(uiImage: UIImage(data: dropItemData)!).resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: UIScreen.main.bounds.width * 0.35).padding(.bottom, 18)
+                    VStack {
+                        Image(uiImage: UIImage(data: dropItemData)!).resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: UIScreen.main.bounds.width * 0.35)
+                        Text(rewardModel.dropItem!.name).foregroundColor(.white).font(.system(size: 25)).fontWeight(.black).shadow(color: Color.black.opacity(0.9), radius: 8)
+                    }
                 }
             }
                 
