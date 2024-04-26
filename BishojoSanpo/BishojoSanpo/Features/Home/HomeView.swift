@@ -17,6 +17,7 @@ struct HomeView: View {
     var body: some View {
         NavigationStack(path: $router.items){
             ZStack {
+                WebPImageView(imageName: "Background.webp").scaleEffect(1.15)
                 CharacterView(userDefaultsModel: userDefaultsModel)
                     .position(x:160,y:450)
                     .scaleEffect(0.88)
