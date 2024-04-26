@@ -12,13 +12,12 @@ struct HomeView: View {
     @ObservedObject var userDefaultsModel = UserDefaultsModel()
     @State var isSerifShowed: Bool =  false
     @State var reloadSerif: Bool = false
-    let bishojoViewWidth: Double = 350
     
     
     var body: some View {
         NavigationStack(path: $router.items){
             ZStack {
-                BishojoView(userDefaultsModel: userDefaultsModel)
+                CharacterView(userDefaultsModel: userDefaultsModel)
                     .position(x:160,y:450)
                     .scaleEffect(0.88)
                     .onTapGesture {

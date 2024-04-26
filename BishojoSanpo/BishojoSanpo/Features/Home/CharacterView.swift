@@ -1,5 +1,5 @@
 //
-//  BishojoView.swift
+//  CharacterView.swift
 //  BishojoSanpo
 //
 //  Created by 伊藤まどか on 2024/04/22.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct BishojoView: View {
+struct CharacterView: View {
     var userDefaultsModel: UserDefaultsModel
     var hairId: Int
     var topId: Int
@@ -30,5 +30,5 @@ struct BishojoView: View {
 
 #Preview {
     var userDefaultsModel = UserDefaultsModel()
-    return BishojoView(userDefaultsModel: userDefaultsModel)
+    return CharacterView(userDefaultsModel: userDefaultsModel)
 }
