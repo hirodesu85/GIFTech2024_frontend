@@ -8,7 +8,6 @@ import SwiftUI
 
 struct HomeView: View {
     @StateObject private var router = NavigationRouter()
-    @StateObject var locationManager = LocationManager()
     var body: some View {
         NavigationStack(path: $router.items){
             VStack {
@@ -31,10 +30,10 @@ struct HomeView: View {
             .navigationDestination(for: NavigationRouter.Item.self) { item in
                 switch item{
                 case .selectGoal:
-                    SelectGoalView(locationManager: locationManager)
+                    SelectGoalView()
                         .environment(\.font, .custom("NotoSansJP-Black", size: 25))
                 case .map(let goalData):
-                    MapView(locationManager: locationManager, goalData: goalData)
+                    MapView(goalData: goalData)
                 case .itemDrop(let goalData):
                     ItemDropView(goalData: goalData)
                 case .dressUp:

@@ -16,12 +16,10 @@ struct MapView: View {
     @State var polyline: GMSPolyline?
     @State var isChangedPolyline = false
     @State var zoomInCenter: Bool = false
-    var locationManager: LocationManager
     let goalData: GoalData
     let directionModel = DirectionModel()
     
-    init(locationManager: LocationManager, goalData: GoalData) {
-        self.locationManager = locationManager
+    init(goalData: GoalData) {
         self.goalData = goalData
         self.markerManager = MarkerManager(coordinate: CLLocationCoordinate2D(latitude: goalData.destinationLatitude, longitude: goalData.destinationLongtitude), placeName: goalData.placeName)
     }
@@ -84,8 +82,7 @@ class MarkerManager: ObservableObject {
 
 #Preview{
     let goalData = GoalData(placeId: "", currentLatitude: 22, currentLongtitude: 11, selectedDistance: "")
-    let locationManager = LocationManager()
-    return MapView(locationManager: locationManager, goalData: goalData)
+    return MapView(goalData: goalData)
 }
 
 
