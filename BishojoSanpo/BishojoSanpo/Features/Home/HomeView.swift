@@ -19,7 +19,7 @@ struct HomeView: View {
                 }, label: {
                     Text("お散歩")
                 })
-                .playSound(named: "clicksound")
+                .playSound(named: "clicksound.mp3")
                 
                 Button(action: {
                     router.items.append(.dressUp)
@@ -27,7 +27,7 @@ struct HomeView: View {
                 }, label: {
                     Text("着替える")
                 })
-                .playSound(named: "clicksound")
+                .playSound(named: "clicksound.mp3")
             }
             // 画面遷移定義
             .navigationDestination(for: NavigationRouter.Item.self) { item in

@@ -8,7 +8,7 @@ struct PlaySoundModifier: ViewModifier {
     init(soundName: String) {
         self.soundName = soundName
         print("Looking for sound in bundle path: \(Bundle.main.bundlePath)")
-        if let path = Bundle.main.path(forResource: soundName, ofType: "mp3", inDirectory: "Resources/Sounds") {
+        if let path = Bundle.main.path(forResource: soundName, ofType: nil) {
             print("File path found: \(path)")
             do {
                 let url = URL(fileURLWithPath: path)
