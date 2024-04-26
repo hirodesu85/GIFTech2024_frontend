@@ -26,6 +26,9 @@ final class NavigationRouter: ObservableObject {
     @MainActor func navigateToItemDrop(with data: GoalData) {
         items.append(.itemDrop(goalData: data))
     }
+    @MainActor func navigateToDressUp() {
+        items.append(.dressUp)
+    }
 }
 
 struct GoalData: Hashable {

@@ -22,7 +22,24 @@ struct ItemDropView: View {
                 .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
                 .edgesIgnoringSafeArea(.all)
             if(canShowResult) {
-                Text("リザルト画面")
+                VStack {
+                    ZStack {
+                        WebPImageView(imageName: "Dialog_Back.webp")
+                        VStack {
+                            WebPImageView(imageName: "1Pittari_Text_Love.webp").aspectRatio(contentMode: .fit).frame(width: UIScreen.main.bounds.width * 0.45)
+                        }
+                    }
+                    Button(action: {
+                        router.returnToHome()
+                    }) {
+                        WebPImageView(imageName: "Button_BackHome.webp").aspectRatio(contentMode: .fit).frame(width: UIScreen.main.bounds.width * 0.5)
+                    }
+                    Button(action: {
+                        router.navigateToDressUp()
+                    }) {
+                        WebPImageView(imageName: "Button_ChangeWear.webp").aspectRatio(contentMode: .fit).frame(width: UIScreen.main.bounds.width * 0.5)
+                    }
+                }
             } else {
                 VStack{
                     WebPImageView(imageName: "present_box.webp").aspectRatio(contentMode: .fit).frame(width: UIScreen.main.bounds.width * 0.8)
@@ -32,7 +49,6 @@ struct ItemDropView: View {
                 VStack {
                     Button(action: {
                         showResult()
-                        print("押された")
                     }) {
                         WebPImageView(imageName: "skip_button.webp").aspectRatio(contentMode: .fit)
                             .frame(width: 70)

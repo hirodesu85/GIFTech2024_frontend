@@ -44,6 +44,10 @@
 		360E25932BDA770300378270 /* present_box.webp in Resources */ = {isa = PBXBuildFile; fileRef = 360E25922BDA770300378270 /* present_box.webp */; };
 		360E25952BDA770B00378270 /* skip_button.webp in Resources */ = {isa = PBXBuildFile; fileRef = 360E25942BDA770B00378270 /* skip_button.webp */; };
 		360E25972BDA771100378270 /* tap_to_open.webp in Resources */ = {isa = PBXBuildFile; fileRef = 360E25962BDA771100378270 /* tap_to_open.webp */; };
+		360E259B2BDBD76600378270 /* Button_BackHome.webp in Resources */ = {isa = PBXBuildFile; fileRef = 360E259A2BDBD76600378270 /* Button_BackHome.webp */; };
+		360E259F2BDBDA6B00378270 /* Button_ChangeWear.webp in Resources */ = {isa = PBXBuildFile; fileRef = 360E259E2BDBDA6B00378270 /* Button_ChangeWear.webp */; };
+		360E25A12BDBDFB200378270 /* 1Pittari_Text_Love.webp in Resources */ = {isa = PBXBuildFile; fileRef = 360E25A02BDBDFB200378270 /* 1Pittari_Text_Love.webp */; };
+		360E25A32BDBDFCB00378270 /* Dialog_Back.webp in Resources */ = {isa = PBXBuildFile; fileRef = 360E25A22BDBDFCB00378270 /* Dialog_Back.webp */; };
 		4515603B2BCD4257006C8EAA /* SelectGoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4515603A2BCD4257006C8EAA /* SelectGoalView.swift */; };
 		4515603D2BCD4460006C8EAA /* GirlChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4515603C2BCD4460006C8EAA /* GirlChatView.swift */; };
 		4515603F2BCD44A2006C8EAA /* MyChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4515603E2BCD44A2006C8EAA /* MyChatView.swift */; };
@@ -98,6 +102,10 @@
 		360E25922BDA770300378270 /* present_box.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = present_box.webp; sourceTree = "<group>"; };
 		360E25942BDA770B00378270 /* skip_button.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = skip_button.webp; sourceTree = "<group>"; };
 		360E25962BDA771100378270 /* tap_to_open.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = tap_to_open.webp; sourceTree = "<group>"; };
+		360E259A2BDBD76600378270 /* Button_BackHome.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = Button_BackHome.webp; sourceTree = "<group>"; };
+		360E259E2BDBDA6B00378270 /* Button_ChangeWear.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = Button_ChangeWear.webp; sourceTree = "<group>"; };
+		360E25A02BDBDFB200378270 /* 1Pittari_Text_Love.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = 1Pittari_Text_Love.webp; sourceTree = "<group>"; };
+		360E25A22BDBDFCB00378270 /* Dialog_Back.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = Dialog_Back.webp; sourceTree = "<group>"; };
 		4515603A2BCD4257006C8EAA /* SelectGoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SelectGoalView.swift; path = BishojoSanpo/Features/SelectedGoal/SelectGoalView.swift; sourceTree = SOURCE_ROOT; };
 		4515603C2BCD4460006C8EAA /* GirlChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GirlChatView.swift; path = BishojoSanpo/Features/SelectedGoal/GirlChatView.swift; sourceTree = SOURCE_ROOT; };
 		4515603E2BCD44A2006C8EAA /* MyChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyChatView.swift; path = BishojoSanpo/Features/SelectedGoal/MyChatView.swift; sourceTree = SOURCE_ROOT; };
@@ -352,6 +360,10 @@
 		360E258D2BDA766000378270 /* ItemDrop */ = {
 			isa = PBXGroup;
 			children = (
+				360E25A22BDBDFCB00378270 /* Dialog_Back.webp */,
+				360E25A02BDBDFB200378270 /* 1Pittari_Text_Love.webp */,
+				360E259E2BDBDA6B00378270 /* Button_ChangeWear.webp */,
+				360E259A2BDBD76600378270 /* Button_BackHome.webp */,
 				360E25962BDA771100378270 /* tap_to_open.webp */,
 				360E25942BDA770B00378270 /* skip_button.webp */,
 				360E25922BDA770300378270 /* present_box.webp */,
@@ -438,17 +450,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				360E25A32BDBDFCB00378270 /* Dialog_Back.webp in Resources */,
 				360E25912BDA76F000378270 /* effect.webp in Resources */,
 				45C38DA92BCD8837004440A6 /* SelectedButton.webp in Resources */,
 				360E25932BDA770300378270 /* present_box.webp in Resources */,
 				45806DA42BD6678E00976D79 /* NotoSansJP-Black.ttf in Resources */,
 				45C38DB32BCD885B004440A6 /* Header.webp in Resources */,
 				360E25972BDA771100378270 /* tap_to_open.webp in Resources */,
+				360E25A12BDBDFB200378270 /* 1Pittari_Text_Love.webp in Resources */,
 				45C38DB52BCD885B004440A6 /* ChatNormalLeft.webp in Resources */,
 				360E25952BDA770B00378270 /* skip_button.webp in Resources */,
 				45C38DB82BCD885B004440A6 /* Background.webp in Resources */,
 				45904E482BD0AD7C007F304A /* NewHeader.webp in Resources */,
 				45C38DAB2BCD8848004440A6 /* SelectChat.webp in Resources */,
+				360E259B2BDBD76600378270 /* Button_BackHome.webp in Resources */,
 				45C38DB72BCD885B004440A6 /* NoSelectedButton.webp in Resources */,
 				22969AC32BBE7B0500D8FC26 /* Preview Assets.xcassets in Resources */,
 				45C38DA72BCD87A1004440A6 /* WaitingButton.webp in Resources */,
@@ -459,6 +474,7 @@
 				2285D1762BD23C7C00F0D8A6 /* ArrivedButton.webp in Resources */,
 				2285D1752BD23C7C00F0D8A6 /* HeartFrame.webp in Resources */,
 				2285D1622BCCD64700F0D8A6 /* SampleWebP.webp in Resources */,
+				360E259F2BDBDA6B00378270 /* Button_ChangeWear.webp in Resources */,
 				45C8E8FC2BD657990043C975 /* NotoSansJP-VariableFont_wght.ttf in Resources */,
 				45C38DB62BCD885B004440A6 /* HomeButton.webp in Resources */,
 				45C38DB42BCD885B004440A6 /* ChatNormalRight.webp in Resources */,
