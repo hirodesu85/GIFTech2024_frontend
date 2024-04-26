@@ -18,6 +18,11 @@ struct HomeView: View {
         NavigationStack(path: $router.items){
             ZStack {
                 WebPImageView(imageName: "Background.webp").scaleEffect(1.15)
+                    .onTapGesture {
+                        if isSerifShowed {
+                            isSerifShowed = false
+                        }
+                    }
                 CharacterView(userDefaultsModel: userDefaultsModel)
                     .position(x:160,y:450)
                     .scaleEffect(0.88)
