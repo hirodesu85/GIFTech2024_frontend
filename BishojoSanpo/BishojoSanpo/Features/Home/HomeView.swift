@@ -80,12 +80,12 @@ struct HomeView: View {
                         Text("ランクを7にする").background(Color.white)
                     }
                     Button {
-                        userDefaultsModel.updateWearingItem(hair: 1, top: 2, bottom: 1, shoes: 1)
+                        userDefaultsModel.updateWearingItem(hair: 1, top: 1, bottom: 1, shoes: 1)
                     } label: {
                         Text("Topsをピンクに").background(Color.white)
                     }
                     Button {
-                        userDefaultsModel.updateWearingItem(hair: 1, top: 1, bottom: 1, shoes: 1)
+                        userDefaultsModel.updateWearingItem(hair: 1, top: 2, bottom: 1, shoes: 1)
                     } label: {
                         Text("Topsをブルーに").background(Color.white)
                     }
