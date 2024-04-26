@@ -11,7 +11,7 @@ struct GirlChatView: View {
     let girlText :String
     var body: some View {
         HStack(spacing: 0) {
-            WebPImageView(imageName: "GirlIcon.webp")
+            WebPImageView(imageName: "Face.webp")
                 .frame(width: 100, height: 100)
                 .font(.system(size: 25))
                 .padding(10)
