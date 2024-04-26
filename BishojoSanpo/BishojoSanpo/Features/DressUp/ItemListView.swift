@@ -47,12 +47,22 @@ struct ItemListView: View {
             VStack(spacing: 0) {
                 Spacer()
                     .frame(height: 100)
-                if let catalog = itemListModel.catalog {
-                    ItemTable(itemListModel: itemListModel, userDefaultsModel: userDefaultsModel, selectedCategory: $selectedCategory, selectedItemModel: selectedItemModel)
-                        .padding(.leading, 145)
-                } else {
-                    Text("データをロード中...")
-                }
+                ZStack{
+                    if let catalog = itemListModel.catalog {
+                        ItemTable(itemListModel: itemListModel, userDefaultsModel: userDefaultsModel, selectedCategory: $selectedCategory, selectedItemModel: selectedItemModel)
+
+                    } else {
+                        WebPImageView(imageName: "NewBackWhite.webp")
+                            .scaledToFill()
+                            .frame(width: 200, height: 494)
+                            .clipped()
+                            .blur(radius: 3.0)
+                        Text("Loading...").foregroundStyle(Color("ChatColor"))
+                            .font(.headline)
+
+                    }
+                }.padding(.leading, 145)
+                
                 
                 Button(action: {
                     updateUserDefaulsWearing()
@@ -77,4 +87,7 @@ struct ItemListView: View {
             bottom: selectedItemModel.bottom == -1 ? userDefaultsModel.currentWearingId["bottom"] as! Int: selectedItemModel.bottom,
             shoes: selectedItemModel.shoes == -1 ? userDefaultsModel.currentWearingId["shoes"] as! Int: selectedItemModel.shoes)
     }
+}
+#Preview {
+    ItemListView(itemListModel: ItemListModel(), selectedCategory: 1, userDefaultsModel: UserDefaultsModel(), selectedItemModel: SelectedItemModel())
 }

@@ -87,7 +87,8 @@ struct ItemTable: View {
                                             } else if phase.error != nil {
                                                 Text("画像読み込みエラー")
                                             } else {
-                                                Text("画像取得中...")
+                                                Text("Loading...").foregroundStyle(Color("ChatColor"))
+                                                    .font(.caption)
                                             }
                                         }
                                         .frame(width: 100, height: 100)
