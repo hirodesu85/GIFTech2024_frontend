@@ -23,7 +23,7 @@ struct MapView: View {
     init(locationManager: LocationManager, goalData: GoalData) {
         self.locationManager = locationManager
         self.goalData = goalData
-        self.markerManager = MarkerManager(coordinate: CLLocationCoordinate2D(latitude: goalData.destinationLatitude, longitude: goalData.destinationLongtitude))
+        self.markerManager = MarkerManager(coordinate: CLLocationCoordinate2D(latitude: goalData.destinationLatitude, longitude: goalData.destinationLongtitude), placeName: goalData.placeName)
     }
     
     var body: some View {
@@ -56,11 +56,14 @@ struct MapView: View {
         
         DispatchQueue.global(qos: .userInitiated).async {
             // 経路情報取得
-            let directionResult = directionModel.getDirection(destination: destination, start: startLocation)
+            let directionResult = directionModel.getDirection(destination: destination, start: startLocation, selectedDistance: goalData.selectedDistance)
             // 取得した経路情報を用いてpolylineを作成
             if let directionResult = directionResult {
                 DispatchQueue.main.async {
                     self.polyline = directionModel.createPolyline(from: directionResult)
+                    let endAddress = directionResult.routes.last?.legs.last?.endAddress.replacingOccurrences(of: "日本、", with: "") ?? ""
+                    let distanceText = directionResult.routes.last?.legs.last?.distance.text ?? ""
+                    self.markerManager.destinationMarker.snippet = "\(endAddress)\n移動距離: \(distanceText)"
                     isChangedPolyline = true // MapViewControllerBridgeに変更を検知させるためのフラグをtrueに
                 }
             }
@@ -73,8 +76,9 @@ struct MapView: View {
 class MarkerManager: ObservableObject {
     @Published var destinationMarker: GMSMarker
     
-    init(coordinate: CLLocationCoordinate2D) {
+    init(coordinate: CLLocationCoordinate2D, placeName: String) {
         self.destinationMarker = GMSMarker(position: coordinate)
+        self.destinationMarker.title = placeName
     }
 }
 

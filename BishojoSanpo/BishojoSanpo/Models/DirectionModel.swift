@@ -11,18 +11,17 @@ import GoogleMaps
 class DirectionModel {
     /// 経路検索APIのエンドポイント. 経路検索APIはSDKとして提供されていないため、エンドポイントはベタ書きになります
     let baseUrl = "https://maps.googleapis.com/maps/api/directions/json"
-
-    
     
     // 現在地から目的地までのルートを検索する
-    func getDirection(destination: String, start startLocation: String) -> Direction? {
+    func getDirection(destination: String, start startLocation: String, selectedDistance: String) -> Direction? {
         guard var components = URLComponents(string: baseUrl) else { return nil }
 
         components.queryItems = [
             URLQueryItem(name: "key", value: Constants.apiKey),
             URLQueryItem(name: "origin", value: startLocation),
-            URLQueryItem(name: "destination", value: destination)
-        ]
+            URLQueryItem(name: "destination", value: destination),
+            selectedDistance == "near" ? URLQueryItem(name: "mode", value: "walking") : nil
+        ].compactMap { $0 }
 
         guard let url = components.url else { return nil }
 
@@ -91,11 +90,17 @@ struct Leg: Codable {
     let endLocation: LocationPoint
     /// 経路
     let steps: [Step]
+    // 目的地の住所
+    let endAddress: String
+    // 目的地までの移動距離
+    let distance: TextValueObject
     
     enum CodingKeys: String, CodingKey {
         case startLocation = "start_location"
         case endLocation = "end_location"
         case steps
+        case endAddress = "end_address"
+        case distance
     }
 }
 
@@ -112,4 +117,9 @@ struct Step: Codable {
 struct LocationPoint: Codable {
     let lat: Double
     let lng: Double
+}
+
+struct TextValueObject: Codable {
+    let text: String
+    let value: Int
 }
