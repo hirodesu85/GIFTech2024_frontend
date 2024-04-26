@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		22080F432BD3F66A00D3FF38 /* ItemListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22080F422BD3F66A00D3FF38 /* ItemListModel.swift */; };
 		22080F452BD3FF9500D3FF38 /* DressUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22080F442BD3FF9500D3FF38 /* DressUp.swift */; };
-		22080F432BD3F66A00D3FF38 /* ItemListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22080F422BD3F66A00D3FF38 /* ItemListModel.swift */; };
-		22080F452BD3FF9500D3FF38 /* DressUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22080F442BD3FF9500D3FF38 /* DressUp.swift */; };
 		22080F532BD4967D00D3FF38 /* ArrivedButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22080F522BD4967D00D3FF38 /* ArrivedButtonView.swift */; };
 		22080F552BD4978C00D3FF38 /* HomeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22080F542BD4978C00D3FF38 /* HomeButtonView.swift */; };
 		22080F572BD49ED800D3FF38 /* NavigateToDressUpButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22080F562BD49ED800D3FF38 /* NavigateToDressUpButton.swift */; };
@@ -105,6 +103,7 @@
 		45806DA42BD6678E00976D79 /* NotoSansJP-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 45806DA32BD6678E00976D79 /* NotoSansJP-Black.ttf */; };
 		45904E462BD0AD6F007F304A /* NewNotSelectedButton.webp in Resources */ = {isa = PBXBuildFile; fileRef = 45904E452BD0AD6F007F304A /* NewNotSelectedButton.webp */; };
 		45904E482BD0AD7C007F304A /* NewHeader.webp in Resources */ = {isa = PBXBuildFile; fileRef = 45904E472BD0AD7C007F304A /* NewHeader.webp */; };
+		45C05F0E2BDBF70C006DAE2B /* Face.webp in Resources */ = {isa = PBXBuildFile; fileRef = 45C05F0D2BDBF70C006DAE2B /* Face.webp */; };
 		45C38DA72BCD87A1004440A6 /* WaitingButton.webp in Resources */ = {isa = PBXBuildFile; fileRef = 45C38DA62BCD87A1004440A6 /* WaitingButton.webp */; };
 		45C38DA92BCD8837004440A6 /* SelectedButton.webp in Resources */ = {isa = PBXBuildFile; fileRef = 45C38DA82BCD8837004440A6 /* SelectedButton.webp */; };
 		45C38DAB2BCD8848004440A6 /* SelectChat.webp in Resources */ = {isa = PBXBuildFile; fileRef = 45C38DAA2BCD8848004440A6 /* SelectChat.webp */; };
@@ -119,8 +118,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		22080F422BD3F66A00D3FF38 /* ItemListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListModel.swift; sourceTree = "<group>"; };
-		22080F442BD3FF9500D3FF38 /* DressUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DressUp.swift; sourceTree = "<group>"; };
 		22080F422BD3F66A00D3FF38 /* ItemListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListModel.swift; sourceTree = "<group>"; };
 		22080F442BD3FF9500D3FF38 /* DressUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DressUp.swift; sourceTree = "<group>"; };
 		22080F522BD4967D00D3FF38 /* ArrivedButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrivedButtonView.swift; sourceTree = "<group>"; };
@@ -213,6 +210,7 @@
 		45806DA32BD6678E00976D79 /* NotoSansJP-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansJP-Black.ttf"; sourceTree = "<group>"; };
 		45904E452BD0AD6F007F304A /* NewNotSelectedButton.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = NewNotSelectedButton.webp; sourceTree = "<group>"; };
 		45904E472BD0AD7C007F304A /* NewHeader.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = NewHeader.webp; sourceTree = "<group>"; };
+		45C05F0D2BDBF70C006DAE2B /* Face.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = Face.webp; sourceTree = "<group>"; };
 		45C38DA62BCD87A1004440A6 /* WaitingButton.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = WaitingButton.webp; sourceTree = "<group>"; };
 		45C38DA82BCD8837004440A6 /* SelectedButton.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = SelectedButton.webp; sourceTree = "<group>"; };
 		45C38DAA2BCD8848004440A6 /* SelectChat.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = SelectChat.webp; sourceTree = "<group>"; };
@@ -392,6 +390,7 @@
 		2285D1582BCBFF0300F0D8A6 /* SelectGoal */ = {
 			isa = PBXGroup;
 			children = (
+				45C05F0D2BDBF70C006DAE2B /* Face.webp */,
 				45904E472BD0AD7C007F304A /* NewHeader.webp */,
 				45904E452BD0AD6F007F304A /* NewNotSelectedButton.webp */,
 				45C38DB12BCD885B004440A6 /* Background.webp */,
@@ -687,6 +686,7 @@
 				22080F842BD6756800D3FF38 /* Rank_7.webp in Resources */,
 				22080F8A2BD6756800D3FF38 /* Home_Talk.webp in Resources */,
 				452FF3192BD7E4EB00A0187D /* ItemBlank.webp in Resources */,
+				45C05F0E2BDBF70C006DAE2B /* Face.webp in Resources */,
 				45C38DB42BCD885B004440A6 /* ChatNormalRight.webp in Resources */,
 				2285D1782BD23C7C00F0D8A6 /* HeartBase.webp in Resources */,
 				22080F882BD6756800D3FF38 /* Home_Button_Go.webp in Resources */,
