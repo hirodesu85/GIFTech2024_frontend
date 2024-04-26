@@ -12,7 +12,7 @@ struct ItemListView: View {
     @State var selectedCategory: Int = 0
     
     @EnvironmentObject var router: NavigationRouter
-    @ObservedObject var userDefaultsModel = UserDefaultsModel()
+    @ObservedObject var userDefaultsModel: UserDefaultsModel
     @State var selectedItemModel = SelectedItemModel()
     
     var body: some View {
@@ -77,8 +77,4 @@ struct ItemListView: View {
             bottom: selectedItemModel.bottom == -1 ? userDefaultsModel.currentWearingId["bottom"] as! Int: selectedItemModel.bottom,
             shoes: selectedItemModel.shoes == -1 ? userDefaultsModel.currentWearingId["shoes"] as! Int: selectedItemModel.shoes)
     }
-}
-
-#Preview {
-    ItemListView()
 }

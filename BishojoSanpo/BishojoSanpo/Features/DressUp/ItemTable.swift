@@ -172,7 +172,3 @@ struct ItemTable: View {
     
     
 }
-
-#Preview {
-    ItemListView()
-}

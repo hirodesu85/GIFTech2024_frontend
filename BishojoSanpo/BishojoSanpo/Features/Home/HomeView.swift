@@ -111,7 +111,7 @@ struct HomeView: View {
                 case .itemDrop(let goalData):
                     ItemDropView(goalData: goalData)
                 case .dressUp:
-                    DressUpView()
+                    DressUpView(userDefaultsModel: userDefaultsModel)
                 }
             }
         }
