@@ -27,6 +27,7 @@ final class NavigationRouter: ObservableObject {
         items.append(.itemDrop(goalData: data))
     }
     @MainActor func navigateToDressUp() {
+        items.removeLast(items.count)
         items.append(.dressUp)
     }
 }
