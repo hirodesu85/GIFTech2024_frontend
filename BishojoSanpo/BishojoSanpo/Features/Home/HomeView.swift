@@ -18,6 +18,16 @@ struct HomeView: View {
     var body: some View {
         NavigationStack(path: $router.items){
             ZStack {
+                BishojoView(userDefaultsModel: userDefaultsModel)
+                    .position(x:160,y:450)
+                    .scaleEffect(0.88)
+                    .onTapGesture {
+                        if isSerifShowed {
+                            reloadSerif.toggle()
+                        } else {
+                            isSerifShowed = true
+                        }
+                    }
                 // ランク表示
                 VStack {
                     HStack() {
@@ -31,16 +41,7 @@ struct HomeView: View {
                     Spacer()
                 }
                 
-                BishojoView()
-                    .position(x:170,y:400)
-                    .scaleEffect(1.7)
-                    .onTapGesture {
-                        if isSerifShowed {
-                            reloadSerif.toggle()
-                        } else {
-                            isSerifShowed = true
-                        }
-                    }
+                
                 if isSerifShowed {
                     SerifView(reload: reloadSerif)
                         .position(x:300,y:215)
@@ -73,6 +74,17 @@ struct HomeView: View {
                     } label: {
                         Text("ランクを7にする").background(Color.white)
                     }
+                    Button {
+                        userDefaultsModel.updateWearingItem(hair: 1, top: 2, bottom: 1, shoes: 1)
+                    } label: {
+                        Text("Topsをピンクに").background(Color.white)
+                    }
+                    Button {
+                        userDefaultsModel.updateWearingItem(hair: 1, top: 1, bottom: 1, shoes: 1)
+                    } label: {
+                        Text("Topsをブルーに").background(Color.white)
+                    }
+                    
                 }
                 // デモボタンここまで
                 

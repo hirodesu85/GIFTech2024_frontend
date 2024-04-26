@@ -24,7 +24,6 @@
 		22080F8A2BD6756800D3FF38 /* Home_Talk.webp in Resources */ = {isa = PBXBuildFile; fileRef = 22080F802BD6756800D3FF38 /* Home_Talk.webp */; };
 		22080F8C2BD6771200D3FF38 /* SelectGoalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22080F8B2BD6771200D3FF38 /* SelectGoalButton.swift */; };
 		22080F8E2BD67A9000D3FF38 /* BishojoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22080F8D2BD67A9000D3FF38 /* BishojoView.swift */; };
-		22080F902BD6843500D3FF38 /* Character.webp in Resources */ = {isa = PBXBuildFile; fileRef = 22080F8F2BD6843500D3FF38 /* Character.webp */; };
 		22080F942BD6941400D3FF38 /* RankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22080F932BD6941400D3FF38 /* RankView.swift */; };
 		22080F962BD745E400D3FF38 /* UserDefaultsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22080F952BD745E400D3FF38 /* UserDefaultsModel.swift */; };
 		22080F982BD7572500D3FF38 /* DressUpButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22080F972BD7572500D3FF38 /* DressUpButton.swift */; };
@@ -33,6 +32,22 @@
 		22080F9E2BD7A82500D3FF38 /* SerifView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22080F9D2BD7A82500D3FF38 /* SerifView.swift */; };
 		22080FA12BD7AAF600D3FF38 /* BishojoSerif.json in Resources */ = {isa = PBXBuildFile; fileRef = 22080FA02BD7AAF600D3FF38 /* BishojoSerif.json */; };
 		22080FA32BD7B28D00D3FF38 /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = 22080FA22BD7B28D00D3FF38 /* test.json */; };
+		22080FBE2BDB91CD00D3FF38 /* Character2_2_2_2.webp in Resources */ = {isa = PBXBuildFile; fileRef = 22080FAE2BDB91CC00D3FF38 /* Character2_2_2_2.webp */; };
+		22080FBF2BDB91CD00D3FF38 /* Character1_1_1_2.webp in Resources */ = {isa = PBXBuildFile; fileRef = 22080FAF2BDB91CC00D3FF38 /* Character1_1_1_2.webp */; };
+		22080FC02BDB91CD00D3FF38 /* Character1_2_2_1.webp in Resources */ = {isa = PBXBuildFile; fileRef = 22080FB02BDB91CC00D3FF38 /* Character1_2_2_1.webp */; };
+		22080FC12BDB91CD00D3FF38 /* Character1_2_2_2.webp in Resources */ = {isa = PBXBuildFile; fileRef = 22080FB12BDB91CC00D3FF38 /* Character1_2_2_2.webp */; };
+		22080FC22BDB91CD00D3FF38 /* Character1_1_1_1.webp in Resources */ = {isa = PBXBuildFile; fileRef = 22080FB22BDB91CC00D3FF38 /* Character1_1_1_1.webp */; };
+		22080FC32BDB91CD00D3FF38 /* Character1_1_2_2.webp in Resources */ = {isa = PBXBuildFile; fileRef = 22080FB32BDB91CC00D3FF38 /* Character1_1_2_2.webp */; };
+		22080FC42BDB91CD00D3FF38 /* Character2_1_2_2.webp in Resources */ = {isa = PBXBuildFile; fileRef = 22080FB42BDB91CD00D3FF38 /* Character2_1_2_2.webp */; };
+		22080FC52BDB91CD00D3FF38 /* Character1_1_2_1.webp in Resources */ = {isa = PBXBuildFile; fileRef = 22080FB52BDB91CD00D3FF38 /* Character1_1_2_1.webp */; };
+		22080FC62BDB91CD00D3FF38 /* Character2_1_1_2.webp in Resources */ = {isa = PBXBuildFile; fileRef = 22080FB62BDB91CD00D3FF38 /* Character2_1_1_2.webp */; };
+		22080FC72BDB91CD00D3FF38 /* Character2_2_1_1.webp in Resources */ = {isa = PBXBuildFile; fileRef = 22080FB72BDB91CD00D3FF38 /* Character2_2_1_1.webp */; };
+		22080FC82BDB91CD00D3FF38 /* Character2_2_2_1.webp in Resources */ = {isa = PBXBuildFile; fileRef = 22080FB82BDB91CD00D3FF38 /* Character2_2_2_1.webp */; };
+		22080FC92BDB91CD00D3FF38 /* Character1_2_1_1.webp in Resources */ = {isa = PBXBuildFile; fileRef = 22080FB92BDB91CD00D3FF38 /* Character1_2_1_1.webp */; };
+		22080FCA2BDB91CD00D3FF38 /* Character2_2_1_2.webp in Resources */ = {isa = PBXBuildFile; fileRef = 22080FBA2BDB91CD00D3FF38 /* Character2_2_1_2.webp */; };
+		22080FCB2BDB91CD00D3FF38 /* Character2_1_1_1.webp in Resources */ = {isa = PBXBuildFile; fileRef = 22080FBB2BDB91CD00D3FF38 /* Character2_1_1_1.webp */; };
+		22080FCC2BDB91CD00D3FF38 /* Character1_2_1_2.webp in Resources */ = {isa = PBXBuildFile; fileRef = 22080FBC2BDB91CD00D3FF38 /* Character1_2_1_2.webp */; };
+		22080FCD2BDB91CD00D3FF38 /* Character2_1_2_1.webp in Resources */ = {isa = PBXBuildFile; fileRef = 22080FBD2BDB91CD00D3FF38 /* Character2_1_2_1.webp */; };
 		2285D13B2BC76A9000F0D8A6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2285D13A2BC76A9000F0D8A6 /* Constants.swift */; };
 		2285D13F2BCA022C00F0D8A6 /* ItemDropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2285D13E2BCA022C00F0D8A6 /* ItemDropView.swift */; };
 		2285D1412BCA024600F0D8A6 /* ItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2285D1402BCA024600F0D8A6 /* ItemListView.swift */; };
@@ -97,7 +112,6 @@
 		22080F802BD6756800D3FF38 /* Home_Talk.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = Home_Talk.webp; sourceTree = "<group>"; };
 		22080F8B2BD6771200D3FF38 /* SelectGoalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectGoalButton.swift; sourceTree = "<group>"; };
 		22080F8D2BD67A9000D3FF38 /* BishojoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BishojoView.swift; sourceTree = "<group>"; };
-		22080F8F2BD6843500D3FF38 /* Character.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = Character.webp; sourceTree = "<group>"; };
 		22080F932BD6941400D3FF38 /* RankView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankView.swift; sourceTree = "<group>"; };
 		22080F952BD745E400D3FF38 /* UserDefaultsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsModel.swift; sourceTree = "<group>"; };
 		22080F972BD7572500D3FF38 /* DressUpButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DressUpButton.swift; sourceTree = "<group>"; };
@@ -106,6 +120,22 @@
 		22080F9D2BD7A82500D3FF38 /* SerifView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerifView.swift; sourceTree = "<group>"; };
 		22080FA02BD7AAF600D3FF38 /* BishojoSerif.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BishojoSerif.json; sourceTree = "<group>"; };
 		22080FA22BD7B28D00D3FF38 /* test.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
+		22080FAE2BDB91CC00D3FF38 /* Character2_2_2_2.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = Character2_2_2_2.webp; sourceTree = "<group>"; };
+		22080FAF2BDB91CC00D3FF38 /* Character1_1_1_2.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = Character1_1_1_2.webp; sourceTree = "<group>"; };
+		22080FB02BDB91CC00D3FF38 /* Character1_2_2_1.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = Character1_2_2_1.webp; sourceTree = "<group>"; };
+		22080FB12BDB91CC00D3FF38 /* Character1_2_2_2.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = Character1_2_2_2.webp; sourceTree = "<group>"; };
+		22080FB22BDB91CC00D3FF38 /* Character1_1_1_1.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = Character1_1_1_1.webp; sourceTree = "<group>"; };
+		22080FB32BDB91CC00D3FF38 /* Character1_1_2_2.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = Character1_1_2_2.webp; sourceTree = "<group>"; };
+		22080FB42BDB91CD00D3FF38 /* Character2_1_2_2.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = Character2_1_2_2.webp; sourceTree = "<group>"; };
+		22080FB52BDB91CD00D3FF38 /* Character1_1_2_1.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = Character1_1_2_1.webp; sourceTree = "<group>"; };
+		22080FB62BDB91CD00D3FF38 /* Character2_1_1_2.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = Character2_1_1_2.webp; sourceTree = "<group>"; };
+		22080FB72BDB91CD00D3FF38 /* Character2_2_1_1.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = Character2_2_1_1.webp; sourceTree = "<group>"; };
+		22080FB82BDB91CD00D3FF38 /* Character2_2_2_1.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = Character2_2_2_1.webp; sourceTree = "<group>"; };
+		22080FB92BDB91CD00D3FF38 /* Character1_2_1_1.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = Character1_2_1_1.webp; sourceTree = "<group>"; };
+		22080FBA2BDB91CD00D3FF38 /* Character2_2_1_2.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = Character2_2_1_2.webp; sourceTree = "<group>"; };
+		22080FBB2BDB91CD00D3FF38 /* Character2_1_1_1.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = Character2_1_1_1.webp; sourceTree = "<group>"; };
+		22080FBC2BDB91CD00D3FF38 /* Character1_2_1_2.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = Character1_2_1_2.webp; sourceTree = "<group>"; };
+		22080FBD2BDB91CD00D3FF38 /* Character2_1_2_1.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = Character2_1_2_1.webp; sourceTree = "<group>"; };
 		2285D13A2BC76A9000F0D8A6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2285D13E2BCA022C00F0D8A6 /* ItemDropView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDropView.swift; sourceTree = "<group>"; };
 		2285D1402BCA024600F0D8A6 /* ItemListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListView.swift; sourceTree = "<group>"; };
@@ -168,7 +198,6 @@
 		22080F622BD674FF00D3FF38 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				22080F8F2BD6843500D3FF38 /* Character.webp */,
 				22080F9B2BD75CAC00D3FF38 /* HP_Move.webp */,
 				22080F7F2BD6756800D3FF38 /* Home_Button_Clothes.webp */,
 				22080F7E2BD6756800D3FF38 /* Home_Button_Go.webp */,
@@ -189,6 +218,30 @@
 				22080FA22BD7B28D00D3FF38 /* test.json */,
 			);
 			path = JSON;
+			sourceTree = "<group>";
+		};
+		22080FAD2BDB91C000D3FF38 /* Character */ = {
+			isa = PBXGroup;
+			children = (
+				22080FB22BDB91CC00D3FF38 /* Character1_1_1_1.webp */,
+				22080FAF2BDB91CC00D3FF38 /* Character1_1_1_2.webp */,
+				22080FB52BDB91CD00D3FF38 /* Character1_1_2_1.webp */,
+				22080FB32BDB91CC00D3FF38 /* Character1_1_2_2.webp */,
+				22080FB92BDB91CD00D3FF38 /* Character1_2_1_1.webp */,
+				22080FBC2BDB91CD00D3FF38 /* Character1_2_1_2.webp */,
+				22080FB02BDB91CC00D3FF38 /* Character1_2_2_1.webp */,
+				22080FB12BDB91CC00D3FF38 /* Character1_2_2_2.webp */,
+				22080FBB2BDB91CD00D3FF38 /* Character2_1_1_1.webp */,
+				22080FB62BDB91CD00D3FF38 /* Character2_1_1_2.webp */,
+				22080FBD2BDB91CD00D3FF38 /* Character2_1_2_1.webp */,
+				22080FB42BDB91CD00D3FF38 /* Character2_1_2_2.webp */,
+				22080FB72BDB91CD00D3FF38 /* Character2_2_1_1.webp */,
+				22080FBA2BDB91CD00D3FF38 /* Character2_2_1_2.webp */,
+				22080FB82BDB91CD00D3FF38 /* Character2_2_2_1.webp */,
+				22080FAE2BDB91CC00D3FF38 /* Character2_2_2_2.webp */,
+			);
+			name = Character;
+			path = ../../Features/Character;
 			sourceTree = "<group>";
 		};
 		2214DE562BBEB065000E883F /* Resources */ = {
@@ -308,6 +361,7 @@
 		2285D1592BCBFF3000F0D8A6 /* WebPImage */ = {
 			isa = PBXGroup;
 			children = (
+				22080FAD2BDB91C000D3FF38 /* Character */,
 				22080F622BD674FF00D3FF38 /* Home */,
 				2285D1612BCCD64700F0D8A6 /* SampleWebP.webp */,
 				2285D15D2BCC001500F0D8A6 /* Map */,
@@ -493,31 +547,46 @@
 			files = (
 				22080FA12BD7AAF600D3FF38 /* BishojoSerif.json in Resources */,
 				45C38DA92BCD8837004440A6 /* SelectedButton.webp in Resources */,
+				22080FC42BDB91CD00D3FF38 /* Character2_1_2_2.webp in Resources */,
 				45806DA42BD6678E00976D79 /* NotoSansJP-Black.ttf in Resources */,
 				45C38DB32BCD885B004440A6 /* Header.webp in Resources */,
+				22080FC62BDB91CD00D3FF38 /* Character2_1_1_2.webp in Resources */,
 				22080F852BD6756800D3FF38 /* Rank_8.webp in Resources */,
+				22080FC32BDB91CD00D3FF38 /* Character1_1_2_2.webp in Resources */,
 				45C38DB52BCD885B004440A6 /* ChatNormalLeft.webp in Resources */,
 				22080F862BD6756800D3FF38 /* HP_Empty.webp in Resources */,
+				22080FCA2BDB91CD00D3FF38 /* Character2_2_1_2.webp in Resources */,
 				45C38DB82BCD885B004440A6 /* Background.webp in Resources */,
+				22080FCB2BDB91CD00D3FF38 /* Character2_1_1_1.webp in Resources */,
 				45904E482BD0AD7C007F304A /* NewHeader.webp in Resources */,
+				22080FCD2BDB91CD00D3FF38 /* Character2_1_2_1.webp in Resources */,
 				45C38DAB2BCD8848004440A6 /* SelectChat.webp in Resources */,
 				45C38DB72BCD885B004440A6 /* NoSelectedButton.webp in Resources */,
+				22080FC82BDB91CD00D3FF38 /* Character2_2_2_1.webp in Resources */,
 				22969AC32BBE7B0500D8FC26 /* Preview Assets.xcassets in Resources */,
 				45C38DA72BCD87A1004440A6 /* WaitingButton.webp in Resources */,
 				22080F812BD6756800D3FF38 /* Home_Nextpoint_Text.webp in Resources */,
+				22080FC52BDB91CD00D3FF38 /* Character1_1_2_1.webp in Resources */,
 				45C38DB92BCD885B004440A6 /* GirlIcon.webp in Resources */,
+				22080FBF2BDB91CD00D3FF38 /* Character1_1_1_2.webp in Resources */,
+				22080FC92BDB91CD00D3FF38 /* Character1_2_1_1.webp in Resources */,
 				45904E462BD0AD6F007F304A /* NewNotSelectedButton.webp in Resources */,
 				22080F832BD6756800D3FF38 /* HP_Frame.webp in Resources */,
 				2285D1772BD23C7C00F0D8A6 /* NoTextButton.webp in Resources */,
-				22080F902BD6843500D3FF38 /* Character.webp in Resources */,
+				22080FC22BDB91CD00D3FF38 /* Character1_1_1_1.webp in Resources */,
+				22080FBE2BDB91CD00D3FF38 /* Character2_2_2_2.webp in Resources */,
 				22080F892BD6756800D3FF38 /* Home_Button_Clothes.webp in Resources */,
 				22080FA32BD7B28D00D3FF38 /* test.json in Resources */,
 				22969AC02BBE7B0500D8FC26 /* Assets.xcassets in Resources */,
+				22080FCC2BDB91CD00D3FF38 /* Character1_2_1_2.webp in Resources */,
 				2285D1762BD23C7C00F0D8A6 /* ArrivedButton.webp in Resources */,
 				2285D1752BD23C7C00F0D8A6 /* HeartFrame.webp in Resources */,
 				2285D1622BCCD64700F0D8A6 /* SampleWebP.webp in Resources */,
 				45C8E8FC2BD657990043C975 /* NotoSansJP-VariableFont_wght.ttf in Resources */,
+				22080FC72BDB91CD00D3FF38 /* Character2_2_1_1.webp in Resources */,
 				45C38DB62BCD885B004440A6 /* HomeButton.webp in Resources */,
+				22080FC12BDB91CD00D3FF38 /* Character1_2_2_2.webp in Resources */,
+				22080FC02BDB91CD00D3FF38 /* Character1_2_2_1.webp in Resources */,
 				22080F9C2BD75CAC00D3FF38 /* HP_Move.webp in Resources */,
 				22080F842BD6756800D3FF38 /* Rank_7.webp in Resources */,
 				22080F8A2BD6756800D3FF38 /* Home_Talk.webp in Resources */,
