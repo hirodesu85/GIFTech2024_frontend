@@ -12,6 +12,8 @@ struct HomeView: View {
     @ObservedObject var userDefaultsModel = UserDefaultsModel()
     @State var isSerifShowed: Bool =  false
     @State var reloadSerif: Bool = false
+    @State var isPressedSelectGoal = false
+    @State var isPressedDressUp = false
     
     
     var body: some View {
@@ -52,8 +54,8 @@ struct HomeView: View {
                         .position(x:300,y:215)
                         .scaleEffect(0.6)
                 }
-                DressUpButton()
-                SelectGoalButton()
+                DressUpButton(isPressed: $isPressedDressUp)
+                SelectGoalButton(isPressed: $isPressedSelectGoal)
                 
                 // デモボタン ItemDropViewで値を更新できたら消す
                 VStack{

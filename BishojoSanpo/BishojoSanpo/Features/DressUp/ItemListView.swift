@@ -79,7 +79,6 @@ struct ItemListView: View {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                         updateUserDefaulsWearing()
                     }
-                    
                 }) {
                     WebPImageView(imageName: "ButtonDecide.webp")
                         .frame(width: 230, height: 230)
