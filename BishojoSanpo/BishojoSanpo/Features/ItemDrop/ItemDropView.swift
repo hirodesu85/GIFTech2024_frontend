@@ -11,6 +11,7 @@ struct ItemDropView: View {
     @EnvironmentObject var router: NavigationRouter
     let goalData: GoalData
     @StateObject private var rewardModel = RewardModel()
+    @ObservedObject var userDefaultsModel = UserDefaultsModel()
     @State private var isTapped = false
     @State private var canShowResult = false
     @State private var getItemImageData: Data? = nil
@@ -23,7 +24,7 @@ struct ItemDropView: View {
                 .edgesIgnoringSafeArea(.all)
             if(canShowResult) {
                 VStack {
-                    ResultDetailBox(rank: rewardModel.rank!, untilNextRank: rewardModel.untilNextRank!)
+                    ResultDetailBox(userDefaultsModel: userDefaultsModel)
                     Button(action: {
                         router.returnToHome()
                     }) {
@@ -88,11 +89,75 @@ struct ItemDropView: View {
                 } catch let err {
                     print("Error : \(err.localizedDescription)")
                 }
+                if (userDefaultsModel.untilNextRank > rewardModel.getRankPoint!) {
+                    userDefaultsModel.updateUntilNextRank(newUntilNextRank: userDefaultsModel.untilNextRank - rewardModel.getRankPoint!)
+                    userDefaultsModel.updateCurrentRankPoint(newCurrentRankPoint: userDefaultsModel.currentRankPoint + rewardModel.getRankPoint!)
+                } else {
+                    let nextRank = userDefaultsModel.rank + 1
+                    let afterUntilNextRank = requireMaxRankPoint(rank: nextRank) - (rewardModel.getRankPoint! - userDefaultsModel.untilNextRank)
+                    userDefaultsModel.updateRank(newRank: nextRank)
+                    userDefaultsModel.updateUntilNextRank(newUntilNextRank: afterUntilNextRank)
+                    userDefaultsModel.updateCurrentRankPoint(newCurrentRankPoint: requireMaxRankPoint(rank: nextRank) - afterUntilNextRank)
+                }
             }
         }
     }
     private func showResult() {
         canShowResult = true
+    }
+    
+    // 今のランクからランクアップするのに必要な最大のポイントを返す
+    private func requireMaxRankPoint(rank: Int) -> Int {
+        switch rank {
+        case 1:
+            return 100
+        case 2:
+            return 200
+        case 3:
+            return 300
+        case 4:
+            return 400
+        case 5:
+            return 500
+        case 6:
+            return 600
+        case 7:
+            return 700
+        case 8:
+            return 800
+        case 9:
+            return 900
+        default:
+            return 1000
+        }
+    
+    }
+    // 前回のランクのMAXまでの通算ポイントを除いた現在のポイントを返す
+    // 実際は7 ~ 8しか使われないが、それ以外も実装した(特に理由はない)
+    private func calcNowRankPoint(rank: Int, untilNextRank: Int) -> Int {
+        switch rank {
+        case 1:
+            return 100 - untilNextRank
+        case 2:
+            return 200 - untilNextRank
+        case 3:
+            return 300 - untilNextRank
+        case 4:
+            return 400 - untilNextRank
+        case 5:
+            return 500 - untilNextRank
+        case 6:
+            return 600 - untilNextRank
+        case 7:
+            return 700 - untilNextRank
+        case 8:
+            return 800 - untilNextRank
+        case 9:
+            return 900 - untilNextRank
+        default:
+            // ここが実行されることはあり得ないが、XCodeに怒られるし、例外を考えるのは面倒臭いのでデカい値を返す
+            return 10000
+        }
     }
 }
 
