@@ -35,6 +35,13 @@ struct SelectGoalView: View {
                     .edgesIgnoringSafeArea(.all)
                 GirlChatView(girlText: "どこにしようかな〜")
             }
+        } else if selectGoalModel.errorMessage != nil {
+            ZStack {
+                WebPImageView(imageName: "Background.webp")
+                    .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
+                    .edgesIgnoringSafeArea(.all)
+                GirlChatView(girlText: "場所が見つからなかった...😭")
+            }
         } else {
             ZStack {
                 WebPImageView(imageName: "Background.webp")
@@ -99,7 +106,9 @@ struct SelectGoalView: View {
             isLoading = true
             await selectGoalModel.fetchSuggestedPlace()  // API呼び出しと内部状態の更新
             sendToMapData.update(from: selectGoalModel) // GoalDataにSelectGoalModelのデータを反映
-            router.navigateToMap(with: sendToMapData) // 更新されたGoalDataを持ってナビゲーション
+            if (selectGoalModel.errorMessage == nil) {
+                router.navigateToMap(with: sendToMapData) // 更新されたGoalDataを持ってナビゲーション
+            }
             isLoading = false
         }
     }

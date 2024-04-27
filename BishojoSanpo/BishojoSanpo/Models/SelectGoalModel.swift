@@ -36,6 +36,7 @@ class SelectGoalModel {
             self.longitude = suggestedPlace.longitude
         } catch {
             self.errorMessage = error.localizedDescription
+            print(self.errorMessage ?? "")
         }
     }
 }
