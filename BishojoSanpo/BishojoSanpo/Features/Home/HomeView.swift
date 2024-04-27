@@ -72,50 +72,7 @@ struct HomeView: View {
                     SelectGoalButton(isPressed: $isPressedSelectGoal)
                         .frame(width: 200)
                         .position(x: geometry.size.width * 0.74, y: geometry.size.height * 0.73) //
-                    // デモボタン 本番前に消す
-                    VStack{
-                        Button {
-                            userDefaultsModel.updateCurrentRankPoint(newCurrentRankPoint: userDefaultsModel.currentRankPoint + 100)
-                            userDefaultsModel.updateUntilNextRank(newUntilNextRank: userDefaultsModel.untilNextRank - 100)
-                        } label: {
-                            Text("ポイントが100増える").background(Color.white)
-                        }
-                        Button(action: {
-                            userDefaultsModel.updateCurrentRankPoint(newCurrentRankPoint: 0)
-                            userDefaultsModel.updateUntilNextRank(newUntilNextRank: 700)
-                        }, label: {
-                            Text("ポイントをリセット").background(Color.white)
-                        })
-                        Button {
-                            userDefaultsModel.updateRank(newRank: 8)
-                        } label: {
-                            Text("ランクを8にする").background(Color.white)
-                        }
-                        Button {
-                            userDefaultsModel.updateRank(newRank: 7)
-                        } label: {
-                            Text("ランクを7にする").background(Color.white)
-                        }
-                        Button {
-                            userDefaultsModel.updateWearingItem(hair: 1, top: 1, bottom: 1, shoes: 1)
-                        } label: {
-                            Text("Topsをピンクに").background(Color.white)
-                        }
-                        Button {
-                            userDefaultsModel.updateWearingItem(hair: 1, top: 2, bottom: 1, shoes: 1)
-                        } label: {
-                            Text("Topsをブルーに").background(Color.white)
-                        }
-                        
-                    }
-                    .frame(width: 200,height: 400)
-                    .position(x:geometry.size.width/2, y:geometry.size.height/2)
-                    
                 }.ignoresSafeArea()
-                
-                // デモボタンここまで
-                
-                
             }
             .onAppear {
                 BgmPlayer.shared.playBackgroundMusic(filename: "bgm_home")
