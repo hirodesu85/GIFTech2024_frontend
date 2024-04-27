@@ -14,6 +14,7 @@ class SelectGoalModel {
     var selectedDistance: String = ""
     var placeId: String = ""
     var placeName: String = ""
+    var placeImageUrl: String = ""
     var latitude: Double = 0.0
     var longitude: Double = 0.0
     var errorMessage: String?
@@ -30,10 +31,12 @@ class SelectGoalModel {
             let suggestedPlace = try JSONDecoder().decode(SuggestedPlace.self, from: data)
             self.placeId = suggestedPlace.place_id
             self.placeName = suggestedPlace.name
+            self.placeImageUrl = suggestedPlace.image_url
             self.latitude = suggestedPlace.latitude
             self.longitude = suggestedPlace.longitude
         } catch {
             self.errorMessage = error.localizedDescription
+            print(self.errorMessage ?? "")
         }
     }
 }
@@ -41,6 +44,7 @@ class SelectGoalModel {
 struct SuggestedPlace: Codable {
     let place_id: String
     let name: String
+    let image_url: String
     let latitude: Double
     let longitude: Double
 }

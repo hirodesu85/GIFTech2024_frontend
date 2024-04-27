@@ -21,7 +21,7 @@ struct MapView: View {
     
     init(goalData: GoalData) {
         self.goalData = goalData
-        self.markerManager = MarkerManager(coordinate: CLLocationCoordinate2D(latitude: goalData.destinationLatitude, longitude: goalData.destinationLongtitude), placeName: goalData.placeName)
+        self.markerManager = MarkerManager(coordinate: CLLocationCoordinate2D(latitude: goalData.destinationLatitude, longitude: goalData.destinationLongtitude), placeName: goalData.placeName, placeImageUrl: goalData.placeImageUrl)
     }
     
     var body: some View {
@@ -74,9 +74,10 @@ struct MapView: View {
 class MarkerManager: ObservableObject {
     @Published var destinationMarker: GMSMarker
     
-    init(coordinate: CLLocationCoordinate2D, placeName: String) {
+    init(coordinate: CLLocationCoordinate2D, placeName: String, placeImageUrl: String) {
         self.destinationMarker = GMSMarker(position: coordinate)
         self.destinationMarker.title = placeName
+        self.destinationMarker.userData = placeImageUrl
     }
 }
 
@@ -84,5 +85,3 @@ class MarkerManager: ObservableObject {
     let goalData = GoalData(placeId: "", currentLatitude: 22, currentLongtitude: 11, selectedDistance: "")
     return MapView(goalData: goalData)
 }
-
-
