@@ -102,6 +102,7 @@ struct SelectGoalView: View {
             locationManager.onLocationUpdate = { newLocation in
                 if !hasUpdateLocation && isSelectedCategory {getDestinationAndNavigate(newLocation: newLocation)}
             }
+            BgmPlayer.shared.playBackgroundMusic(filename: "bgm_selectGoal")
         }
         .onChange(of: isSelectedDistance) { _ in
             locationManager.fetchLocation()

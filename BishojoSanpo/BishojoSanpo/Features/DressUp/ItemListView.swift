@@ -33,6 +33,7 @@ struct ItemListView: View {
             
             Button(action: {
                 router.returnToHome()
+                AudioPlayer.shared.playSound()
             }) {
                 WebPImageView(imageName: "HomeButton.webp")
                     .frame(width: 70, height: 70)
@@ -66,6 +67,7 @@ struct ItemListView: View {
                 
                 Button(action: {
                     updateUserDefaulsWearing()
+                    AudioPlayer.shared.playSound()
                 }) {
                     WebPImageView(imageName: "ButtonDecide.webp")
                         .frame(width: 230, height: 230)
@@ -73,6 +75,7 @@ struct ItemListView: View {
                 }
                 .padding(.leading, 145)
             }.onAppear {
+                BgmPlayer.shared.playBackgroundMusic(filename: "bgm_dressUp")
                 Task {
                     await itemListModel.fetchCatalog()
                 }

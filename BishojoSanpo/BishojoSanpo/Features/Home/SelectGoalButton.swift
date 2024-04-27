@@ -12,6 +12,7 @@ struct SelectGoalButton: View {
     let userDefaultsModel = UserDefaultsModel.shared
     var body: some View {
             Button(action: {
+                AudioPlayer.shared.playSound()
                 router.items.append(.selectGoal)
                 print(userDefaultsModel.currentRankPoint)
             }, label: {

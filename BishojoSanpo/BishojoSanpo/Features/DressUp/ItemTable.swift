@@ -22,6 +22,7 @@ struct ItemTable: View {
                 HStack(alignment: .bottom, spacing: 0) {
                     Button(action: {
                         selectedCategory = 0
+                        TapAudioPlayer.shared.playSound()
                     }) {
                         if selectedCategory == 0 {
                             WebPImageView(imageName: "TagActiveHair.webp")
@@ -34,6 +35,7 @@ struct ItemTable: View {
                     
                     Button(action: {
                         selectedCategory = 1
+                        TapAudioPlayer.shared.playSound()
                     }) {
                         if selectedCategory == 1 {
                             WebPImageView(imageName: "TagActiveOver.webp")
@@ -46,6 +48,7 @@ struct ItemTable: View {
                     
                     Button(action: {
                         selectedCategory = 2
+                        TapAudioPlayer.shared.playSound()
                     }) {
                         if selectedCategory == 2 {
                             WebPImageView(imageName: "TagActiveUnder.webp")
@@ -58,6 +61,7 @@ struct ItemTable: View {
                     
                     Button(action: {
                         selectedCategory = 3
+                        TapAudioPlayer.shared.playSound()
                     }) {
                         if selectedCategory == 3 {
                             WebPImageView(imageName: "TagActiveShoes.webp")
@@ -93,6 +97,7 @@ struct ItemTable: View {
                                         }
                                         .frame(width: 100, height: 100)
                                         .onTapGesture {
+                                            TapAudioPlayer.shared.playSound()
                                             if isSelectedItem(itemId: item.id){
                                                 selectedItemModel.updateSelectedItem(category: selectedCategory, itemId: -1)
                                                

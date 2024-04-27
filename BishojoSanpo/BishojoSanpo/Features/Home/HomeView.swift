@@ -106,6 +106,9 @@ struct HomeView: View {
                 
                 
             }
+            .onAppear {
+                BgmPlayer.shared.playBackgroundMusic(filename: "bgm_home")
+            }
             .onChange(of: router.items) { newValue in
                 if newValue.contains(where: { $0 == .selectGoal || $0 == .dressUp }) {
                     isSerifShowed = false
@@ -135,3 +138,4 @@ struct HomeView: View {
 #Preview {
     HomeView()
 }
+	
