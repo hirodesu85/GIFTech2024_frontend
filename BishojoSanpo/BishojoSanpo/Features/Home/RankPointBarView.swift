@@ -14,8 +14,9 @@ struct RankPointBarView: View {
         ZStack{
             WebPImageView(imageName: "HP_Empty.webp")
             WebPImageView(imageName: "HP_Move.webp")
-                .scaleEffect(x: calculatePointRate(), y: 1, anchor: .leading)
+                .scaleEffect(x: calculatePointRate()*1.02, y: 1, anchor: .leading)
                 .padding()
+                .offset(x:-1.2)
             WebPImageView(imageName: "HP_Frame.webp")
         }
     }

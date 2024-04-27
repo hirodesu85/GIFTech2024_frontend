@@ -20,8 +20,8 @@ struct HomeButtonView: View {
                         AudioPlayer.shared.playSound()
                     }) {
                         WebPImageView(imageName: "HomeButton.webp")
-                            .frame(width: 70, height: 70)
-                            .padding(.top, 15)
+                            .frame(width: 55, height: 55)
+                            .padding(.top, 25)
                             .padding(.trailing, 12)
                     }
                     Spacer()

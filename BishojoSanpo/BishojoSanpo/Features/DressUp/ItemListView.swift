@@ -29,8 +29,8 @@ struct ItemListView: View {
                 .edgesIgnoringSafeArea(.all)
             
             WebPImageView(imageName: "ItemSign.webp")
-                .frame(width: 230, height: 200)
-                .offset(x: -80, y: -390)
+                .frame(width: 210, height: 180)
+                .offset(x: -90, y: -395)
                 .edgesIgnoringSafeArea(.all)
             
             Button(action: {
@@ -40,8 +40,10 @@ struct ItemListView: View {
                 }
             }) {
                 WebPImageView(imageName: "HomeButton.webp")
-                    .frame(width: 70, height: 70)
+                    .frame(width: 50, height: 50)
                     .padding(.trailing, 12)
+                    .padding(.top,25)
+
                     .scaleEffect(isPressedHome ? 1.2 : 1)
                     .animation(.easeInOut(duration: 0.2), value: isPressedHome)
             }
@@ -50,7 +52,8 @@ struct ItemListView: View {
                     .onChanged { _ in isPressedHome = true }
                     .onEnded { _ in isPressedHome = false }
             )
-            .offset(x: 150, y: -370)
+            .offset(x: 159, y: -418)
+
             
             CharacterView(userDefaultsModel: userDefaultsModel)
                 .scaleEffect(0.83)
@@ -62,7 +65,7 @@ struct ItemListView: View {
                 ZStack{
                     if let catalog = itemListModel.catalog {
                         ItemTable(itemListModel: itemListModel, userDefaultsModel: userDefaultsModel, selectedCategory: $selectedCategory, selectedItemModel: selectedItemModel)
-
+                        
                     } else {
                         WebPImageView(imageName: "NewBackWhite.webp")
                             .scaledToFill()
@@ -71,7 +74,7 @@ struct ItemListView: View {
                             .blur(radius: 3.0)
                         Text("Loading...").foregroundStyle(Color("ChatColor"))
                             .font(.headline)
-
+                        
                     }
                 }.padding(.leading, 145)
                 
@@ -83,8 +86,9 @@ struct ItemListView: View {
                     }
                 }) {
                     WebPImageView(imageName: "ButtonDecide.webp")
-                        .frame(width: 230, height: 230)
-                        .offset(x: 0, y: -10)
+                        .frame(width: 200, height: 200)
+                        .offset(x: 18, y: -10)
+
                         .scaleEffect(isPressedDecide ? 1.2 : 1)
                         .animation(.easeInOut(duration: 0.2), value: isPressedDecide)
                 }
