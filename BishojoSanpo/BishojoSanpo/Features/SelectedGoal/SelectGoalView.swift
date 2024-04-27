@@ -22,6 +22,9 @@ struct SelectGoalView: View {
     @State var isSelectedDistance: Bool = false
     @State var selectedDistance: Int = -1
     @State private var isLoading = false
+    @State private var isPressedHome = false
+    @State private var isPressedCategory = [false, false, false]
+    @State private var isPressedDistance = [false, false, false]
     
     let categoryOptions = ["散歩", "サウナ", "ご飯"]
     let distanceOptions = ["近く", "中距離", "遠く"]
@@ -59,12 +62,14 @@ struct SelectGoalView: View {
                                 
                                 MyChatView(isSelected: $isSelectedCategory,
                                            selectedOption: $selectedCategory,
+                                           isPressed: $isPressedCategory,
                                            options: categoryOptions)
                                 if isSelectedCategory {
                                     GirlChatView(girlText: "どこまで行く？")
                                     
                                     MyChatView(isSelected: $isSelectedDistance,
                                                selectedOption: $selectedDistance,
+                                               isPressed: $isPressedDistance,
                                                options: distanceOptions)
                                     
                                     Color.clear.id(1)
@@ -79,7 +84,7 @@ struct SelectGoalView: View {
                             }
                         }
                     }
-                    HeaderView()
+                    HeaderView(isPressedHome: $isPressedHome)
                 }
             }
             .navigationBarBackButtonHidden(true)
@@ -89,7 +94,9 @@ struct SelectGoalView: View {
                 }
             }
             .onChange(of: isSelectedDistance) { _ in
-                locationManager.fetchLocation()
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                    locationManager.fetchLocation()
+                }
             }
         }
     }
