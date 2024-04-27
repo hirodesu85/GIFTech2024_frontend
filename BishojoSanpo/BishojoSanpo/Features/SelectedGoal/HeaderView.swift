@@ -19,9 +19,10 @@ struct HeaderView: View {
                         radius: 10,
                         x: 0, y: 5)
             HStack {
-                Text("wwwwwwwww")
+                Text("音子")
                     .padding(.leading, 10)
                     .padding(.top, 30)
+                    .padding(.bottom, 10)
                     .foregroundStyle(.white)
                 Spacer()
                 Button(action: {

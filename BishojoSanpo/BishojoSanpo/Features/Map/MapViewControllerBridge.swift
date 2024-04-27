@@ -26,6 +26,7 @@ struct MapViewControllerBridge: UIViewControllerRepresentable {
     
     func updateUIViewController(_ uiViewController: MapViewController, context: Context) {
         marker.map = uiViewController.map
+        uiViewController.map.selectedMarker = marker // デフォルトでマーカーの場所名を表示させた状態にするための設定
         // アニメーションが未完了の場合のみアニメーションを実行
         if isChangedPolyline, let polyline = polyline {
             polyline.map = uiViewController.map
