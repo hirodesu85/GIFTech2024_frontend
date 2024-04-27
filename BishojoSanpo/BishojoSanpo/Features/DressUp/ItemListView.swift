@@ -27,8 +27,8 @@ struct ItemListView: View {
                 .edgesIgnoringSafeArea(.all)
             
             WebPImageView(imageName: "ItemSign.webp")
-                .frame(width: 230, height: 200)
-                .offset(x: -80, y: -390)
+                .frame(width: 210, height: 180)
+                .offset(x: -90, y: -395)
                 .edgesIgnoringSafeArea(.all)
             
             Button(action: {
@@ -68,8 +68,8 @@ struct ItemListView: View {
                     updateUserDefaulsWearing()
                 }) {
                     WebPImageView(imageName: "ButtonDecide.webp")
-                        .frame(width: 230, height: 230)
-                        .offset(x: 0, y: -10)
+                        .frame(width: 200, height: 200)
+                        .offset(x: 18, y: -10)
                 }
                 .padding(.leading, 145)
             }.onAppear {
@@ -88,6 +88,6 @@ struct ItemListView: View {
             shoes: selectedItemModel.shoes == -1 ? userDefaultsModel.currentWearingId["shoes"] as! Int: selectedItemModel.shoes)
     }
 }
-#Preview {
-    ItemListView(itemListModel: ItemListModel(), selectedCategory: 1, userDefaultsModel: UserDefaultsModel(), selectedItemModel: SelectedItemModel())
-}
+//#Preview {
+//    ItemListView(itemListModel: ItemListModel(), selectedCategory: 1, userDefaultsModel: UserDefaultsModel(), selectedItemModel: SelectedItemModel())
+//}

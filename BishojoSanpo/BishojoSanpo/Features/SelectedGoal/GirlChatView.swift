@@ -14,14 +14,16 @@ struct GirlChatView: View {
             WebPImageView(imageName: "Face.webp")
                 .frame(width: 100, height: 100)
                 .font(.system(size: 25))
-                .padding(10)
+                .padding(.vertical, 10)
+                .padding(.leading, 20)
+                .padding(.trailing, 0)
             ZStack {
                 WebPImageView(imageName: "ChatNormalLeft.webp")
                 HStack {
                     Text(girlText)
                         .foregroundStyle(Color("ChatColor"))
                         .padding(.bottom, 25)
-                        .padding(.leading, 20)
+                        .padding(.leading, 25)
                     Spacer()
                 }
             }

@@ -28,6 +28,14 @@ struct HomeView: View {
                     .scaleEffect(0.88)
                     .onTapGesture {
                         if isSerifShowed {
+                            withAnimation(.linear(duration: 0.2)) {
+                                isSerifShowed = false
+                            }
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                                withAnimation(.linear(duration: 0.2)) {
+                                    isSerifShowed = true
+                                }
+                            }
                             reloadSerif.toggle()
                         } else {
                             isSerifShowed = true
@@ -105,7 +113,7 @@ struct HomeView: View {
                 switch item {
                 case .selectGoal:
                     SelectGoalView()
-                        .environment(\.font, .custom("NotoSansJP-Black", size: 25))
+                        .environment(\.font, .custom("NotoSansJP-Black", size: 20))
                 case .map(let goalData):
                     MapView(goalData: goalData)
                 case .itemDrop(let goalData):

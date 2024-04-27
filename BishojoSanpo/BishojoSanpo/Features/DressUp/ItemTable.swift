@@ -105,7 +105,8 @@ struct ItemTable: View {
                                             WebPImageView(imageName: "Cursor.webp").allowsHitTesting(false)
                                         }
                                         if isEquipped(itemId: item.id){
-                                            WebPImageView(imageName: "Equipment.webp").frame(width: 50)
+                                            WebPImageView(imageName: "Equipment.webp")
+                                                .frame(width: 35)
                                                 .offset(x:30,y:-30)
                                                 .allowsHitTesting(false)
                                         }

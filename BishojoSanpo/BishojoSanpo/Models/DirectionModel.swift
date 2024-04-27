@@ -66,7 +66,7 @@ class DirectionModel {
         // パスからポリラインを生成
         let polyline = GMSPolyline(path: path)
         polyline.strokeColor = UIColor.mapLine
-        polyline.strokeWidth = 4.0
+        polyline.strokeWidth = 6.0
         
         // ポリラインオブジェクトを返す
         return polyline

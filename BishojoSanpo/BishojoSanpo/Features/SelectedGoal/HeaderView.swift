@@ -20,16 +20,16 @@ struct HeaderView: View {
                         x: 0, y: 5)
             HStack {
                 Text("音子")
-                    .padding(.leading, 10)
-                    .padding(.top, 30)
-                    .padding(.bottom, 10)
+                    .padding(.leading, 25)
+                    .padding(.top, 25)
+                    .padding(.bottom, 15)
                     .foregroundStyle(.white)
                 Spacer()
                 Button(action: {
                     router.returnToHome()
                 }) {
                     WebPImageView(imageName: "HomeButton.webp")
-                        .frame(width: 70, height: 70)
+                        .frame(width: 55, height: 55)
                         .padding(.trailing, 12)
                 }
                 

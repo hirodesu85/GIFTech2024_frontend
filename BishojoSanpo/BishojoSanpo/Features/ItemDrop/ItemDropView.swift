@@ -24,7 +24,7 @@ struct ItemDropView: View {
                 .edgesIgnoringSafeArea(.all)
             if(canShowResult) {
                 VStack {
-                    ResultDetailBox(userDefaultsModel: userDefaultsModel)
+                    ResultDetailBox(userDefaultsModel: userDefaultsModel).frame(width: 340).offset(y:-20)
                     Button(action: {
                         router.returnToHome()
                     }) {
@@ -38,8 +38,8 @@ struct ItemDropView: View {
                 }
             } else {
                 VStack{
-                    WebPImageView(imageName: "present_box.webp").aspectRatio(contentMode: .fit).frame(width: UIScreen.main.bounds.width * 0.8)
-                    WebPImageView(imageName: "tap_to_open.webp").aspectRatio(contentMode: .fit).frame(width: UIScreen.main.bounds.width * 0.7)
+                    WebPImageView(imageName: "present_box.webp").aspectRatio(contentMode: .fit).frame(width: UIScreen.main.bounds.width * 0.7).offset(y:-50)
+                    WebPImageView(imageName: "tap_to_open.webp").aspectRatio(contentMode: .fit).frame(width: UIScreen.main.bounds.width * 0.7).offset(y:-50)
                 }
                 DetectTapView(isTapped: $isTapped)
                 VStack {
@@ -60,12 +60,14 @@ struct ItemDropView: View {
                     
                 if let dropItemData = getItemImageData , isTapped {
                     ZStack {
-                        WebPImageView(imageName: "effect.webp")
+                        WebPImageView(imageName: "effect.webp").offset(y:-40)
                         VStack {
                             Image(uiImage: UIImage(data: dropItemData)!).resizable()
                                 .aspectRatio(contentMode: .fit)
-                                .frame(width: UIScreen.main.bounds.width * 0.35)
+                                .frame(width: UIScreen.main.bounds.width * 0.38)
+                                .offset(y:-90)
                             Text(rewardModel.dropItem!.name).foregroundColor(.white).font(.system(size: 25)).fontWeight(.black).shadow(color: Color.black.opacity(0.9), radius: 8)
+                                .offset(y:-50)
                         }
                     }.onAppear {
                         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
