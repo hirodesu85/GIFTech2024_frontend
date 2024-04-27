@@ -83,6 +83,8 @@
 		360E259F2BDBDA6B00378270 /* Button_ChangeWear.webp in Resources */ = {isa = PBXBuildFile; fileRef = 360E259E2BDBDA6B00378270 /* Button_ChangeWear.webp */; };
 		360E25A12BDBDFB200378270 /* 1Pittari_Text_Love.webp in Resources */ = {isa = PBXBuildFile; fileRef = 360E25A02BDBDFB200378270 /* 1Pittari_Text_Love.webp */; };
 		360E25A32BDBDFCB00378270 /* Dialog_Back.webp in Resources */ = {isa = PBXBuildFile; fileRef = 360E25A22BDBDFCB00378270 /* Dialog_Back.webp */; };
+		360E25A52BDC740100378270 /* ResultDetailBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360E25A42BDC740100378270 /* ResultDetailBox.swift */; };
+		360E25A72BDC896800378270 /* StrokeBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360E25A62BDC896800378270 /* StrokeBackground.swift */; };
 		4515603B2BCD4257006C8EAA /* SelectGoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4515603A2BCD4257006C8EAA /* SelectGoalView.swift */; };
 		4515603D2BCD4460006C8EAA /* GirlChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4515603C2BCD4460006C8EAA /* GirlChatView.swift */; };
 		4515603F2BCD44A2006C8EAA /* MyChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4515603E2BCD44A2006C8EAA /* MyChatView.swift */; };
@@ -197,6 +199,8 @@
 		360E259E2BDBDA6B00378270 /* Button_ChangeWear.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = Button_ChangeWear.webp; sourceTree = "<group>"; };
 		360E25A02BDBDFB200378270 /* 1Pittari_Text_Love.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = 1Pittari_Text_Love.webp; sourceTree = "<group>"; };
 		360E25A22BDBDFCB00378270 /* Dialog_Back.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = Dialog_Back.webp; sourceTree = "<group>"; };
+		360E25A42BDC740100378270 /* ResultDetailBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultDetailBox.swift; sourceTree = "<group>"; };
+		360E25A62BDC896800378270 /* StrokeBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrokeBackground.swift; sourceTree = "<group>"; };
 		4515603A2BCD4257006C8EAA /* SelectGoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SelectGoalView.swift; path = BishojoSanpo/Features/SelectedGoal/SelectGoalView.swift; sourceTree = SOURCE_ROOT; };
 		4515603C2BCD4460006C8EAA /* GirlChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GirlChatView.swift; path = BishojoSanpo/Features/SelectedGoal/GirlChatView.swift; sourceTree = SOURCE_ROOT; };
 		4515603E2BCD44A2006C8EAA /* MyChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyChatView.swift; path = BishojoSanpo/Features/SelectedGoal/MyChatView.swift; sourceTree = SOURCE_ROOT; };
@@ -387,6 +391,8 @@
 				2285D13E2BCA022C00F0D8A6 /* ItemDropView.swift */,
 				22080F562BD49ED800D3FF38 /* NavigateToDressUpButton.swift */,
 				22080F582BD4A05D00D3FF38 /* DetectTapView.swift */,
+				360E25A42BDC740100378270 /* ResultDetailBox.swift */,
+				360E25A62BDC896800378270 /* StrokeBackground.swift */,
 			);
 			path = ItemDrop;
 			sourceTree = "<group>";
@@ -746,6 +752,7 @@
 				22969ABE2BBE7B0400D8FC26 /* HomeView.swift in Sources */,
 				22080F532BD4967D00D3FF38 /* ArrivedButtonView.swift in Sources */,
 				22080FD02BDB9B8D00D3FF38 /* HomeRankPointView.swift in Sources */,
+				360E25A72BDC896800378270 /* StrokeBackground.swift in Sources */,
 				22080F592BD4A05D00D3FF38 /* DetectTapView.swift in Sources */,
 				2285D1412BCA024600F0D8A6 /* ItemListView.swift in Sources */,
 				4515603D2BCD4460006C8EAA /* GirlChatView.swift in Sources */,
@@ -763,6 +770,7 @@
 				22080F9A2BD7589600D3FF38 /* RankPointBarView.swift in Sources */,
 				22080F5D2BD4A3C100D3FF38 /* RewardModel.swift in Sources */,
 				452FF3202BD7E78600A0187D /* ItemTable.swift in Sources */,
+				360E25A52BDC740100378270 /* ResultDetailBox.swift in Sources */,
 				22080F452BD3FF9500D3FF38 /* DressUp.swift in Sources */,
 				4515603F2BCD44A2006C8EAA /* MyChatView.swift in Sources */,
 				2285D1432BCA0ACF00F0D8A6 /* NavigationRouter.swift in Sources */,

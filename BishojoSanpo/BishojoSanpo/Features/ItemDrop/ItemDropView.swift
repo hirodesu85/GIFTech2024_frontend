@@ -23,12 +23,7 @@ struct ItemDropView: View {
                 .edgesIgnoringSafeArea(.all)
             if(canShowResult) {
                 VStack {
-                    ZStack {
-                        WebPImageView(imageName: "Dialog_Back.webp")
-                        VStack {
-                            WebPImageView(imageName: "1Pittari_Text_Love.webp").aspectRatio(contentMode: .fit).frame(width: UIScreen.main.bounds.width * 0.45)
-                        }
-                    }
+                    ResultDetailBox(rank: rewardModel.rank!, untilNextRank: rewardModel.untilNextRank!)
                     Button(action: {
                         router.returnToHome()
                     }) {
