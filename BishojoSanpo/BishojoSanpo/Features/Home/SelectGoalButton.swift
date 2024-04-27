@@ -13,6 +13,7 @@ struct SelectGoalButton: View {
     var body: some View {
         GeometryReader { geometry in
             Button(action: {
+                AudioPlayer.shared.playSound()
                 router.items.append(.selectGoal)
                 print(userDefaultsModel.currentRankPoint)
             }, label: {

@@ -73,6 +73,7 @@ struct ItemListView: View {
                 }
                 .padding(.leading, 145)
             }.onAppear {
+                BgmPlayer.shared.playBackgroundMusic(filename: "bgm_dressUp")
                 Task {
                     await itemListModel.fetchCatalog()
                 }

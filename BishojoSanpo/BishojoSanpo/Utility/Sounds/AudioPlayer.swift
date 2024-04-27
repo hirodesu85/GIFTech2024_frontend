@@ -14,7 +14,7 @@ class AudioPlayer {
             return
         }
 
-        let url = URL(fileURLWithPath: path)  // この行はOptionalではない
+        let url = URL(fileURLWithPath: path)
 
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: url)

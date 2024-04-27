@@ -13,6 +13,7 @@ struct DressUpButton: View {
     var body: some View {
         GeometryReader { geometry in
             Button(action: {
+                AudioPlayer.shared.playSound()
                 router.items.append(.dressUp)
             }, label: {
                 WebPImageView(imageName: "Home_Button_Clothes.webp")

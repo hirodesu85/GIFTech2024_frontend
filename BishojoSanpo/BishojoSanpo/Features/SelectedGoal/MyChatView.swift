@@ -45,6 +45,7 @@ struct MyChatView: View {
                             Button(action: {
                                 self.selectedOption = index
                                 self.isSelected = true
+                                ChatAudioPlayer.shared.playSound()
                             }) {
                                 ZStack {
                                     WebPImageView(imageName: "WaitingButton.webp")
