@@ -9,8 +9,11 @@ import SwiftUI
 
 struct ItemTable: View {
     @ObservedObject var itemListModel: ItemListModel
+    @ObservedObject var userDefaultsModel: UserDefaultsModel
     @Binding var selectedCategory: Int
+    @ObservedObject var selectedItemModel: SelectedItemModel
     let columns: [GridItem] = Array(repeating: .init(.flexible()), count: 2)
+    let categories = ["hair", "top", "bottom", "shoes"]
     
     
     var body: some View {
@@ -78,18 +81,34 @@ struct ItemTable: View {
                             LazyVGrid(columns: columns, spacing: 5) {
                                 ForEach(itemsForSelectedCategory(catalog: catalog), id: \.self.id) { item in
                                     ZStack {
-                                        WebPImageView(imageName: "ItemBlank.webp")
-                                            .frame(width: 100, height: 100)
                                         AsyncImage(url: URL(string: item.imageUrl)) { phase in
                                             if let image = phase.image {
                                                 image.resizable()
                                             } else if phase.error != nil {
                                                 Text("画像読み込みエラー")
                                             } else {
-                                                Text("画像取得中...")
+                                                Text("Loading...").foregroundStyle(Color("ChatColor"))
+                                                    .font(.caption)
                                             }
-                                        }.frame(width: 55, height: 55)
-                                            .offset(x: -3, y: 3)
+                                        }
+                                        .frame(width: 100, height: 100)
+                                        .onTapGesture {
+                                            if isSelectedItem(itemId: item.id){
+                                                selectedItemModel.updateSelectedItem(category: selectedCategory, itemId: -1)
+                                               
+                                            }else{
+                                                selectedItemModel.updateSelectedItem(category: selectedCategory, itemId: item.id)
+                                                
+                                            }
+                                        }
+                                        if isSelectedItem(itemId: item.id){
+                                            WebPImageView(imageName: "Cursor.webp").allowsHitTesting(false)
+                                        }
+                                        if isEquipped(itemId: item.id){
+                                            WebPImageView(imageName: "Equipment.webp").frame(width: 50)
+                                                .offset(x:30,y:-30)
+                                                .allowsHitTesting(false)
+                                        }
                                     }
                                 }
                                 
@@ -131,8 +150,26 @@ struct ItemTable: View {
             return []
         }
     }
-}
-
-#Preview {
-    ItemListView()
+    func isEquipped(itemId: Int) -> Bool {
+        
+        let selectedCategoryString = categories[min(selectedCategory, categories.count - 1)]
+        return self.userDefaultsModel.currentWearingId[selectedCategoryString] as? Int == itemId
+    }
+    func isSelectedItem(itemId: Int) -> Bool {
+        switch selectedCategory {
+            case 0:
+                return selectedItemModel.hair == itemId
+            case 1:
+                return selectedItemModel.top == itemId
+            case 2:
+                return selectedItemModel.bottom == itemId
+            case 3:
+                return selectedItemModel.shoes == itemId
+            default:
+                return false
+            }
+    }
+    
+    
+    
 }

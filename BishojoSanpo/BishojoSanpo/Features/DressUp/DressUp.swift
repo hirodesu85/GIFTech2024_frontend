@@ -9,6 +9,7 @@ import SwiftUI
 
 struct DressUpView: View {
     @EnvironmentObject var router: NavigationRouter
+    @ObservedObject var userDefaultsModel: UserDefaultsModel
 
     var body: some View {
         VStack{
@@ -20,13 +21,11 @@ struct DressUpView: View {
             }, label: {
                 Text("Home")
             })
-            ItemListView()
+            ItemListView(userDefaultsModel: userDefaultsModel)
         }
         .navigationBarBackButtonHidden(true)
         
     }
 }
 
-#Preview {
-    DressUpView()
-}
+
