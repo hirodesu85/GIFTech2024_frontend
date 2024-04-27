@@ -10,6 +10,8 @@ import SwiftUI
 struct ItemListView: View {
     @StateObject var itemListModel = ItemListModel()
     @State var selectedCategory: Int = 0
+    @State private var isPressedDecide = false
+    @State private var isPressedHome = false
     
     @EnvironmentObject var router: NavigationRouter
     @ObservedObject var userDefaultsModel: UserDefaultsModel
@@ -32,13 +34,22 @@ struct ItemListView: View {
                 .edgesIgnoringSafeArea(.all)
             
             Button(action: {
-                router.returnToHome()
                 AudioPlayer.shared.playSound()
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                    router.returnToHome()
+                }
             }) {
                 WebPImageView(imageName: "HomeButton.webp")
                     .frame(width: 70, height: 70)
                     .padding(.trailing, 12)
+                    .scaleEffect(isPressedHome ? 1.2 : 1)
+                    .animation(.easeInOut(duration: 0.2), value: isPressedHome)
             }
+            .simultaneousGesture(
+                DragGesture(minimumDistance: 0)
+                    .onChanged { _ in isPressedHome = true }
+                    .onEnded { _ in isPressedHome = false }
+            )
             .offset(x: 150, y: -370)
             
             CharacterView(userDefaultsModel: userDefaultsModel)
@@ -47,7 +58,7 @@ struct ItemListView: View {
             
             VStack(spacing: 0) {
                 Spacer()
-                    .frame(height: 100)
+                    .frame(height: 50)
                 ZStack{
                     if let catalog = itemListModel.catalog {
                         ItemTable(itemListModel: itemListModel, userDefaultsModel: userDefaultsModel, selectedCategory: $selectedCategory, selectedItemModel: selectedItemModel)
@@ -66,13 +77,22 @@ struct ItemListView: View {
                 
                 
                 Button(action: {
-                    updateUserDefaulsWearing()
                     AudioPlayer.shared.playSound()
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                        updateUserDefaulsWearing()
+                    }
                 }) {
                     WebPImageView(imageName: "ButtonDecide.webp")
                         .frame(width: 230, height: 230)
                         .offset(x: 0, y: -10)
+                        .scaleEffect(isPressedDecide ? 1.2 : 1)
+                        .animation(.easeInOut(duration: 0.2), value: isPressedDecide)
                 }
+                .simultaneousGesture(
+                    DragGesture(minimumDistance: 0)
+                        .onChanged { _ in isPressedDecide = true }
+                        .onEnded { _ in isPressedDecide = false }
+                )
                 .padding(.leading, 145)
             }.onAppear {
                 BgmPlayer.shared.playBackgroundMusic(filename: "bgm_dressUp")
@@ -90,7 +110,4 @@ struct ItemListView: View {
             bottom: selectedItemModel.bottom == -1 ? userDefaultsModel.currentWearingId["bottom"] as! Int: selectedItemModel.bottom,
             shoes: selectedItemModel.shoes == -1 ? userDefaultsModel.currentWearingId["shoes"] as! Int: selectedItemModel.shoes)
     }
-}
-#Preview {
-    ItemListView(itemListModel: ItemListModel(), selectedCategory: 1, userDefaultsModel: UserDefaultsModel(), selectedItemModel: SelectedItemModel())
 }

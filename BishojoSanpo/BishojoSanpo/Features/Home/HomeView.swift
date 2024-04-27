@@ -12,13 +12,15 @@ struct HomeView: View {
     @ObservedObject var userDefaultsModel = UserDefaultsModel.shared
     @State var isSerifShowed: Bool =  false
     @State var reloadSerif: Bool = false
+    @State var isPressedSelectGoal = false
+    @State var isPressedDressUp = false
     
     
     var body: some View {
         NavigationStack(path: $router.items){
             ZStack {
                 GeometryReader {geometry in
-                    
+
                     WebPImageView(imageName: "Background.webp")
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
                         .onTapGesture {
@@ -55,10 +57,10 @@ struct HomeView: View {
                             .scaleEffect(0.6)
                     }
 
-                    DressUpButton()
+                    DressUpButton(isPressed: $isPressedDressUp)
                         .frame(width: 150)
                         .position(x: geometry.size.width * 0.78, y: geometry.size.height * 0.9) // ボタンの位置を右下に設定
-                    SelectGoalButton()
+                    SelectGoalButton(isPressed: $isPressedSelectGoal)
                         .frame(width: 200)
                         .position(x: geometry.size.width * 0.74, y: geometry.size.height * 0.73) //
                     // デモボタン 本番前に消す
