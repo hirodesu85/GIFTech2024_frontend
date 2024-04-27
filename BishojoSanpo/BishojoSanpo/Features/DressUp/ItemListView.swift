@@ -35,10 +35,11 @@ struct ItemListView: View {
                 router.returnToHome()
             }) {
                 WebPImageView(imageName: "HomeButton.webp")
-                    .frame(width: 70, height: 70)
+                    .frame(width: 50, height: 50)
                     .padding(.trailing, 12)
+                    .padding(.top,25)
             }
-            .offset(x: 150, y: -370)
+            .offset(x: 159, y: -418)
             
             CharacterView(userDefaultsModel: userDefaultsModel)
                 .scaleEffect(0.83)

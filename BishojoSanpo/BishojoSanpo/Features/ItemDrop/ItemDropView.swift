@@ -47,9 +47,9 @@ struct ItemDropView: View {
                         showResult()
                     }) {
                         WebPImageView(imageName: "skip_button.webp").aspectRatio(contentMode: .fit)
-                            .frame(width: 70)
-                            .padding(.top, 15)
-                            .padding(.trailing, 12)
+                            .frame(width: 50)
+                            .padding(.top, 25)
+                            .padding(.trailing, 14)
                     }
                 }.frame(
                     width: UIScreen.main.bounds.width,
