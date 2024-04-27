@@ -120,9 +120,9 @@
 		613CEF9E2BDCB60A0081C8A8 /* ChatAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613CEF9D2BDCB60A0081C8A8 /* ChatAudioPlayer.swift */; };
 		613CEFA02BDCC8020081C8A8 /* BgmPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613CEF9F2BDCC8020081C8A8 /* BgmPlayer.swift */; };
 		613CEFA22BDCC8BC0081C8A8 /* bgm_home.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 613CEFA12BDCC8BC0081C8A8 /* bgm_home.mp3 */; };
-		613CEFA42BDCCA320081C8A8 /* bgm_selectGoal.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 613CEFA32BDCCA320081C8A8 /* bgm_selectGoal.mp3 */; };
 		613CEFA62BDCCB030081C8A8 /* bgm_dressUp.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 613CEFA52BDCCB030081C8A8 /* bgm_dressUp.mp3 */; };
 		613CEFA82BDCCC740081C8A8 /* bgm_map.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 613CEFA72BDCCC740081C8A8 /* bgm_map.mp3 */; };
+		613CEFAA2BDCF72F0081C8A8 /* bgm_selectGoal.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 613CEFA92BDCF72F0081C8A8 /* bgm_selectGoal.mp3 */; };
 		61D36B6A2BDA5C01008A7D41 /* clicksound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 61D36B692BDA5C01008A7D41 /* clicksound.mp3 */; };
 		61D94ACB2BDBA4000018D6FB /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D94ACA2BDBA4000018D6FB /* AudioPlayer.swift */; };
 /* End PBXBuildFile section */
@@ -238,9 +238,9 @@
 		613CEF9D2BDCB60A0081C8A8 /* ChatAudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatAudioPlayer.swift; sourceTree = "<group>"; };
 		613CEF9F2BDCC8020081C8A8 /* BgmPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BgmPlayer.swift; sourceTree = "<group>"; };
 		613CEFA12BDCC8BC0081C8A8 /* bgm_home.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bgm_home.mp3; sourceTree = "<group>"; };
-		613CEFA32BDCCA320081C8A8 /* bgm_selectGoal.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bgm_selectGoal.mp3; sourceTree = "<group>"; };
 		613CEFA52BDCCB030081C8A8 /* bgm_dressUp.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bgm_dressUp.mp3; sourceTree = "<group>"; };
 		613CEFA72BDCCC740081C8A8 /* bgm_map.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bgm_map.mp3; sourceTree = "<group>"; };
+		613CEFA92BDCF72F0081C8A8 /* bgm_selectGoal.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bgm_selectGoal.mp3; sourceTree = "<group>"; };
 		61D36B692BDA5C01008A7D41 /* clicksound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = clicksound.mp3; path = Sounds/clicksound.mp3; sourceTree = "<group>"; };
 		61D94ACA2BDBA4000018D6FB /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -323,9 +323,9 @@
 		2214DE582BBEB0CA000E883F /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				613CEFA92BDCF72F0081C8A8 /* bgm_selectGoal.mp3 */,
 				613CEFA72BDCCC740081C8A8 /* bgm_map.mp3 */,
 				613CEFA52BDCCB030081C8A8 /* bgm_dressUp.mp3 */,
-				613CEFA32BDCCA320081C8A8 /* bgm_selectGoal.mp3 */,
 				613CEFA12BDCC8BC0081C8A8 /* bgm_home.mp3 */,
 				613CEF9B2BDCB5DB0081C8A8 /* chatsound.mp3 */,
 				61D36B692BDA5C01008A7D41 /* clicksound.mp3 */,
@@ -666,7 +666,6 @@
 				45806DA42BD6678E00976D79 /* NotoSansJP-Black.ttf in Resources */,
 				22080FE32BDBDF7A00D3FF38 /* Character1_2_1_1.webp in Resources */,
 				613CEFA82BDCCC740081C8A8 /* bgm_map.mp3 in Resources */,
-				613CEFA42BDCCA320081C8A8 /* bgm_selectGoal.mp3 in Resources */,
 				45C38DB32BCD885B004440A6 /* Header.webp in Resources */,
 				22080F852BD6756800D3FF38 /* Rank_8.webp in Resources */,
 				45C38DB52BCD885B004440A6 /* ChatNormalLeft.webp in Resources */,
@@ -703,6 +702,7 @@
 				452FF3172BD7E4EB00A0187D /* TagNormalUnder.webp in Resources */,
 				452FF3222BD82A6E00A0187D /* Curtain.webp in Resources */,
 				452FF31D2BD7E4EB00A0187D /* TagActiveHair.webp in Resources */,
+				613CEFAA2BDCF72F0081C8A8 /* bgm_selectGoal.mp3 in Resources */,
 				452FF30E2BD7E4EB00A0187D /* TagActiveUnder.webp in Resources */,
 				22080FE62BDBDF7A00D3FF38 /* Character2_1_1_2.webp in Resources */,
 				2285D1772BD23C7C00F0D8A6 /* NoTextButton.webp in Resources */,
