@@ -26,11 +26,16 @@ final class NavigationRouter: ObservableObject {
     @MainActor func navigateToItemDrop(with data: GoalData) {
         items.append(.itemDrop(goalData: data))
     }
+    @MainActor func navigateToDressUp() {
+        items.removeLast(items.count)
+        items.append(.dressUp)
+    }
 }
 
 struct GoalData: Hashable {
     var placeId: String = ""
     var placeName: String = ""
+    var placeImageUrl: String = ""
     var currentLatitude: Double = 0
     var currentLongtitude: Double = 0
     var destinationLatitude: Double = 0
@@ -40,6 +45,7 @@ struct GoalData: Hashable {
     mutating func update(from viewModel: SelectGoalModel) {
         placeId = viewModel.placeId
         placeName = viewModel.placeName
+        placeImageUrl = viewModel.placeImageUrl
         currentLatitude = viewModel.currentLatitude
         currentLongtitude = viewModel.currentLongitude
         destinationLatitude = viewModel.latitude

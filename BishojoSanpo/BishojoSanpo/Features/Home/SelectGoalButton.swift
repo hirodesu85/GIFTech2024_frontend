@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SelectGoalButton: View {
     @EnvironmentObject var router: NavigationRouter
-    let userDefaultsModel = UserDefaultsModel()
+    let userDefaultsModel = UserDefaultsModel.shared
     var body: some View {
         GeometryReader { geometry in
             Button(action: {

@@ -29,6 +29,6 @@ struct CharacterView: View {
 }
 
 #Preview {
-    var userDefaultsModel = UserDefaultsModel()
+    var userDefaultsModel = UserDefaultsModel.shared
     return CharacterView(userDefaultsModel: userDefaultsModel)
 }
