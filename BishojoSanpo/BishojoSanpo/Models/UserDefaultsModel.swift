@@ -14,7 +14,9 @@ class UserDefaultsModel: ObservableObject {
     @Published var currentRankPoint: Int
     @Published var currentWearingId: [String:Any] = [:]
     
-    init() {
+    static let shared = UserDefaultsModel()
+    
+    private init() {
         UserDefaults.standard.register(defaults: [
             "rank": 7,
             "untilNextRank": 100,

@@ -13,6 +13,7 @@ struct NavigateToDressUpButton: View {
         Button(action: {
             router.items.removeLast(router.items.count)
             router.items.append(.dressUp)
+            AudioPlayer.shared.playSound()
         }, label: {
             Text("着せ替えする")
         })

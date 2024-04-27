@@ -34,6 +34,7 @@ struct ItemListView: View {
                 .edgesIgnoringSafeArea(.all)
             
             Button(action: {
+                AudioPlayer.shared.playSound()
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                     router.returnToHome()
                 }
@@ -76,6 +77,7 @@ struct ItemListView: View {
                 
                 
                 Button(action: {
+                    AudioPlayer.shared.playSound()
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                         updateUserDefaulsWearing()
                     }
@@ -93,6 +95,7 @@ struct ItemListView: View {
                 )
                 .padding(.leading, 145)
             }.onAppear {
+                BgmPlayer.shared.playBackgroundMusic(filename: "bgm_dressUp")
                 Task {
                     await itemListModel.fetchCatalog()
                 }
@@ -107,7 +110,4 @@ struct ItemListView: View {
             bottom: selectedItemModel.bottom == -1 ? userDefaultsModel.currentWearingId["bottom"] as! Int: selectedItemModel.bottom,
             shoes: selectedItemModel.shoes == -1 ? userDefaultsModel.currentWearingId["shoes"] as! Int: selectedItemModel.shoes)
     }
-}
-#Preview {
-    ItemListView(itemListModel: ItemListModel(), selectedCategory: 1, userDefaultsModel: UserDefaultsModel(), selectedItemModel: SelectedItemModel())
 }

@@ -27,6 +27,7 @@ struct HeaderView: View {
                     .foregroundStyle(.white)
                 Spacer()
                 Button(action: {
+                    AudioPlayer.shared.playSound()
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                         router.returnToHome()
                     }

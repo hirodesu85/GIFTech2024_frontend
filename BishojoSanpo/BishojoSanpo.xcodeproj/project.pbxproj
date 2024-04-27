@@ -76,6 +76,16 @@
 		22986D3D2BC500A50018DCFC /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22986D3C2BC500A50018DCFC /* MapViewController.swift */; };
 		22986D412BC5010D0018DCFC /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22986D402BC5010D0018DCFC /* MapView.swift */; };
 		22986D432BC5016B0018DCFC /* MapViewControllerBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22986D422BC5016B0018DCFC /* MapViewControllerBridge.swift */; };
+		360E25912BDA76F000378270 /* effect.webp in Resources */ = {isa = PBXBuildFile; fileRef = 360E25902BDA76F000378270 /* effect.webp */; };
+		360E25932BDA770300378270 /* present_box.webp in Resources */ = {isa = PBXBuildFile; fileRef = 360E25922BDA770300378270 /* present_box.webp */; };
+		360E25952BDA770B00378270 /* skip_button.webp in Resources */ = {isa = PBXBuildFile; fileRef = 360E25942BDA770B00378270 /* skip_button.webp */; };
+		360E25972BDA771100378270 /* tap_to_open.webp in Resources */ = {isa = PBXBuildFile; fileRef = 360E25962BDA771100378270 /* tap_to_open.webp */; };
+		360E259B2BDBD76600378270 /* Button_BackHome.webp in Resources */ = {isa = PBXBuildFile; fileRef = 360E259A2BDBD76600378270 /* Button_BackHome.webp */; };
+		360E259F2BDBDA6B00378270 /* Button_ChangeWear.webp in Resources */ = {isa = PBXBuildFile; fileRef = 360E259E2BDBDA6B00378270 /* Button_ChangeWear.webp */; };
+		360E25A12BDBDFB200378270 /* 1Pittari_Text_Love.webp in Resources */ = {isa = PBXBuildFile; fileRef = 360E25A02BDBDFB200378270 /* 1Pittari_Text_Love.webp */; };
+		360E25A32BDBDFCB00378270 /* Dialog_Back.webp in Resources */ = {isa = PBXBuildFile; fileRef = 360E25A22BDBDFCB00378270 /* Dialog_Back.webp */; };
+		360E25A52BDC740100378270 /* ResultDetailBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360E25A42BDC740100378270 /* ResultDetailBox.swift */; };
+		360E25A72BDC896800378270 /* StrokeBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360E25A62BDC896800378270 /* StrokeBackground.swift */; };
 		4515603B2BCD4257006C8EAA /* SelectGoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4515603A2BCD4257006C8EAA /* SelectGoalView.swift */; };
 		4515603D2BCD4460006C8EAA /* GirlChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4515603C2BCD4460006C8EAA /* GirlChatView.swift */; };
 		4515603F2BCD44A2006C8EAA /* MyChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4515603E2BCD44A2006C8EAA /* MyChatView.swift */; };
@@ -116,6 +126,19 @@
 		45C38DB82BCD885B004440A6 /* Background.webp in Resources */ = {isa = PBXBuildFile; fileRef = 45C38DB12BCD885B004440A6 /* Background.webp */; };
 		45C38DB92BCD885B004440A6 /* GirlIcon.webp in Resources */ = {isa = PBXBuildFile; fileRef = 45C38DB22BCD885B004440A6 /* GirlIcon.webp */; };
 		45C8E8FC2BD657990043C975 /* NotoSansJP-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 45C8E8FB2BD657990043C975 /* NotoSansJP-VariableFont_wght.ttf */; };
+		613CEF9C2BDCB5DB0081C8A8 /* chatsound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 613CEF9B2BDCB5DB0081C8A8 /* chatsound.mp3 */; };
+		613CEF9E2BDCB60A0081C8A8 /* ChatAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613CEF9D2BDCB60A0081C8A8 /* ChatAudioPlayer.swift */; };
+		613CEFA02BDCC8020081C8A8 /* BgmPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613CEF9F2BDCC8020081C8A8 /* BgmPlayer.swift */; };
+		613CEFA22BDCC8BC0081C8A8 /* bgm_home.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 613CEFA12BDCC8BC0081C8A8 /* bgm_home.mp3 */; };
+		613CEFA62BDCCB030081C8A8 /* bgm_dressUp.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 613CEFA52BDCCB030081C8A8 /* bgm_dressUp.mp3 */; };
+		613CEFA82BDCCC740081C8A8 /* bgm_map.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 613CEFA72BDCCC740081C8A8 /* bgm_map.mp3 */; };
+		613CEFAA2BDCF72F0081C8A8 /* bgm_selectGoal.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 613CEFA92BDCF72F0081C8A8 /* bgm_selectGoal.mp3 */; };
+		613CEFAC2BDCF8BC0081C8A8 /* kirakirasound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 613CEFAB2BDCF8BC0081C8A8 /* kirakirasound.mp3 */; };
+		613CEFAE2BDCF8D10081C8A8 /* KirakiraPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613CEFAD2BDCF8D10081C8A8 /* KirakiraPlayer.swift */; };
+		613CEFB22BDD041C0081C8A8 /* TapAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613CEFB12BDD041C0081C8A8 /* TapAudioPlayer.swift */; };
+		613CEFB42BDD0BE50081C8A8 /* tapsound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 613CEFB32BDD0BE50081C8A8 /* tapsound.mp3 */; };
+		61D36B6A2BDA5C01008A7D41 /* clicksound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 61D36B692BDA5C01008A7D41 /* clicksound.mp3 */; };
+		61D94ACB2BDBA4000018D6FB /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D94ACA2BDBA4000018D6FB /* AudioPlayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -184,6 +207,16 @@
 		22986D3C2BC500A50018DCFC /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		22986D402BC5010D0018DCFC /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		22986D422BC5016B0018DCFC /* MapViewControllerBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewControllerBridge.swift; sourceTree = "<group>"; };
+		360E25902BDA76F000378270 /* effect.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = effect.webp; sourceTree = "<group>"; };
+		360E25922BDA770300378270 /* present_box.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = present_box.webp; sourceTree = "<group>"; };
+		360E25942BDA770B00378270 /* skip_button.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = skip_button.webp; sourceTree = "<group>"; };
+		360E25962BDA771100378270 /* tap_to_open.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = tap_to_open.webp; sourceTree = "<group>"; };
+		360E259A2BDBD76600378270 /* Button_BackHome.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = Button_BackHome.webp; sourceTree = "<group>"; };
+		360E259E2BDBDA6B00378270 /* Button_ChangeWear.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = Button_ChangeWear.webp; sourceTree = "<group>"; };
+		360E25A02BDBDFB200378270 /* 1Pittari_Text_Love.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = 1Pittari_Text_Love.webp; sourceTree = "<group>"; };
+		360E25A22BDBDFCB00378270 /* Dialog_Back.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = Dialog_Back.webp; sourceTree = "<group>"; };
+		360E25A42BDC740100378270 /* ResultDetailBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultDetailBox.swift; sourceTree = "<group>"; };
+		360E25A62BDC896800378270 /* StrokeBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrokeBackground.swift; sourceTree = "<group>"; };
 		4515603A2BCD4257006C8EAA /* SelectGoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SelectGoalView.swift; path = BishojoSanpo/Features/SelectedGoal/SelectGoalView.swift; sourceTree = SOURCE_ROOT; };
 		4515603C2BCD4460006C8EAA /* GirlChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GirlChatView.swift; path = BishojoSanpo/Features/SelectedGoal/GirlChatView.swift; sourceTree = SOURCE_ROOT; };
 		4515603E2BCD44A2006C8EAA /* MyChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyChatView.swift; path = BishojoSanpo/Features/SelectedGoal/MyChatView.swift; sourceTree = SOURCE_ROOT; };
@@ -221,10 +254,23 @@
 		45C38DAE2BCD885A004440A6 /* ChatNormalLeft.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = ChatNormalLeft.webp; sourceTree = "<group>"; };
 		45C38DAF2BCD885A004440A6 /* HomeButton.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = HomeButton.webp; sourceTree = "<group>"; };
 		45C38DB02BCD885B004440A6 /* NoSelectedButton.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = NoSelectedButton.webp; sourceTree = "<group>"; };
-		45C38DB12BCD885B004440A6 /* Background.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = Background.webp; sourceTree = "<group>"; };
+		45C38DB12BCD885B004440A6 /* Background.webp */ = {isa = PBXFileReference; lastKnownFileType = file; name = Background.webp; path = ../SelectGoal/Background.webp; sourceTree = "<group>"; };
 		45C38DB22BCD885B004440A6 /* GirlIcon.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = GirlIcon.webp; sourceTree = "<group>"; };
 		45C8E8FB2BD657990043C975 /* NotoSansJP-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansJP-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		45C8E8FD2BD658E00043C975 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		613CEF9B2BDCB5DB0081C8A8 /* chatsound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = chatsound.mp3; sourceTree = "<group>"; };
+		613CEF9D2BDCB60A0081C8A8 /* ChatAudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatAudioPlayer.swift; sourceTree = "<group>"; };
+		613CEF9F2BDCC8020081C8A8 /* BgmPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BgmPlayer.swift; sourceTree = "<group>"; };
+		613CEFA12BDCC8BC0081C8A8 /* bgm_home.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bgm_home.mp3; sourceTree = "<group>"; };
+		613CEFA52BDCCB030081C8A8 /* bgm_dressUp.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bgm_dressUp.mp3; sourceTree = "<group>"; };
+		613CEFA72BDCCC740081C8A8 /* bgm_map.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bgm_map.mp3; sourceTree = "<group>"; };
+		613CEFA92BDCF72F0081C8A8 /* bgm_selectGoal.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bgm_selectGoal.mp3; sourceTree = "<group>"; };
+		613CEFAB2BDCF8BC0081C8A8 /* kirakirasound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = kirakirasound.mp3; sourceTree = "<group>"; };
+		613CEFAD2BDCF8D10081C8A8 /* KirakiraPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KirakiraPlayer.swift; sourceTree = "<group>"; };
+		613CEFB12BDD041C0081C8A8 /* TapAudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapAudioPlayer.swift; sourceTree = "<group>"; };
+		613CEFB32BDD0BE50081C8A8 /* tapsound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tapsound.mp3; sourceTree = "<group>"; };
+		61D36B692BDA5C01008A7D41 /* clicksound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = clicksound.mp3; path = Sounds/clicksound.mp3; sourceTree = "<group>"; };
+		61D94ACA2BDBA4000018D6FB /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -305,8 +351,16 @@
 		2214DE582BBEB0CA000E883F /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				613CEFB32BDD0BE50081C8A8 /* tapsound.mp3 */,
+				613CEFAB2BDCF8BC0081C8A8 /* kirakirasound.mp3 */,
+				613CEFA92BDCF72F0081C8A8 /* bgm_selectGoal.mp3 */,
+				613CEFA72BDCCC740081C8A8 /* bgm_map.mp3 */,
+				613CEFA52BDCCB030081C8A8 /* bgm_dressUp.mp3 */,
+				613CEFA12BDCC8BC0081C8A8 /* bgm_home.mp3 */,
+				613CEF9B2BDCB5DB0081C8A8 /* chatsound.mp3 */,
+				61D36B692BDA5C01008A7D41 /* clicksound.mp3 */,
 			);
-			path = Sounds;
+			name = Sounds;
 			sourceTree = "<group>";
 		};
 		2214DE592BBEB0DA000E883F /* Features */ = {
@@ -375,6 +429,8 @@
 				2285D13E2BCA022C00F0D8A6 /* ItemDropView.swift */,
 				22080F562BD49ED800D3FF38 /* NavigateToDressUpButton.swift */,
 				22080F582BD4A05D00D3FF38 /* DetectTapView.swift */,
+				360E25A42BDC740100378270 /* ResultDetailBox.swift */,
+				360E25A62BDC896800378270 /* StrokeBackground.swift */,
 			);
 			path = ItemDrop;
 			sourceTree = "<group>";
@@ -382,6 +438,7 @@
 		2285D1532BCBFD5F00F0D8A6 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				619AB3B12BDA4A8E001ED8D7 /* Sounds */,
 				2285D16C2BCE83D800F0D8A6 /* Loacation */,
 				2285D1672BCD12B600F0D8A6 /* PageTransition */,
 				2285D15E2BCC04B600F0D8A6 /* WebP */,
@@ -395,7 +452,6 @@
 				45C05F0D2BDBF70C006DAE2B /* Face.webp */,
 				45904E472BD0AD7C007F304A /* NewHeader.webp */,
 				45904E452BD0AD6F007F304A /* NewNotSelectedButton.webp */,
-				45C38DB12BCD885B004440A6 /* Background.webp */,
 				45C38DAE2BCD885A004440A6 /* ChatNormalLeft.webp */,
 				45C38DAD2BCD885A004440A6 /* ChatNormalRight.webp */,
 				45C38DB22BCD885B004440A6 /* GirlIcon.webp */,
@@ -412,6 +468,7 @@
 		2285D1592BCBFF3000F0D8A6 /* WebPImage */ = {
 			isa = PBXGroup;
 			children = (
+				360E258D2BDA766000378270 /* ItemDrop */,
 				22080FAD2BDB91C000D3FF38 /* Character */,
 				22080F622BD674FF00D3FF38 /* Home */,
 				2285D1612BCCD64700F0D8A6 /* SampleWebP.webp */,
@@ -426,6 +483,7 @@
 		2285D15A2BCBFF9A00F0D8A6 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				45C38DB12BCD885B004440A6 /* Background.webp */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -520,6 +578,21 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		360E258D2BDA766000378270 /* ItemDrop */ = {
+			isa = PBXGroup;
+			children = (
+				360E25A22BDBDFCB00378270 /* Dialog_Back.webp */,
+				360E25A02BDBDFB200378270 /* 1Pittari_Text_Love.webp */,
+				360E259E2BDBDA6B00378270 /* Button_ChangeWear.webp */,
+				360E259A2BDBD76600378270 /* Button_BackHome.webp */,
+				360E25962BDA771100378270 /* tap_to_open.webp */,
+				360E25942BDA770B00378270 /* skip_button.webp */,
+				360E25922BDA770300378270 /* present_box.webp */,
+				360E25902BDA76F000378270 /* effect.webp */,
+			);
+			path = ItemDrop;
+			sourceTree = "<group>";
+		};
 		452FF2FA2BD7E4A500A0187D /* DressUp */ = {
 			isa = PBXGroup;
 			children = (
@@ -554,6 +627,18 @@
 				45C8E8FB2BD657990043C975 /* NotoSansJP-VariableFont_wght.ttf */,
 			);
 			path = fonts;
+			sourceTree = "<group>";
+		};
+		619AB3B12BDA4A8E001ED8D7 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				61D94ACA2BDBA4000018D6FB /* AudioPlayer.swift */,
+				613CEF9D2BDCB60A0081C8A8 /* ChatAudioPlayer.swift */,
+				613CEF9F2BDCC8020081C8A8 /* BgmPlayer.swift */,
+				613CEFAD2BDCF8D10081C8A8 /* KirakiraPlayer.swift */,
+				613CEFB12BDD041C0081C8A8 /* TapAudioPlayer.swift */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -625,11 +710,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				360E25A32BDBDFCB00378270 /* Dialog_Back.webp in Resources */,
+				360E25912BDA76F000378270 /* effect.webp in Resources */,
+				360E25932BDA770300378270 /* present_box.webp in Resources */,
+				360E25972BDA771100378270 /* tap_to_open.webp in Resources */,
+				360E25A12BDBDFB200378270 /* 1Pittari_Text_Love.webp in Resources */,
+				360E25952BDA770B00378270 /* skip_button.webp in Resources */,
 				22080FA12BD7AAF600D3FF38 /* CharacterSerif.json in Resources */,
 				452FF30D2BD7E4EB00A0187D /* ItemBlue.webp in Resources */,
 				45C38DA92BCD8837004440A6 /* SelectedButton.webp in Resources */,
 				45806DA42BD6678E00976D79 /* NotoSansJP-Black.ttf in Resources */,
 				22080FE32BDBDF7A00D3FF38 /* Character1_2_1_1.webp in Resources */,
+				613CEFA82BDCCC740081C8A8 /* bgm_map.mp3 in Resources */,
 				45C38DB32BCD885B004440A6 /* Header.webp in Resources */,
 				22080F852BD6756800D3FF38 /* Rank_8.webp in Resources */,
 				45C38DB52BCD885B004440A6 /* ChatNormalLeft.webp in Resources */,
@@ -641,6 +733,8 @@
 				45904E482BD0AD7C007F304A /* NewHeader.webp in Resources */,
 				452FF31C2BD7E4EB00A0187D /* ItemPink.webp in Resources */,
 				45C38DAB2BCD8848004440A6 /* SelectChat.webp in Resources */,
+				613CEFA22BDCC8BC0081C8A8 /* bgm_home.mp3 in Resources */,
+				360E259B2BDBD76600378270 /* Button_BackHome.webp in Resources */,
 				452FF3142BD7E4EB00A0187D /* TagActiveShoes.webp in Resources */,
 				45C38DB72BCD885B004440A6 /* NoSelectedButton.webp in Resources */,
 				22969AC32BBE7B0500D8FC26 /* Preview Assets.xcassets in Resources */,
@@ -657,6 +751,7 @@
 				22080FEA2BDBDF7A00D3FF38 /* Character1_2_2_2.webp in Resources */,
 				22080F832BD6756800D3FF38 /* HP_Frame.webp in Resources */,
 				452FF3162BD7E4EB00A0187D /* Equipment.webp in Resources */,
+				613CEF9C2BDCB5DB0081C8A8 /* chatsound.mp3 in Resources */,
 				452FF3132BD7E4EB00A0187D /* TagNormalShoes.webp in Resources */,
 				22080FEE2BDBDF7A00D3FF38 /* Character2_1_1_1.webp in Resources */,
 				452FF31A2BD7E4EB00A0187D /* ButtonDropdown.webp in Resources */,
@@ -664,23 +759,29 @@
 				452FF3172BD7E4EB00A0187D /* TagNormalUnder.webp in Resources */,
 				452FF3222BD82A6E00A0187D /* Curtain.webp in Resources */,
 				452FF31D2BD7E4EB00A0187D /* TagActiveHair.webp in Resources */,
+				613CEFAA2BDCF72F0081C8A8 /* bgm_selectGoal.mp3 in Resources */,
 				452FF30E2BD7E4EB00A0187D /* TagActiveUnder.webp in Resources */,
 				22080FE62BDBDF7A00D3FF38 /* Character2_1_1_2.webp in Resources */,
 				2285D1772BD23C7C00F0D8A6 /* NoTextButton.webp in Resources */,
+				61D36B6A2BDA5C01008A7D41 /* clicksound.mp3 in Resources */,
 				22080F892BD6756800D3FF38 /* Home_Button_Clothes.webp in Resources */,
 				22080FA32BD7B28D00D3FF38 /* test.json in Resources */,
 				452FF3112BD7E4EB00A0187D /* TagNormalOver.webp in Resources */,
 				22969AC02BBE7B0500D8FC26 /* Assets.xcassets in Resources */,
+				613CEFA62BDCCB030081C8A8 /* bgm_dressUp.mp3 in Resources */,
 				2285D1762BD23C7C00F0D8A6 /* ArrivedButton.webp in Resources */,
 				2285D1752BD23C7C00F0D8A6 /* HeartFrame.webp in Resources */,
 				452FF3152BD7E4EB00A0187D /* ButtonDecide.webp in Resources */,
 				452FF3122BD7E4EB00A0187D /* BackWhite.webp in Resources */,
 				452FF31B2BD7E4EB00A0187D /* ItemLock.webp in Resources */,
 				22080FE92BDBDF7A00D3FF38 /* Character1_1_2_1.webp in Resources */,
+				613CEFB42BDD0BE50081C8A8 /* tapsound.mp3 in Resources */,
 				22080FF12BDBDF7A00D3FF38 /* Character2_1_2_2.webp in Resources */,
 				2285D1622BCCD64700F0D8A6 /* SampleWebP.webp in Resources */,
+				360E259F2BDBDA6B00378270 /* Button_ChangeWear.webp in Resources */,
 				452FF3242BD8B0A000A0187D /* NewBackWhite.webp in Resources */,
 				45C8E8FC2BD657990043C975 /* NotoSansJP-VariableFont_wght.ttf in Resources */,
+				613CEFAC2BDCF8BC0081C8A8 /* kirakirasound.mp3 in Resources */,
 				45C38DB62BCD885B004440A6 /* HomeButton.webp in Resources */,
 				22080F9C2BD75CAC00D3FF38 /* HP_Move.webp in Resources */,
 				22080F842BD6756800D3FF38 /* Rank_7.webp in Resources */,
@@ -705,7 +806,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				22080FD22BDBCB9400D3FF38 /* SelectedItemModel.swift in Sources */,
+				613CEF9E2BDCB60A0081C8A8 /* ChatAudioPlayer.swift in Sources */,
 				22986D412BC5010D0018DCFC /* MapView.swift in Sources */,
+				613CEFB22BDD041C0081C8A8 /* TapAudioPlayer.swift in Sources */,
 				451560412BCD44C6006C8EAA /* HeaderView.swift in Sources */,
 				22986D432BC5016B0018DCFC /* MapViewControllerBridge.swift in Sources */,
 				2285D16E2BCE890D00F0D8A6 /* LocationManager.swift in Sources */,
@@ -714,23 +817,28 @@
 				22969ABE2BBE7B0400D8FC26 /* HomeView.swift in Sources */,
 				22080F532BD4967D00D3FF38 /* ArrivedButtonView.swift in Sources */,
 				22080FD02BDB9B8D00D3FF38 /* HomeRankPointView.swift in Sources */,
+				360E25A72BDC896800378270 /* StrokeBackground.swift in Sources */,
 				22080F592BD4A05D00D3FF38 /* DetectTapView.swift in Sources */,
 				2285D1412BCA024600F0D8A6 /* ItemListView.swift in Sources */,
 				4515603D2BCD4460006C8EAA /* GirlChatView.swift in Sources */,
+				61D94ACB2BDBA4000018D6FB /* AudioPlayer.swift in Sources */,
 				2285D13F2BCA022C00F0D8A6 /* ItemDropView.swift in Sources */,
 				22080F982BD7572500D3FF38 /* DressUpButton.swift in Sources */,
 				22080F432BD3F66A00D3FF38 /* ItemListModel.swift in Sources */,
 				2285D1702BCFDD4400F0D8A6 /* DirectionModel.swift in Sources */,
 				2285D13B2BC76A9000F0D8A6 /* Constants.swift in Sources */,
 				22080F8E2BD67A9000D3FF38 /* CharacterView.swift in Sources */,
+				613CEFA02BDCC8020081C8A8 /* BgmPlayer.swift in Sources */,
 				22986D3D2BC500A50018DCFC /* MapViewController.swift in Sources */,
 				2285D1572BCBFE2000F0D8A6 /* WebPImageView.swift in Sources */,
 				22080F942BD6941400D3FF38 /* RankView.swift in Sources */,
 				22969ABC2BBE7B0400D8FC26 /* BishojoSanpoApp.swift in Sources */,
+				613CEFAE2BDCF8D10081C8A8 /* KirakiraPlayer.swift in Sources */,
 				22080F8C2BD6771200D3FF38 /* SelectGoalButton.swift in Sources */,
 				22080F9A2BD7589600D3FF38 /* RankPointBarView.swift in Sources */,
 				22080F5D2BD4A3C100D3FF38 /* RewardModel.swift in Sources */,
 				452FF3202BD7E78600A0187D /* ItemTable.swift in Sources */,
+				360E25A52BDC740100378270 /* ResultDetailBox.swift in Sources */,
 				22080F452BD3FF9500D3FF38 /* DressUp.swift in Sources */,
 				4515603F2BCD44A2006C8EAA /* MyChatView.swift in Sources */,
 				2285D1432BCA0ACF00F0D8A6 /* NavigationRouter.swift in Sources */,

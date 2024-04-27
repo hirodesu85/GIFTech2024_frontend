@@ -17,7 +17,11 @@ struct MyChatView: View {
     var body: some View {
         HStack {
             ZStack {
-                WebPImageView(imageName: "SelectChat.webp")
+                if (options.count > 1) {
+                    WebPImageView(imageName: "SelectChat.webp")
+                } else {
+                    WebPImageView(imageName: "ChatNormalRight.webp")
+                }
                 
                 VStack {
                     ForEach(0..<options.count, id: \.self) { index in
@@ -46,6 +50,7 @@ struct MyChatView: View {
                             Button(action: {
                                 self.selectedOption = index
                                 self.isSelected = true
+                                ChatAudioPlayer.shared.playSound()
                             }) {
                                 ZStack {
                                     WebPImageView(imageName: "WaitingButton.webp")

@@ -9,7 +9,7 @@ import SwiftUI
 struct HomeView: View {
     @StateObject private var router = NavigationRouter()
     @StateObject var locationManager = LocationManager()
-    @ObservedObject var userDefaultsModel = UserDefaultsModel()
+    @ObservedObject var userDefaultsModel = UserDefaultsModel.shared
     @State var isSerifShowed: Bool =  false
     @State var reloadSerif: Bool = false
     @State var isPressedSelectGoal = false
@@ -19,83 +19,97 @@ struct HomeView: View {
     var body: some View {
         NavigationStack(path: $router.items){
             ZStack {
-                WebPImageView(imageName: "Background.webp").scaleEffect(1.15)
-                    .onTapGesture {
-                        if isSerifShowed {
-                            isSerifShowed = false
+                GeometryReader {geometry in
+
+                    WebPImageView(imageName: "Background.webp")
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .onTapGesture {
+                            if isSerifShowed {
+                                isSerifShowed = false
+                            }
                         }
-                    }
-                CharacterView(userDefaultsModel: userDefaultsModel)
-                    .position(x:160,y:450)
-                    .scaleEffect(0.88)
-                    .onTapGesture {
-                        if isSerifShowed {
-                            reloadSerif.toggle()
-                        } else {
-                            isSerifShowed = true
+
+                    CharacterView(userDefaultsModel: userDefaultsModel)
+                        .frame(width: 300)
+                        .position(x: geometry.size.width * 0.4,y:geometry.size.height * 0.58)
+                        .onTapGesture {
+                            if isSerifShowed {
+                                reloadSerif.toggle()
+                            } else {
+                                isSerifShowed = true
+                            }
                         }
-                    }
-                // ランク表示
-                VStack {
-                    HStack() {
-                        Spacer(minLength: 20)
-                        RankView(rank: userDefaultsModel.rank)
-                            .frame(width: 135)
-                        HomeRankPointView(nowRankPoint: userDefaultsModel.currentRankPoint, nextRankPoint: userDefaultsModel.untilNextRank)
-                            .offset(y:-18)
-                        Spacer(minLength: 20)
-                    }
-                    Spacer()
-                }
-                
-                
-                if isSerifShowed {
-                    SerifView(reload: reloadSerif, rank: userDefaultsModel.rank)
-                        .position(x:300,y:215)
-                        .scaleEffect(0.6)
-                }
-                DressUpButton(isPressed: $isPressedDressUp)
-                SelectGoalButton(isPressed: $isPressedSelectGoal)
-                
-                // デモボタン ItemDropViewで値を更新できたら消す
-                VStack{
-                    Button {
-                        userDefaultsModel.updateCurrentRankPoint(newCurrentRankPoint: userDefaultsModel.currentRankPoint + 100)
-                        userDefaultsModel.updateUntilNextRank(newUntilNextRank: userDefaultsModel.untilNextRank - 100)
-                    } label: {
-                        Text("ポイントが100増える").background(Color.white)
-                    }
-                    Button(action: {
-                        userDefaultsModel.updateCurrentRankPoint(newCurrentRankPoint: 0)
-                        userDefaultsModel.updateUntilNextRank(newUntilNextRank: 700)
-                    }, label: {
-                        Text("ポイントをリセット").background(Color.white)
-                    })
-                    Button {
-                        userDefaultsModel.updateRank(newRank: 8)
-                    } label: {
-                        Text("ランクを8にする").background(Color.white)
-                    }
-                    Button {
-                        userDefaultsModel.updateRank(newRank: 7)
-                    } label: {
-                        Text("ランクを7にする").background(Color.white)
-                    }
-                    Button {
-                        userDefaultsModel.updateWearingItem(hair: 1, top: 1, bottom: 1, shoes: 1)
-                    } label: {
-                        Text("Topsをピンクに").background(Color.white)
-                    }
-                    Button {
-                        userDefaultsModel.updateWearingItem(hair: 1, top: 2, bottom: 1, shoes: 1)
-                    } label: {
-                        Text("Topsをブルーに").background(Color.white)
-                    }
+
+                        HStack() {
+                            Spacer(minLength: 20)
+                            RankView(rank: userDefaultsModel.rank)
+                                .frame(width: 135)
+                            HomeRankPointView(nowRankPoint: userDefaultsModel.currentRankPoint, nextRankPoint: userDefaultsModel.untilNextRank)
+                                .offset(y:-18)
+                            Spacer(minLength: 20)
+                        }
+                        .position(x:geometry.size.width/2, y:geometry.size.height*0.12)
                     
-                }
+
+                    if isSerifShowed {
+                        SerifView(reload: reloadSerif, rank: userDefaultsModel.rank)
+                            .position(x:geometry.size.width * 0.73,y:geometry.size.height * 0.3)
+                            .scaleEffect(0.6)
+                    }
+
+                    DressUpButton(isPressed: $isPressedDressUp)
+                        .frame(width: 150)
+                        .position(x: geometry.size.width * 0.78, y: geometry.size.height * 0.9) // ボタンの位置を右下に設定
+                    SelectGoalButton(isPressed: $isPressedSelectGoal)
+                        .frame(width: 200)
+                        .position(x: geometry.size.width * 0.74, y: geometry.size.height * 0.73) //
+                    // デモボタン 本番前に消す
+                    VStack{
+                        Button {
+                            userDefaultsModel.updateCurrentRankPoint(newCurrentRankPoint: userDefaultsModel.currentRankPoint + 100)
+                            userDefaultsModel.updateUntilNextRank(newUntilNextRank: userDefaultsModel.untilNextRank - 100)
+                        } label: {
+                            Text("ポイントが100増える").background(Color.white)
+                        }
+                        Button(action: {
+                            userDefaultsModel.updateCurrentRankPoint(newCurrentRankPoint: 0)
+                            userDefaultsModel.updateUntilNextRank(newUntilNextRank: 700)
+                        }, label: {
+                            Text("ポイントをリセット").background(Color.white)
+                        })
+                        Button {
+                            userDefaultsModel.updateRank(newRank: 8)
+                        } label: {
+                            Text("ランクを8にする").background(Color.white)
+                        }
+                        Button {
+                            userDefaultsModel.updateRank(newRank: 7)
+                        } label: {
+                            Text("ランクを7にする").background(Color.white)
+                        }
+                        Button {
+                            userDefaultsModel.updateWearingItem(hair: 1, top: 1, bottom: 1, shoes: 1)
+                        } label: {
+                            Text("Topsをピンクに").background(Color.white)
+                        }
+                        Button {
+                            userDefaultsModel.updateWearingItem(hair: 1, top: 2, bottom: 1, shoes: 1)
+                        } label: {
+                            Text("Topsをブルーに").background(Color.white)
+                        }
+                        
+                    }
+                    .frame(width: 200,height: 400)
+                    .position(x:geometry.size.width/2, y:geometry.size.height/2)
+                    
+                }.ignoresSafeArea()
+                
                 // デモボタンここまで
                 
                 
+            }
+            .onAppear {
+                BgmPlayer.shared.playBackgroundMusic(filename: "bgm_home")
             }
             .onChange(of: router.items) { newValue in
                 if newValue.contains(where: { $0 == .selectGoal || $0 == .dressUp }) {
@@ -126,3 +140,4 @@ struct HomeView: View {
 #Preview {
     HomeView()
 }
+	
