@@ -43,6 +43,7 @@ struct ItemListView: View {
                     .frame(width: 50, height: 50)
                     .padding(.trailing, 12)
                     .padding(.top,25)
+
                     .scaleEffect(isPressedHome ? 1.2 : 1)
                     .animation(.easeInOut(duration: 0.2), value: isPressedHome)
             }
@@ -52,7 +53,7 @@ struct ItemListView: View {
                     .onEnded { _ in isPressedHome = false }
             )
             .offset(x: 159, y: -418)
-            
+
             
             CharacterView(userDefaultsModel: userDefaultsModel)
                 .scaleEffect(0.83)
@@ -87,6 +88,7 @@ struct ItemListView: View {
                     WebPImageView(imageName: "ButtonDecide.webp")
                         .frame(width: 200, height: 200)
                         .offset(x: 18, y: -10)
+
                         .scaleEffect(isPressedDecide ? 1.2 : 1)
                         .animation(.easeInOut(duration: 0.2), value: isPressedDecide)
                 }

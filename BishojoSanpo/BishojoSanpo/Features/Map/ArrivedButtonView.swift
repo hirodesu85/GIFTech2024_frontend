@@ -19,6 +19,7 @@ struct ArrivedButtonView: View {
                     Button(action: {
                         router.navigateToItemDrop(with: goalData)
                         print("a")
+                        AudioPlayer.shared.playSound()
                     }) {
                         WebPImageView(imageName: "ArrivedButton.webp")
                             .frame(width: 150, height: 100) // ここで高さも指定

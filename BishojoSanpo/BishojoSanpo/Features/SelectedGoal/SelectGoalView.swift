@@ -21,6 +21,10 @@ struct SelectGoalView: View {
     @State var selectedCategory: Int = -1
     @State var isSelectedDistance: Bool = false
     @State var selectedDistance: Int = -1
+    @State private var isPressedHome = false
+    @State private var isPressedCategory = [false, false, false]
+    @State private var isPressedDistance = [false, false, false]
+    @State private var isPressedAgain = [false, false, false]
     @State var isSelectedSelectAgain: Bool = false
     @State var selectedSelectAgain: Int = -1
     @State private var isError: Bool = false
@@ -48,14 +52,16 @@ struct SelectGoalView: View {
                             
                             MyChatView(isSelected: $isSelectedCategory,
                                        selectedOption: $selectedCategory,
+                                       isPressed: $isPressedCategory,
                                        options: categoryOptions)
                             if isSelectedCategory {
                                 GirlChatView(girlText: "どこまで行く？")
                                 
                                 MyChatView(isSelected: $isSelectedDistance,
                                            selectedOption: $selectedDistance,
+                                           isPressed: $isPressedDistance,
                                            options: distanceOptions)
-                                
+
                                 Color.clear.id(1)
                                     .frame(height: 50)
                             }
@@ -70,6 +76,7 @@ struct SelectGoalView: View {
                                 GirlChatView(girlText: "もう一度選択してくれる？🥺")
                                 MyChatView(isSelected: $isSelectedSelectAgain,
                                            selectedOption: $selectedSelectAgain,
+                                           isPressed: $isPressedAgain,
                                            options: selectAgainOptions)
 
                                 Color.clear.id(3)
@@ -94,7 +101,7 @@ struct SelectGoalView: View {
                         }
                     }
                 }
-                HeaderView()
+                HeaderView(isPressedHome: $isPressedHome)
             }
         }
         .navigationBarBackButtonHidden(true)
@@ -102,6 +109,7 @@ struct SelectGoalView: View {
             locationManager.onLocationUpdate = { newLocation in
                 if !hasUpdateLocation && isSelectedCategory {getDestinationAndNavigate(newLocation: newLocation)}
             }
+            BgmPlayer.shared.playBackgroundMusic(filename: "bgm_selectGoal")
         }
         .onChange(of: isSelectedDistance) { _ in
             locationManager.fetchLocation()

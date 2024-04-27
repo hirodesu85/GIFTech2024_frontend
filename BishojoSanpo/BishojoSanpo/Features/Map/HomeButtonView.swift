@@ -17,6 +17,7 @@ struct HomeButtonView: View {
                 VStack {
                     Button(action: {
                         router.returnToHome()
+                        AudioPlayer.shared.playSound()
                     }) {
                         WebPImageView(imageName: "HomeButton.webp")
                             .frame(width: 55, height: 55)

@@ -10,6 +10,7 @@ import SwiftUI
 struct HeaderView: View {
     
     @EnvironmentObject var router: NavigationRouter
+    @Binding var isPressedHome: Bool
     
     var body: some View {
         ZStack {
@@ -26,19 +27,24 @@ struct HeaderView: View {
                     .foregroundStyle(.white)
                 Spacer()
                 Button(action: {
-                    router.returnToHome()
+                    AudioPlayer.shared.playSound()
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                        router.returnToHome()
+                    }
                 }) {
                     WebPImageView(imageName: "HomeButton.webp")
                         .frame(width: 55, height: 55)
                         .padding(.trailing, 12)
+                        .scaleEffect(isPressedHome ? 1.2 : 1)
+                        .animation(.easeInOut(duration: 0.2), value: isPressedHome)
                 }
-                
+                .simultaneousGesture(
+                    DragGesture(minimumDistance: 0)
+                        .onChanged { _ in isPressedHome = true }
+                        .onEnded { _ in isPressedHome = false }
+                )
             }
         }
     }
-}
-
-#Preview {
-    HeaderView()
 }
 

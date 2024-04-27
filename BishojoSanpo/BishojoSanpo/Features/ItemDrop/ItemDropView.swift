@@ -102,6 +102,7 @@ struct ItemDropView: View {
                     userDefaultsModel.updateCurrentRankPoint(newCurrentRankPoint: requireMaxRankPoint(rank: nextRank) - afterUntilNextRank)
                 }
             }
+            BgmPlayer.shared.playBackgroundMusic(filename: "bgm_selectGoal")
         }
     }
     private func showResult() {

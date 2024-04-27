@@ -45,6 +45,7 @@ struct MapView: View {
         
         .onAppear{
             loadDirection()
+            BgmPlayer.shared.playBackgroundMusic(filename: "bgm_map")
         }
         .navigationBarBackButtonHidden(true)
     }

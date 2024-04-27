@@ -10,6 +10,7 @@ import SwiftUI
 struct MyChatView: View {
     @Binding var isSelected: Bool
     @Binding var selectedOption: Int
+    @Binding var isPressed: [Bool]
     
     let options: [String]
     
@@ -49,6 +50,7 @@ struct MyChatView: View {
                             Button(action: {
                                 self.selectedOption = index
                                 self.isSelected = true
+                                ChatAudioPlayer.shared.playSound()
                             }) {
                                 ZStack {
                                     WebPImageView(imageName: "WaitingButton.webp")
@@ -56,7 +58,14 @@ struct MyChatView: View {
                                     Text(options[index])
                                         .foregroundStyle(.white)
                                 }
+                                .scaleEffect(isPressed[index] ? 1.1 : 1)
+                                .animation(.easeInOut(duration: 0.2), value: isPressed[index])
                             }
+                            .simultaneousGesture(
+                                DragGesture(minimumDistance: 0)
+                                    .onChanged { _ in isPressed[index] = true }
+                                    .onEnded { _ in isPressed[index] = false }
+                            )
                         }
                     }
                 }
