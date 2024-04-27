@@ -29,7 +29,7 @@ struct HomeView: View {
 
                     CharacterView(userDefaultsModel: userDefaultsModel)
                         .frame(width: 300)
-                        .position(x: geometry.size.width * 0.4,y:geometry.size.height * 0.56)
+                        .position(x: geometry.size.width * 0.4,y:geometry.size.height * 0.58)
                         .onTapGesture {
                             if isSerifShowed {
                                 reloadSerif.toggle()
@@ -57,10 +57,10 @@ struct HomeView: View {
 
                     DressUpButton()
                         .frame(width: 150)
-                        .position(x: geometry.size.width * 0.75, y: geometry.size.height * 0.9) // ボタンの位置を右下に設定
+                        .position(x: geometry.size.width * 0.78, y: geometry.size.height * 0.9) // ボタンの位置を右下に設定
                     SelectGoalButton()
                         .frame(width: 200)
-                        .position(x: geometry.size.width * 0.7, y: geometry.size.height * 0.73) //
+                        .position(x: geometry.size.width * 0.74, y: geometry.size.height * 0.73) //
                     // デモボタン 本番前に消す
                     VStack{
                         Button {
