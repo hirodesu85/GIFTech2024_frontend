@@ -30,5 +30,5 @@ struct ResultDetailBox: View {
 }
 
 #Preview {
-    ResultDetailBox(userDefaultsModel: UserDefaultsModel())
+    ResultDetailBox(userDefaultsModel: UserDefaultsModel.shared)
 }

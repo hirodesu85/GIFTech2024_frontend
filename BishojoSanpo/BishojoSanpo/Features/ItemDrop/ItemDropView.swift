@@ -11,7 +11,7 @@ struct ItemDropView: View {
     @EnvironmentObject var router: NavigationRouter
     let goalData: GoalData
     @StateObject private var rewardModel = RewardModel()
-    @ObservedObject var userDefaultsModel = UserDefaultsModel()
+    @ObservedObject var userDefaultsModel = UserDefaultsModel.shared
     @State private var isTapped = false
     @State private var canShowResult = false
     @State private var getItemImageData: Data? = nil
