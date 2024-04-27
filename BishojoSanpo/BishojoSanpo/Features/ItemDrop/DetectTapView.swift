@@ -16,10 +16,8 @@ struct DetectTapView: View {
                 .contentShape(Rectangle()) // これにより透明な部分もタップ可能になる
                 .onTapGesture {
                     isTapped = true
+                    KirakiraPlayer.shared.playSound()
                 }
-        }
-        .onAppear{
-            KirakiraPlayer.shared.playSound()
         }
     }
 }
