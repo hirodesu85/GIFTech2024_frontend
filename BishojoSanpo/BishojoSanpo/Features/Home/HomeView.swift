@@ -35,14 +35,14 @@ struct HomeView: View {
                         .onTapGesture {
                             if isSerifShowed {
                                 withAnimation(.linear(duration: 0.2)) {
-                                isSerifShowed = false
-                            }
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                                withAnimation(.linear(duration: 0.2)) {
-                                    isSerifShowed = true
+                                    isSerifShowed = false
                                 }
-                            }
-                            reloadSerif.toggle()
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                                    withAnimation(.linear(duration: 0.2)) {
+                                        isSerifShowed = true
+                                    }
+                                }
+                                reloadSerif.toggle()
                             } else {
                                 isSerifShowed = true
                             }

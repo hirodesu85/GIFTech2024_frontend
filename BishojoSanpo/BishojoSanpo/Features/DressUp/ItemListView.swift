@@ -53,6 +53,7 @@ struct ItemListView: View {
             )
             .offset(x: 159, y: -418)
             
+            
             CharacterView(userDefaultsModel: userDefaultsModel)
                 .scaleEffect(0.83)
                 .offset(x:-75,y:35)
@@ -63,7 +64,7 @@ struct ItemListView: View {
                 ZStack{
                     if let catalog = itemListModel.catalog {
                         ItemTable(itemListModel: itemListModel, userDefaultsModel: userDefaultsModel, selectedCategory: $selectedCategory, selectedItemModel: selectedItemModel)
-
+                        
                     } else {
                         WebPImageView(imageName: "NewBackWhite.webp")
                             .scaledToFill()
@@ -72,7 +73,7 @@ struct ItemListView: View {
                             .blur(radius: 3.0)
                         Text("Loading...").foregroundStyle(Color("ChatColor"))
                             .font(.headline)
-
+                        
                     }
                 }.padding(.leading, 145)
                 
