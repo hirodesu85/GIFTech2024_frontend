@@ -18,5 +18,8 @@ struct DetectTapView: View {
                     isTapped = true
                 }
         }
+        .onAppear{
+            KirakiraPlayer.shared.playSound()
+        }
     }
 }

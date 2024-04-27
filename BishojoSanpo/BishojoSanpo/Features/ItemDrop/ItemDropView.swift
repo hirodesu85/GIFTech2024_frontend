@@ -36,6 +36,7 @@ struct ItemDropView: View {
             Task {
                 await rewardModel.fetchRewardData(goalData: goalData)
             }
+            BgmPlayer.shared.playBackgroundMusic(filename: "bgm_selectGoal")
         }
         
         
