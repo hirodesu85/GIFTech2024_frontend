@@ -112,6 +112,7 @@ struct SelectGoalView: View {
             BgmPlayer.shared.playBackgroundMusic(filename: "bgm_selectGoal")
         }
         .onChange(of: isSelectedDistance) { _ in
+            isLoading = true
             locationManager.fetchLocation()
         }
         .onChange(of: isSelectedSelectAgain) { _ in
@@ -136,7 +137,7 @@ struct SelectGoalView: View {
         selectGoalModel.currentLongitude = newLocation.coordinate.longitude
         
         Task {
-            isLoading = true
+            
             await selectGoalModel.fetchSuggestedPlace()  // API呼び出しと内部状態の更新
             sendToMapData.update(from: selectGoalModel) // GoalDataにSelectGoalModelのデータを反映
             if selectGoalModel.errorMessage == nil {
