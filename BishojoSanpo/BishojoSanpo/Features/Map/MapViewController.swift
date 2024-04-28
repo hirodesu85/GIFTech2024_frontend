@@ -51,6 +51,7 @@ extension MapViewController: GMSMapViewDelegate {
         imageView.contentMode = .scaleAspectFill // アスペクト比を保持
         imageView.clipsToBounds = true // 余白切り捨て
         imageView.layer.cornerRadius = 5.0
+        marker.tracksInfoWindowChanges = true
         loadImage(from: imageUrl) { image in
             DispatchQueue.main.async {
                 imageView.image = image
