@@ -15,6 +15,8 @@ struct ItemDropView: View {
     @State private var isTapped = false
     @State private var canShowResult = false
     @State private var getItemImageData: Data? = nil
+    @State private var isPressedHome = false
+    @State private var isPressedDressUp = false
     
     var body: some View {
         ZStack{
@@ -26,15 +28,41 @@ struct ItemDropView: View {
                 VStack {
                     ResultDetailBox(userDefaultsModel: userDefaultsModel).frame(width: 340).offset(y:-20)
                     Button(action: {
-                        router.returnToHome()
+                        AudioPlayer.shared.playSound()
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                            router.returnToHome()
+                        }
                     }) {
-                        WebPImageView(imageName: "Button_BackHome.webp").aspectRatio(contentMode: .fit).frame(width: UIScreen.main.bounds.width * 0.5)
+                        WebPImageView(imageName: "Button_BackHome.webp")
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: UIScreen.main.bounds.width * 0.5)
+                            .scaleEffect(isPressedHome ? 1.2 : 1)
+                            .animation(.easeInOut(duration: 0.2), value: isPressedHome)
                     }
+                    .simultaneousGesture(
+                        DragGesture(minimumDistance: 0)
+                            .onChanged { _ in isPressedHome = true }
+                            .onEnded { _ in isPressedHome = false }
+                    )
+                    
                     Button(action: {
-                        router.navigateToDressUp()
+                        AudioPlayer.shared.playSound()
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                            router.navigateToDressUp()
+                        }
+                        
                     }) {
-                        WebPImageView(imageName: "Button_ChangeWear.webp").aspectRatio(contentMode: .fit).frame(width: UIScreen.main.bounds.width * 0.5)
+                        WebPImageView(imageName: "Button_ChangeWear.webp")
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: UIScreen.main.bounds.width * 0.5)
+                            .scaleEffect(isPressedDressUp ? 1.2 : 1)
+                            .animation(.easeInOut(duration: 0.2), value: isPressedDressUp)
                     }
+                    .simultaneousGesture(
+                        DragGesture(minimumDistance: 0)
+                            .onChanged { _ in isPressedDressUp = true }
+                            .onEnded { _ in isPressedDressUp = false }
+                    )
                 }
             } else {
                 VStack{
@@ -55,9 +83,9 @@ struct ItemDropView: View {
                     width: UIScreen.main.bounds.width,
                     height: UIScreen.main.bounds.height,
                     alignment:
-                        .topTrailing
+                            .topTrailing
                 )
-                    
+                
                 if let dropItemData = getItemImageData , isTapped {
                     ZStack {
                         WebPImageView(imageName: "effect.webp").offset(y:-40)
@@ -133,7 +161,7 @@ struct ItemDropView: View {
         default:
             return 1000
         }
-    
+        
     }
     // 前回のランクのMAXまでの通算ポイントを除いた現在のポイントを返す
     // 実際は7 ~ 8しか使われないが、それ以外も実装した(特に理由はない)

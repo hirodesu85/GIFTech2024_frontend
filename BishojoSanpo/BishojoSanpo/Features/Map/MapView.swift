@@ -16,6 +16,7 @@ struct MapView: View {
     @State var polyline: GMSPolyline?
     @State var isChangedPolyline = false
     @State var zoomInCenter: Bool = false
+    @State var isPressedArrivedButton = false
     let goalData: GoalData
     let directionModel = DirectionModel()
     
@@ -37,7 +38,7 @@ struct MapView: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .scaledToFill()
                 .allowsHitTesting(false)
-            ArrivedButtonView(goalData: goalData)
+            ArrivedButtonView(isPressed: $isPressedArrivedButton, goalData: goalData)
             HomeButtonView()
             
         }
